@@ -1,6 +1,6 @@
 <mockup version="1.0" skin="sketch" measuredW="1152" measuredH="472" mockupW="960" mockupH="445">
   <controls>
-    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="192" y="27" w="960" h="445" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="192" y="27" w="960" h="445" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <text>MinkInq</text>
       </controlProperties>
@@ -777,5 +777,6 @@
         <text>V%E6lg</text>
       </controlProperties>
     </control>
+    <control controlID="259" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1095" y="124" w="-1" h="301" measuredW="16" measuredH="100" zOrder="113" locked="false" isInGroup="-1"/>
   </controls>
 </mockup>
