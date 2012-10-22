@@ -1,0 +1,70 @@
+create table Customer
+(fname varchar(20) not null,
+lname varchar(20) not null,
+custid int,
+address varchar(30) not null,
+zipcode int,
+city varchar(20), 
+phoneno int not null,
+email varchar(50) not null,
+type varchar(15) not null,	
+primary key (custid));
+
+
+
+create table Supplier
+(supplierid int not null,
+name varchar (20),
+address varchar (30),
+country varchar (30),
+phonenumber int not null,
+email varchar (50) not null,
+primary key (supplierid));
+
+
+create table Invoice
+(invoicenum int, 
+paymentdate datetime DEFAULT GETDATE(),
+totalamount decimal(10, 2),
+primary key (invoicenum));
+
+
+create table Product
+(productid int,
+purchaseprice decimal(10, 2),
+salesprice decimal(10, 2),
+rentprice decimal (10, 2),
+countryoforigin varchar(30),
+minimumstock int, 
+size char (9),
+colour varchar(20),
+producttype varchar (20),
+productdescription varchar (50),
+fabric varchar (50),
+supplier int,
+calibre decimal (4,4)
+primary key (productid),
+foreign key (supplier) references Supplier(supplierid));
+
+
+create table SalesOrder
+(salesorderid int,
+creationdate   datetime  DEFAULT GETDATE(),
+deliverydate datetime  DEFAULT GETDATE(),
+deliverystatus varchar(20),
+totalamount decimal (10, 2),
+customer int not null,
+invoice int
+primary key (salesorderid),
+foreign key (customer) references Customer(custid),
+foreign key (invoice) references Invoice (invoicenum));
+
+
+
+create table ProductSalesOrder
+(prodid int,
+salesid int,
+quantity int not null,
+foreign key(prodid) references Product(productid) on update cascade on delete cascade,
+foreign key(salesid) references SalesOrder(salesorderid)  on update cascade on delete cascade);	
+     	 	 
