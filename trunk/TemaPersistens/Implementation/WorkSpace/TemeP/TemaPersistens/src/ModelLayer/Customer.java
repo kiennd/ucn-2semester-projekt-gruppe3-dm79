@@ -6,24 +6,40 @@ public class Customer
 	private String fname;
 	private String lname;
 	private String address;
+	private String pno;
 	private String email;
 	private String custType;
 	private String zipCode;
 	private String city;
 	
 	
-	public Customer(int custID, String fname, String lname, String address, String email, String custType, String zipCode, String city)
+	public Customer(int custID, String fname, String lname, String address, String pno, String email, String custType, String zipCode, String city)
 	{
 		this.custID = custID;
 		this.fname = fname;
 		this.lname = lname;
 		this.address = address;
+		this.pno = pno;
 		this.email = email;
 		this.custType = custType;
 		this.zipCode = zipCode;
 		this.city = city;
 	}
 	 
+
+
+
+	public String getPno() {
+		return pno;
+	}
+
+
+
+
+	public void setPno(String pno) {
+		this.pno = pno;
+	}
+
 
 
 
