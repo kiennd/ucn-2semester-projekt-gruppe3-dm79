@@ -9,19 +9,20 @@ public class Supplier
 	private String address;
 	private String country;
 	private String email;
-		
+	private int phonenum;	
 
 	
 	/**
 	 * Constructor for objects of class Supplier
 	 */
-	public Supplier(int supplierId, String name, String address, String country, String email)
+	public Supplier(int supplierId, String name, String address, String country, String email, int phonenum)
 	{
 		this.supplierId = supplierId;
 		this.name = name;
 		this.address = address;
 		this.country = country;
 		this.email = email;
+		this.setPhonenum(phonenum);
 	}
 	
 	
@@ -31,6 +32,16 @@ public class Supplier
 	public Supplier()
 	{
 		
+	}
+	
+	
+	/**
+	 * Supplier constructor with id parameter.
+	 */
+	
+	public Supplier(int supplierId)
+	{
+		this.supplierId = supplierId;
 	}
 
 
@@ -104,6 +115,16 @@ public class Supplier
 	public void setEmail(String email) 
 	{
 		this.email = email;
+	}
+
+
+	public int getPhonenum() {
+		return phonenum;
+	}
+
+
+	public void setPhonenum(int phonenum) {
+		this.phonenum = phonenum;
 	}
 	
 	

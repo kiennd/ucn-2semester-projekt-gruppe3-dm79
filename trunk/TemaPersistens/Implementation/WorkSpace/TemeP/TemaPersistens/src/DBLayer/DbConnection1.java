@@ -2,43 +2,43 @@ package DBLayer;
 import java.sql.*;
 public class DbConnection1 
 {
-	 //constans used to get access to the database
+	 //constants used to get access to the database
 		//SQL Server
 	   private static final String  driver = "balder.ucn.dk:1433";
-	    private static final String  databaseName = ";databaseName=dm79_3";
-	//jdbc:sqlserver://localhost\SQLEXPRESS/Databases/EPS:1357;user=epsingall;password=welkom1;
+	   private static final String  databaseName = ";databaseName=dm79_3";
+	//jdbc:sqlserver://URL\SQLEXPRESS/Databases/EPS:1357;user=epsingall;password=welkom1;
 	    //SQL Server
-	  //  private static String  userName = ";user=sa";
+	  //  private static String  userName = ";user=DM79_3";
 	    private static String  userName = "; user=DM79_3";
 	    private static String password = ";password=MaaGodt";
 	   
 	  
 	    private DatabaseMetaData dma;
 	    private static Connection con;
-	    // an instance of the class is generetated
+	    // an instance of the class is generated
 	    private static DbConnection1  instance = null;
 
-	    // the constructor is private to ensure that only one object of this class is createt
+	    // the constructor is private to ensure that only one object of this class is created
 	    private DbConnection1()
 	    {
 	    	String url = driver + databaseName + userName + password;
 
 	        try{
-	            //load af driver
+	            //load driver
 	            //SQL Server
 	            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-	            System.out.println("Load af class ok");
+	            System.out.println("Load of class ok");
 	          
 	        }
 	        catch(Exception e){
-	            System.out.println("Can not find the driver");
+	            System.out.println("Cannot find the driver");
 	            System.out.println(e.getMessage());
 	        }//end catch
 	        try{
 	            //connection to the database
 	           
 	            con = DriverManager.getConnection(url);
-	            //set autocommit
+	            //set auto commit
 	            con.setAutoCommit(true);
 	            dma = con.getMetaData(); // get meta data
 	            System.out.println("Connection to " + dma.getURL());
