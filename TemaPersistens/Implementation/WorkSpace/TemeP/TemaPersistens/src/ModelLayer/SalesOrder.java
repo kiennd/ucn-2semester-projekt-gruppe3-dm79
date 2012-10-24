@@ -8,8 +8,8 @@ public class SalesOrder
 	private String deliveryStatus;
 	private String status;
 	private double totalAmount;
-	private Customer customer;
-	private Invoice invoice;
+	private Customer myCustomer;
+	private Invoice Myinvoice;
 	
 	private SalesOrder(int salesOrderID, String creationDate, String deliveryDate, String deliveryStatus, String status, double totalAmount, Customer customer, Invoice invoice)
 	{
@@ -19,8 +19,8 @@ public class SalesOrder
 		this.deliveryStatus = deliveryStatus;
 		this.status = status;
 		this.totalAmount = totalAmount;
-		Customer customer;
-		Invoice invoice;
+		myCustomer = customer;
+		Myinvoice = invoice;
 	}
 
 	public int getSalesOrderID() {
@@ -72,19 +72,19 @@ public class SalesOrder
 	}
 
 	public Customer getCustomer() {
-		return customer;
+		return myCustomer;
 	}
 
 	public void setCustomer(Customer customer) {
-		this.customer = customer;
+		this.myCustomer = customer;
 	}
 
 	public Invoice getInvoice() {
-		return invoice;
+		return Myinvoice;
 	}
 
 	public void setInvoice(Invoice invoice) {
-		this.invoice = invoice;
+		this.Myinvoice = invoice;
 	}
 	
 
