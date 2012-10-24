@@ -10,6 +10,7 @@ import java.util.ArrayList;
  *
  */
 
+@SuppressWarnings("unused")
 public interface IFDBSupplier 
 {
  	//get a supplier with the given id.
