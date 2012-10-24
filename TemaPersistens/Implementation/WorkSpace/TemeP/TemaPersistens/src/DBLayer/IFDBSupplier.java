@@ -1,6 +1,7 @@
 package DBLayer;
 
 import ModelLayer.*;
+
 import java.util.ArrayList;
 
 /**
@@ -9,6 +10,10 @@ import java.util.ArrayList;
  *
  */
 
-public interface IFDBSupplier {
+public interface IFDBSupplier 
+{
+ 	//get a supplier with the given id.
+	public Supplier findSupplier(int suppliernum, boolean retrieveAssociation); 
+	
 
 }
