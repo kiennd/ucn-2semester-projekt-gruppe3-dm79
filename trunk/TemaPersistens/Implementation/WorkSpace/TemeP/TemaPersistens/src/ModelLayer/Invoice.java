@@ -12,6 +12,11 @@ public class Invoice {
 	this.paymentDate = paymentDate;
 	this.totalAmount = totalAmount;
 	}
+	public Invoice()
+	{
+	
+	}
+	
 
 	public int getInvoiceNo() {
 		return invoiceNo;
