@@ -1,0 +1,13 @@
+insert into Supplier values (330, 'Aarhus A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (331, 'Aabybro A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (332, 'Hamburg A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (333, 'Nike', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (334, 'Denim A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (335, 'Cowboys A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (336, 'Copenhagen A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (337, 'Thisted A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (338, 'Cromwell A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (339, 'Lagoon A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (340, 'UCN A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (341, 'Crown A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
+insert into Supplier values (342, 'Longoria A/S', 'Aalbogvej 13', 'USA', 50124574, 'aa@aalb.dk');
