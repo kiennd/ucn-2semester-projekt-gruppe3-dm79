@@ -4,7 +4,7 @@ import ModelLayer.*;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DBCustomer
+public class DBCustomer implements IFDBCustomer
 {
 private Connection con;
 
@@ -34,7 +34,7 @@ public Customer findCustomerByLname(String lname, boolean retrieveAssociation)
 	return singleWhere(wClause, retrieveAssociation);
 }
 
-public ArrayList<Customer> getAllCustomers(boolean retrieveAssociation)
+public ArrayList<Customer> getAllCustomer(boolean retrieveAssociation)
 {
 	return miscWhere("", retrieveAssociation);
 }
