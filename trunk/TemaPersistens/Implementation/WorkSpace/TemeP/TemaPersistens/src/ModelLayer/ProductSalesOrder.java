@@ -18,6 +18,11 @@ public class ProductSalesOrder
 		this.quantity = quantity;
 	}
 
+	
+	public ProductSalesOrder()
+	{
+		
+	}
 
 	
 	// setters and getters.

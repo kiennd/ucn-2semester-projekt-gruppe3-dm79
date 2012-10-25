@@ -23,6 +23,24 @@ public class SalesOrder
 		Myinvoice = invoice;
 	}
 
+	//Empty constructor for creating objects of SalesOrder.
+	public SalesOrder()
+	{
+		
+	}
+	
+	
+	/**
+	 * 
+	 * constructor for creating objects of salesorder with the given id.
+	 */
+	
+	public SalesOrder(int salesOrderID)
+	{
+		this.salesOrderID = salesOrderID;
+	}
+	
+	
 	public int getSalesOrderID() {
 		return salesOrderID;
 	}
