@@ -9,7 +9,7 @@ public interface IFDBCustomer
 	//get one customer by pno
 	public Customer findCustomer(String pno, boolean retriveAssociation);
 	//insert a new customer
-	public int insertEmployee(Customer cus) throws Exception;
+	public int insertCustomer(Customer cus) throws Exception;
 	//update information about an customer
 	public int updateCustomer(Customer cus);
 	
