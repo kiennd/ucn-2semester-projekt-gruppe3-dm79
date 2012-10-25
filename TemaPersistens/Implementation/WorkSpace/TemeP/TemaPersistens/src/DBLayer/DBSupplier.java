@@ -44,7 +44,7 @@ public class DBSupplier
         }
        catch(Exception e)
        {
-           System.out.println("error in building product object");
+           System.out.println("error in building supplier object");
        }
        return supplierObj;
     }
