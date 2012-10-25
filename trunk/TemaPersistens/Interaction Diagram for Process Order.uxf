@@ -17,7 +17,7 @@ Interaction Diagram for Process Order</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>710</x>
-      <y>620</y>
+      <y>550</y>
       <w>140</w>
       <h>30</h>
     </coordinates>
@@ -27,27 +27,27 @@ Interaction Diagram for Process Order</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>710</x>
-      <y>490</y>
+      <x>1070</x>
+      <y>550</y>
       <w>140</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>SalesOrderDB</panel_attributes>
+    <panel_attributes>DBSalesOrder</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>740</x>
-      <y>370</y>
-      <w>70</w>
-      <h>140</h>
+      <x>820</x>
+      <y>520</y>
+      <w>270</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 2.
 
 </panel_attributes>
-    <additional_attributes>40;120;40;30</additional_attributes>
+    <additional_attributes>250;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -135,13 +135,13 @@ Interaction Diagram for Process Order</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>740</x>
-      <y>490</y>
+      <y>370</y>
       <w>68</w>
-      <h>150</h>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 3. 
 </panel_attributes>
-    <additional_attributes>40;130;40;30</additional_attributes>
+    <additional_attributes>40;180;40;30</additional_attributes>
   </element>
 </diagram>
