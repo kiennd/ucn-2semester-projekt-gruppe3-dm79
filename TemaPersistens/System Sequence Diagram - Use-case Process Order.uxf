@@ -31,10 +31,10 @@ bg=green</panel_attributes>
       <x>1030</x>
       <y>140</y>
       <w>50</w>
-      <h>820</h>
+      <h>710</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;800;30;30</additional_attributes>
+    <additional_attributes>30;690;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -42,10 +42,10 @@ bg=green</panel_attributes>
       <x>350</x>
       <y>160</y>
       <w>50</w>
-      <h>770</h>
+      <h>690</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;750;30;30</additional_attributes>
+    <additional_attributes>30;670;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
