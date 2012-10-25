@@ -42,8 +42,8 @@ private ArrayList<Customer> miscWhere(String wClause, boolean retrieveAssociatio
              {   //The supervisor and department is to be build as well
                  for(Customer cusObj : list){
                     String superssn = empObj.getSupervisor().getSsn();
-                    Employee superEmp = singleWhere(" ssn = '" + superssn + "'",false);
-                    empObj.setSupervisor(superEmp);
+                    Customer superEmp = singleWhere(" ssn = '" + superssn + "'",false);
+                    cusObj.setSupervisor(superEmp);
                     System.out.println("Supervisor is seleceted");
                    // here the department has to be selected as well
                  }
