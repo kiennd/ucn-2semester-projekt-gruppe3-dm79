@@ -68,7 +68,7 @@ createCustomer(customer)</panel_attributes>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;
-EnterProduct(productID)</panel_attributes>
+findProduct(productID)</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
   <element>
