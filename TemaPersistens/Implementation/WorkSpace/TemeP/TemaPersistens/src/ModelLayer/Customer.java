@@ -25,6 +25,10 @@ public class Customer
 		this.zipCode = zipCode;
 		this.city = city;
 	}
+	public Customer()
+	{
+		//tom
+	}
 	 
 
 
