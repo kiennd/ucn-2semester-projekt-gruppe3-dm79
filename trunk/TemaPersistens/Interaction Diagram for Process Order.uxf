@@ -52,16 +52,16 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>372</x>
+      <x>384</x>
       <y>156</y>
-      <w>338</w>
+      <w>332</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1. createOrder(salesOrder)
-4. c = createCustomer(Customer cus)
+4. c = insertCustomer(Customer cus)
 6. findProduct(productID)</panel_attributes>
-    <additional_attributes>180;156;180;36</additional_attributes>
+    <additional_attributes>168;156;168;36</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
@@ -129,7 +129,7 @@ fg=red</panel_attributes>
       <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-5. c = createCustomer(Customer cus)</panel_attributes>
+5. c = insertCustomer(Customer cus)</panel_attributes>
     <additional_attributes>36;60;324;60</additional_attributes>
   </element>
   <element>
