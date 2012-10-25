@@ -69,19 +69,56 @@ String qry = "INSERT INTO Customer(custID, fname, lname, address, pno, email, cu
 	return (rc);
 		
 }
+
 public int updateCustomer(Customer cus)
 {
 	Customer cusobj = cus;
 	int rc= -1;
 	
+	String qry = "UPDATE Customer SET" + "fname = '" + cusobj.getFname()+"', " +
+			"lname ='" + cusobj.getLname() + "', " +
+			"address ='" + cusobj.getAddress() + "', " +
+			"pno ='" + cusobj.getPno() + "', " +
+			"email ='" + cusobj.getEmail() + "', " +
+			"custType ='" + cusobj.getCustID() + "', " +
+			"zipCode ='" + cusobj.getZipCode() + "', " +
+			"city ='" + cusobj.getCity() + "',";
+			System.out.println("Update query: " + qry);
+			try
+			{
+				Statement stmt = con.createStatement();
+		 		stmt.setQueryTimeout(5);
+		 	 	rc = stmt.executeUpdate(qry);
+
+		 	 	stmt.close();
+			}
+			catch(Exception ex)
+			{
+				System.out.println("Update exception in Customer db: " + ex);
+			}
+			return(rc);
+			
 }
 
-
-
-
-
-
-
+private int deleteCustomer(String pno)
+{
+	int rc =-1;
+			
+			String qry = "DELETE FROM Customer WHERE pno = '" + pno + "'";
+			System.out.println(qry);
+			try
+			{
+				Statement stmt = con.createStatement();
+		 		stmt.setQueryTimeout(5);
+		 	  	rc = stmt.executeUpdate(qry);
+		 	  	stmt.close();
+			}
+			 catch(Exception ex)
+			 {
+			 	  	System.out.println("Delete exception in Customer db: "+ex);
+		   	 }
+			return(rc);
+}
 
 private Customer buildCustomer(ResultSet results)
 {
