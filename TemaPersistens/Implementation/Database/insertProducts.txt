@@ -1,0 +1,21 @@
+
+
+insert into Product values (111, 20.50, 30.50, 5.50, 'USA', 50, 'large', 'blue', null, null, null, 330, null,'Cowboy Hat', 'Clothing');
+insert into Product values (112, 21.50, 31.50, 4.50, 'Denmark', 50, 'medium', 'green', null, null, null, 331, null, 'Cowboy Boots', 'Clothing');
+insert into Product values (113, 32.50, 50.50, 5.50, 'France', 50, 'medium', 'yellow', null, null, null, 332, null, 'Ponchos', 'Clothing');
+insert into Product values (114, 50.50, 65.50, 5.50, 'Germany', 50, 'large', 'blue', null, null, null, 333, null, 'Denims', 'Clothing');
+
+
+
+
+insert into Product values (115, 11.50, 21.50, 4.50, 'USA', 50, null, null, 'New Model', 'describe prod', null, 334, null, 'Licence Plates', 'Equipment');
+insert into Product values (116, 27.50, 37.50, 5.50, 'Nigeria', 50, null, null, 'New Model', 'describe prod', null, 335, null, 'Bags', 'Equipment');
+insert into Product values (117, 25.50, 41.50, 4.50, 'Faroe Islands', 50, null, null, 'New Model', 'describe prod', null, 336, null, 'Ornaments', 'Equipment');
+insert into Product values (118, 20.50, 30.50, 5.50, 'Hawai', 50, null, null, 'New Model', 'describe prod', null, 337, null, 'Pistol Belts', 'Equipment');
+
+
+
+insert into Product values (119, 71.50, 91.50, 4.50, 'France', 50, null, null, null, null, 'silver', 338, 0.02, 'Texas Ranger', 'GunReplicas');
+insert into Product values (120, 28.50, 60.50, 5.50, 'Denmark', 50, null, null, null, null, 'gold', 339, 0.18, 'Deringer Pistol', 'GunReplicas');
+insert into Product values (121, 43.50, 67.50, 5.50, 'Faroe Islands', 50, null, null, null, null, 'metal', 340, 0.1, 'Frontier Revolver', 'GunReplicas');
+insert into Product values (122, 61.50, 90.50, 4.50, 'Nigeria', 50, null, null, null, null, 'aluminium', 341, 0.4, 'Dragoon Revolver', 'GunReplicas');
