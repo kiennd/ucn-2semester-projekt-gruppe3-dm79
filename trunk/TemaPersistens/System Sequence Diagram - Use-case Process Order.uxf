@@ -4,8 +4,8 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>250</x>
-      <y>70</y>
+      <x>340</x>
+      <y>90</y>
       <w>80</w>
       <h>120</h>
     </coordinates>
@@ -16,8 +16,8 @@ Actor</panel_attributes>
   <element>
     <type>com.umlet.element.custom.Systemborder</type>
     <coordinates>
-      <x>930</x>
-      <y>120</y>
+      <x>1020</x>
+      <y>140</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
@@ -28,30 +28,30 @@ bg=green</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>940</x>
-      <y>120</y>
-      <w>50</w>
-      <h>660</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;640;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>260</x>
+      <x>1030</x>
       <y>140</y>
       <w>50</w>
-      <h>640</h>
+      <h>820</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;620;30;30</additional_attributes>
+    <additional_attributes>30;800;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>180</y>
+      <x>350</x>
+      <y>160</y>
+      <w>50</w>
+      <h>770</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;750;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>240</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -62,8 +62,8 @@ createCustomer(customer)</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>280</y>
+      <x>350</x>
+      <y>340</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -74,8 +74,8 @@ EnterProduct(productID)</panel_attributes>
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>280</x>
-      <y>0</y>
+      <x>370</x>
+      <y>20</y>
       <w>420</w>
       <h>40</h>
     </coordinates>
@@ -86,20 +86,20 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>130</y>
+      <x>350</x>
+      <y>150</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>lt=.&gt;
+    <panel_attributes>lt=&lt;
 createOrder(salesOrder)</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>230</y>
+      <x>350</x>
+      <y>290</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -111,8 +111,8 @@ return customer
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>330</y>
+      <x>350</x>
+      <y>390</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -124,8 +124,21 @@ return product
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>380</y>
+      <x>350</x>
+      <y>440</y>
+      <w>730</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+calculateTotalAmount()
+</panel_attributes>
+    <additional_attributes>710;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>540</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -137,21 +150,8 @@ return totalAmount
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>480</y>
-      <w>730</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-return paymentInfo
-</panel_attributes>
-    <additional_attributes>710;50;30;50</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>260</x>
-      <y>530</y>
+      <x>350</x>
+      <y>590</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -163,53 +163,87 @@ endSalesOrder(salesOrderID)
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>430</y>
+      <x>350</x>
+      <y>490</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
-    <panel_attributes>lt=&lt;
-recivePaymentInfo
+    <panel_attributes>lt=.&gt;
+return discount</panel_attributes>
+    <additional_attributes>710;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>640</y>
+      <w>730</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+saveSalesOrder
 </panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>580</y>
+      <x>350</x>
+      <y>690</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
-saveSalesOrder()
+printSalesOrder
 </panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>630</y>
+      <x>350</x>
+      <y>740</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
-printSalesOrder()
-</panel_attributes>
+sendSalesOrder</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>370</y>
+      <w>800</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>370</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_Loop_
+fg=
+bg=green</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>680</y>
+      <x>350</x>
+      <y>190</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
-sendSalesOrder()
-</panel_attributes>
+return Order</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
 </diagram>
