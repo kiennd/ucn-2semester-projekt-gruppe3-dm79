@@ -7,7 +7,9 @@ public interface IFDBCustomer
 	// Get all customers
 	public ArrayList<Customer> getAllCustomer(boolean retriveAssociation);
 	//get one customer by pno
-	public Customer findCustomer(String pno, boolean retriveAssociation);
+	public Customer findCustomerByPno(String pno, boolean retriveAssociation);
+	public Customer findCustomerByFname(String pno, boolean retriveAssociation);
+	public Customer findCustomerByLname(String pno, boolean retriveAssociation);
 	//insert a new customer
 	public int insertCustomer(Customer cus) throws Exception;
 	//update information about an customer
