@@ -207,20 +207,33 @@ public class DBProduct implements IFDBProduct
         try
 		  {
 				// the columns from product table are used.
-        	prodObj.setName(results.getString("name"));  
+        	prodObj.setName(results.getString("name"));
+        	System.out.println("1");
         	prodObj.setProductId(results.getInt("productid"));
+        	System.out.println("2");
               prodObj.setPurchasePrice(results.getDouble("purchaseprice"));
+              System.out.println("3");
               prodObj.setSalesPrice(results.getDouble("salesprice"));
+              System.out.println("4");
               prodObj.setRentPrice(results.getDouble("rentprice"));
+              System.out.println("5");
               prodObj.setCountryOfOrigin(results.getString("countryoforigin"));
+              System.out.println("6");
               prodObj.setMinStock(results.getInt("minimumstock"));
+              System.out.println("7");
               prodObj.setSize(results.getString("size"));
+              System.out.println("8");
               prodObj.setColour(results.getString("colour"));
+              System.out.println("9");
               prodObj.setType(results.getString("producttype"));
+              System.out.println("10");
               prodObj.setDescription(results.getString("productdescription"));
+              System.out.println("11");
               prodObj.setFabric(results.getString("fabric"));
-              prodObj.setCalibre(results.getString("calbre"));
-              prodObj.setSupplier(new Supplier(results.getInt("supplierid")));
+              System.out.println("12");
+              prodObj.setCalibre(results.getDouble("calibre"));
+             System.out.println("13");
+             prodObj.setSupplier(new Supplier(results.getInt("supplier")));
         }
        catch(Exception e)
        {
