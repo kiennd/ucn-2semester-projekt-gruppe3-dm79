@@ -3,11 +3,11 @@ import ModelLayer.*;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DBInvoice
+public class DBInvoice implements IFDBInvoice
 {
 	private Connection con;
 	
-	public DBInvoice()
+	public DBInvoice() 
 	{
 		con = DbConnection1.getInstance().getDBcon();
 	}
