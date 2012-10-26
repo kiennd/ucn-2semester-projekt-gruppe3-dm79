@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="11.5.1">
-  <zoom_level>12</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>276</x>
-      <y>72</y>
-      <w>564</w>
-      <h>48</h>
+      <x>319</x>
+      <y>44</y>
+      <w>517</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>bg=blue
 Interaction Diagram for Process Order</panel_attributes>
@@ -16,10 +16,10 @@ Interaction Diagram for Process Order</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>468</x>
-      <y>528</y>
-      <w>168</w>
-      <h>36</h>
+      <x>495</x>
+      <y>616</y>
+      <w>154</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>SalesOrder</panel_attributes>
     <additional_attributes/>
@@ -27,10 +27,10 @@ Interaction Diagram for Process Order</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>900</x>
-      <y>528</y>
-      <w>168</w>
-      <h>36</h>
+      <x>902</x>
+      <y>616</y>
+      <w>154</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>DBSalesOrder</panel_attributes>
     <additional_attributes/>
@@ -38,38 +38,48 @@ Interaction Diagram for Process Order</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>600</x>
-      <y>492</y>
-      <w>324</w>
-      <h>112</h>
+      <x>616</x>
+      <y>583</y>
+      <w>309</w>
+      <h>116</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 3. createOrder(salesOrder)
 8.endSalesOrder(salesOrderID)
-fg=red</panel_attributes>
-    <additional_attributes>300;60;36;60</additional_attributes>
+7. c = insertCustomer(Customer cus)</panel_attributes>
+    <additional_attributes>286;55;33;55</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>384</x>
-      <y>156</y>
-      <w>332</w>
-      <h>180</h>
+      <x>407</x>
+      <y>99</y>
+      <w>312</w>
+      <h>263</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1. createOrder(salesOrder)
 4. c = insertCustomer(Customer cus)
-6. findProduct(productID)</panel_attributes>
-    <additional_attributes>168;156;168;36</additional_attributes>
+8. findProduct(productID)
+10. insertProduct(productID, quantity)
+
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes>165;242;165;33</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>468</x>
-      <y>312</y>
-      <w>168</w>
-      <h>36</h>
+      <x>495</x>
+      <y>341</y>
+      <w>154</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>SalesOrderCtr</panel_attributes>
     <additional_attributes/>
@@ -77,10 +87,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>468</x>
-      <y>156</y>
-      <w>168</w>
-      <h>36</h>
+      <x>495</x>
+      <y>99</y>
+      <w>154</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>SalesOrderUI</panel_attributes>
     <additional_attributes/>
@@ -88,10 +98,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>900</x>
-      <y>312</y>
-      <w>168</w>
-      <h>36</h>
+      <x>902</x>
+      <y>385</y>
+      <w>154</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>InvoiceCtr</panel_attributes>
     <additional_attributes/>
@@ -99,10 +109,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>12</x>
-      <y>312</y>
-      <w>168</w>
-      <h>36</h>
+      <x>55</x>
+      <y>341</y>
+      <w>154</w>
+      <h>33</h>
     </coordinates>
     <panel_attributes>CustomerCtr</panel_attributes>
     <additional_attributes/>
@@ -110,39 +120,63 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>600</x>
-      <y>276</y>
-      <w>324</w>
-      <h>84</h>
+      <x>616</x>
+      <y>330</y>
+      <w>307</w>
+      <h>87</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-7.calculateTotalAmount()
-fg=red</panel_attributes>
-    <additional_attributes>300;60;36;60</additional_attributes>
+     7.calculateTotalAmount()
+</panel_attributes>
+    <additional_attributes>286;66;121;66;121;33;33;33</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>144</x>
-      <y>276</y>
-      <w>348</w>
-      <h>84</h>
+      <x>176</x>
+      <y>308</y>
+      <w>340</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 5. c = insertCustomer(Customer cus)</panel_attributes>
-    <additional_attributes>36;60;324;60</additional_attributes>
+    <additional_attributes>33;55;319;55</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>420</x>
-      <y>312</y>
-      <w>262</w>
-      <h>240</h>
+      <x>407</x>
+      <y>341</y>
+      <w>310</w>
+      <h>296</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 2. createOrder(salesOrder) 
-fg=red</panel_attributes>
-    <additional_attributes>132;216;132;36</additional_attributes>
+6. c = insertCustomer(Customer cus)
+</panel_attributes>
+    <additional_attributes>165;275;165;33</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>902</x>
+      <y>297</y>
+      <w>154</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>ProductCtr</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>616</x>
+      <y>286</y>
+      <w>307</w>
+      <h>87</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+     9. findProduct(productID)</panel_attributes>
+    <additional_attributes>286;33;121;33;121;66;33;66</additional_attributes>
   </element>
 </diagram>
