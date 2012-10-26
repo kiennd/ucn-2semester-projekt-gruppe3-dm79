@@ -1,5 +1,7 @@
 package ModelLayer;
 
+import java.util.ArrayList;
+
 public class SalesOrder 
 {
 	private int salesOrderID;
@@ -10,7 +12,7 @@ public class SalesOrder
 	private double totalAmount;
 	private Customer myCustomer;
 	private Invoice Myinvoice;
-	productsalesorder(arraylist)
+	ArrayList <ProductSalesOrder> productsalesorderlist;
 	
 	private SalesOrder(int salesOrderID, String creationDate, String deliveryDate, String deliveryStatus, String status, double totalAmount, Customer customer, Invoice invoice)
 	{
@@ -22,6 +24,7 @@ public class SalesOrder
 		this.totalAmount = totalAmount;
 		myCustomer = customer;
 		Myinvoice = invoice;
+		productsalesorderlist = new ArrayList<ProductSalesOrder>();   
 	}
 
 	//Empty constructor for creating objects of SalesOrder.
@@ -105,6 +108,13 @@ public class SalesOrder
 	public void setInvoice(Invoice invoice) {
 		this.Myinvoice = invoice;
 	}
+	
+	
+    public void addProductSalesOrder(ProductSalesOrder newitem)
+    {
+    	productsalesorderlist.add(newitem);
+    }
+    
 	
 
 }
