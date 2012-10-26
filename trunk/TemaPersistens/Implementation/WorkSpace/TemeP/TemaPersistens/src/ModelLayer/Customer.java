@@ -1,7 +1,6 @@
 package ModelLayer;
 import java.util.ArrayList;
 
-import DBLayer.*;
 public class Customer
 {
 	private int custID;
