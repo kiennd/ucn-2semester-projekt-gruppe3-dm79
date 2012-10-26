@@ -9,6 +9,6 @@ public interface IFDBSalesOrder
 	//Finder en salgsordre
 	public ArrayList<SalesOrder> findSaleOrder(String salesOrderID);
 	
-	public int createSalesOrder(SaleOrder sal) throws Exception;
+	public int createSalesOrder(SalesOrder sal) throws Exception;
 	
 }
