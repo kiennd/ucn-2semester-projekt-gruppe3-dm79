@@ -151,7 +151,7 @@ m2=1
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>930</x>
-      <y>10</y>
+      <y>20</y>
       <w>140</w>
       <h>170</h>
     </coordinates>
@@ -169,15 +169,15 @@ m2=1
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>970</x>
-      <y>150</y>
+      <y>160</y>
       <w>50</w>
-      <h>140</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=0..*
 </panel_attributes>
-    <additional_attributes>30;30;30;120</additional_attributes>
+    <additional_attributes>30;30;30;110</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
