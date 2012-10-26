@@ -1,7 +1,7 @@
 package ModelLayer;
 import java.util.ArrayList;
 
-import DBLayer.SaleOrder;
+import DBLayer.*;
 public class Customer
 {
 	private int custID;
