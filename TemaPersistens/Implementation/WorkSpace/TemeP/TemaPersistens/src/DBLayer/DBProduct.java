@@ -159,7 +159,7 @@ public class DBProduct implements IFDBProduct
 	        ArrayList<Product> list = new ArrayList <Product>();
 
 	        String query = buildQuery(wClause);
-
+	        System.out.println(query);
 	         try{ 
 					// read the Products from the database
 	            Statement stmt = con.createStatement();
@@ -207,8 +207,8 @@ public class DBProduct implements IFDBProduct
         try
 		  {
 				// the columns from product table are used.
-              prodObj.setProductId(results.getInt("productid"));
-              prodObj.setName(results.getString("name"));
+        	prodObj.setName(results.getString("name"));  
+        	prodObj.setProductId(results.getInt("productid"));
               prodObj.setPurchasePrice(results.getDouble("purchaseprice"));
               prodObj.setSalesPrice(results.getDouble("salesprice"));
               prodObj.setRentPrice(results.getDouble("rentprice"));

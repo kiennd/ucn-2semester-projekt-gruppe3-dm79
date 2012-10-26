@@ -10,6 +10,7 @@ public class SalesOrder
 	private double totalAmount;
 	private Customer myCustomer;
 	private Invoice Myinvoice;
+	productsalesorder(arraylist)
 	
 	private SalesOrder(int salesOrderID, String creationDate, String deliveryDate, String deliveryStatus, String status, double totalAmount, Customer customer, Invoice invoice)
 	{
