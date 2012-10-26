@@ -3,7 +3,7 @@ import ModelLayer.*;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DBInvoice 
+public class DBInvoice
 {
 	private Connection con;
 	
@@ -14,7 +14,7 @@ public class DBInvoice
 	
 	public Invoice findInvoice(int invoice, boolean retrieveAssociation)
 	{
-		String wClause = "invoice = " + invoice;
+		String wClause = "invoiceNo = " + invoice;
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	public ArrayList<Invoice> getAllInvoice(boolean retrieveAssociation)
@@ -24,7 +24,25 @@ public class DBInvoice
 	
 	public int insertInvoice(Invoice inv) throws Exception
 	{
-		
+		int rc = -1;
+				String qry = "INSERT INTO Invoice(invoiceNo, paymentDate, totalAmount) VALUES '"+
+		inv.getInvoiceNo() + "', '" +
+		inv.getPaymentDate() + "', '" +
+		inv.getTotalAmount() + "', '" + "', 1234)";
+		System.out.println("insert : " + qry);
+		try
+		{
+			Statement stmt = con.createStatement();
+	        stmt.setQueryTimeout(5);
+	   	    rc = stmt.executeUpdate(qry);
+	        stmt.close();
+		}
+		catch(SQLException ex)
+		{
+			System.out.println("Invoice er ikke oprettet");
+			throw new Exception("Invoice er ikke tilføjet");
+		}
+		return (rc);
 	}
 	
 	
