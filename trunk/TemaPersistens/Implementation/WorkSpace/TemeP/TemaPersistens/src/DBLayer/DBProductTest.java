@@ -26,6 +26,7 @@ public class DBProductTest {
 		}
 		
 	}
+	
 
 	@Test
 	public void testFindProduct() {
