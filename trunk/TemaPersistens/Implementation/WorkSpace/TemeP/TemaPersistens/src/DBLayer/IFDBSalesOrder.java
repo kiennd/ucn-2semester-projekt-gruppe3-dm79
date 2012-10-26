@@ -7,8 +7,11 @@ import java.util.ArrayList;
 public interface IFDBSalesOrder 
 {
 	//Finder en salgsordre
-	public ArrayList<SalesOrder> findSaleOrder(String salesOrderID);
+	public SalesOrder findSaleOrder(int salID, boolean retriveAssociation);
 	
-	public int createSalesOrder(SalesOrder sal) throws Exception;
+	public int insertSaleOrder(SalesOrder saO) throws Exception;
+	
+	public ArrayList<SalesOrder> getAllSaleOrders(boolean retriveAssociation);
+	
 	
 }
