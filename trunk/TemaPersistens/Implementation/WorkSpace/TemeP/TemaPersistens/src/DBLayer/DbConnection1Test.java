@@ -10,7 +10,6 @@ public class DbConnection1Test {
 
 	@Test
 	public void testGetInstance() {
-
 		Connection con = DbConnection1.getInstance().getDBcon();
 		if(con != null)
 		{
@@ -24,4 +23,10 @@ public class DbConnection1Test {
 		
 	}
 
+
+		
+	
+
 }
+
+

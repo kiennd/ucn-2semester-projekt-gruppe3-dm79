@@ -4,7 +4,7 @@ public class DbConnection1
 {
 	 //constants used to get access to the database
 		//SQL Server
-	   private static final String  driver = "balder.ucn.dk:1433";
+	   private static final String  driver =  "jdbc:sqlserver://balder.ucn.dk:1433";
 	   private static final String  databaseName = ";databaseName=dm79_3";
 	//jdbc:sqlserver://URL\SQLEXPRESS/Databases/EPS:1357;user=epsingall;password=welkom1;
 	    //SQL Server
