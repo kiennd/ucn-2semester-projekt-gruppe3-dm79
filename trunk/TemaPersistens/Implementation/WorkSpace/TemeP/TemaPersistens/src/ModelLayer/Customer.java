@@ -1,5 +1,7 @@
 package ModelLayer;
+import java.util.ArrayList;
 
+import DBLayer.SaleOrder;
 public class Customer
 {
 	private int custID;
@@ -11,6 +13,7 @@ public class Customer
 	private String custType;
 	private String zipCode;
 	private String city;
+	private ArrayList<SalesOrder> saleOrder;
 	
 	
 	public Customer(int custID, String fname, String lname, String address, String pno, String email, String custType, String zipCode, String city)
@@ -24,13 +27,17 @@ public class Customer
 		this.custType = custType;
 		this.zipCode = zipCode;
 		this.city = city;
+		ArrayList<SalesOrder> saleOrder;
 	}
 	public Customer()
 	{
 		//tom
 	}
 	 
-
+	public void  addSaleOrder(SalesOrder mySalesOrder)
+	{
+		saleOrder.add(mySalesOrder);
+	}
 
 
 	public String getPno() {
