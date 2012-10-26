@@ -46,7 +46,7 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
 	private Product singleWhere(String wClause, boolean retrieveAssociation)
 	{
 		ResultSet results;
-		ProductSalesOrder prodObj = new ProductSalesOrder();        
+		ProductSalesOrder prodsalesorderObj = new ProductSalesOrder();        
 	    String query =  buildQuery(wClause);
         System.out.println(query);
 		
@@ -59,21 +59,49 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
 
 	 		if( results.next() )
 			{
-				prodObj = ProductSalesOrder(results);
+	 			prodsalesorderObj = ProductSalesOrder(results);
                 //association is to be build
                 stmt.close();
                 if(retrieveAssociation)
 					{   
 					//The productId is to be selected & built as well.
                       DBProduct dbprod = new DBProduct();
-                      dbprod.  // TODO !!!
+                      prodsalesorderObj.setProduct(dbprod.findProduct(prodsalesorderObj.getProduct().getProductId(), false));
                       
   					//The salesOrderId is to be selected & built as well.
                       DBSalesOrder dbsalesOrder = new DBSalesOrder();
-                      dbsalesOrder.  //  !!!TODO
+                      prodsalesorderObj.setSalesOrder(dbsalesOrder.findSalesOrder(prodsalesorderObj.getSalesOrder().getSalesOrderID(), false));  //  !!!TODO
                       
 					}
 			}
+		}
+	 		
+	 		
+
+	 		//method to build ProductSalesOrder object
+	 		private ProductSalesOrder buildProductSalesOrder(ResultSet results)
+	 	    {   
+	 			ProductSalesOrder prodsalesorderObj = new ProductSalesOrder();
+	 	        try
+	 			  {
+	 	// the columns from ProductSalesOrder table are used. The variable names in the get methods must correspond with the naming in the database.
+	 	        	prodsalesorderObj.setSalesOrder(new SalesOrder(results.getInt("salesid")));
+	 	        	System.out.println("getting salesId");
+	 	        	prodsalesorderObj.setProduct(new Product(results.getInt("productid"));
+	 	        	System.out.println("getting productId");
+	 	            prodsalesorderObj.setQuantity(results.getInt("quantity"));
+	 	            System.out.println("getting quantity");
+	 	           
+	 	        }
+	 	       catch(Exception e)
+	 	       {
+	 	           System.out.println("error in building ProductSalesOrder object");
+	 	       }
+	 	       return ProductSalesOrder;
+	 	    }
+	 	     
+	 	 
+	 		
 	 		
 	 		
 //michWere is used whenever we want to select more than one ProductSalesOrder. 
@@ -107,12 +135,6 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
 	 		         }
 	 		    }
 	 		
-	 		 
-	 		 		
-                                          
-
-	 		
-	 		
 	 		
 	
 	
@@ -128,26 +150,7 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
 	}
     
     
-	//method to build productsalesorder object.
-	private ProductSalesOrder buildProductSalesOrder(ResultSet results)
-    {
-		ProductSalesOrder prodSalesOrderObj = new ProductSalesOrder();
-        try
-		  {
-				// the columns from product table are used.
-        	prodSalesOrderObj.setSalesOrder(new SalesOrder(results.getInt("salesid")));
-        	prodSalesOrderObj.setProduct(new Product(results.getInt("prodid")));
-        	prodSalesOrderObj.setQuantity(results.getInt("quantity"));
-		  }
-            
-       catch(Exception e)
-       {
-           System.out.println("error in building Productsalesorder object");
-       }
-       return prodSalesOrderObj;
-    }
-     
-	
+
 	
 	
 	
