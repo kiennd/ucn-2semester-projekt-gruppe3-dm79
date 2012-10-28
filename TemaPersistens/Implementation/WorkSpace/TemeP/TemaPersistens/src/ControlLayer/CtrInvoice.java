@@ -1,4 +1,4 @@
-package src.ControlLayer;
+package ControlLayer;
 import ModelLayer.*;
 
 public class CtrInvoice {
@@ -12,9 +12,9 @@ public class CtrInvoice {
 	public ArrayList<Invoice> findAllInvoice()
 	{
 		IFDBInvoice ifdbInvoice = new DBInvoice();
-		ArrayList<Invoice> allInv = new ArrayList<Invoice>();
-		allInv = ifdbInvoice.getAllInv(false);
-		return allInv;
+		ArrayList<Invoice> allInvoice = new ArrayList<Invoice>();
+		allInvoice = ifdbInvoice.getAllInvoice(false);
+		return allInvoice;
 	}
 	
 }
