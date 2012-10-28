@@ -29,7 +29,7 @@ public Customer findCustomerByFname(String fname, boolean retrieveAssociation)
 
 public Customer findCustomerByLname(String lname, boolean retrieveAssociation)
 {
-	String wClause = "fname like '%" + lname + "%'";
+	String wClause = "lname like '%" + lname + "%'";
 	System.out.println("SearchCustomer" + wClause);
 	return singleWhere(wClause, retrieveAssociation);
 }
