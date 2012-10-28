@@ -13,12 +13,12 @@ import java.util.ArrayList;
 public interface IFDBProductSalesOrder {
 	
     //gets all productsalesorder.
-    public ArrayList<DBProductSalesOrder> getAllProductSalesOrder(boolean retriveAssociation);
+    public ArrayList<ProductSalesOrder> getAllProductSalesOrder(boolean retriveAssociation);
     
     //finds ProductSalesOrder having the sales Id.
-    public Product searchBysalesId(int supId, boolean retriveAssociation);
+    public ProductSalesOrder searchBysalesId(int supId, boolean retriveAssociation);
 
     //finds ProductSalesOrder having the product Id.
-    public Product searchByprodId(int supId, boolean retriveAssociation);
+    public ProductSalesOrder searchByprodId(int supId, boolean retriveAssociation);
 
 }

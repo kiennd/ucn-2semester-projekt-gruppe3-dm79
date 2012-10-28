@@ -84,8 +84,8 @@ public class DBProduct implements IFDBProduct
           stmt.close();
       }//end try
        catch(SQLException ex){
-          System.out.println("Employee ikke oprettet");
-          throw new Exception ("Employee is not inserted correct");
+          System.out.println("Product not created");
+          throw new Exception ("Product is not inserted correctly");
        }
        return(rc);
     }

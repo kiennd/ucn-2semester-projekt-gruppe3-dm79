@@ -34,8 +34,8 @@ public class DBSupplier
         try
 		  {
 				// the columns from supplier table are used.
-              supplierObj.setSupplierId(results.getInt("supplierid"));
               supplierObj.setName(results.getString("name"));
+              supplierObj.setSupplierId(results.getInt("supplierid"));
               supplierObj.setAddress(results.getString("address"));
               supplierObj.setCountry(results.getString("country"));
               supplierObj.setPhonenum(results.getInt("phonenumber"));

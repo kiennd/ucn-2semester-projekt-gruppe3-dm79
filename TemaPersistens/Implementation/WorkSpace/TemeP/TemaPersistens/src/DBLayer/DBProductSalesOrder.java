@@ -22,28 +22,30 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
 	 */    
 	
 	//method to list all productsalesorder.
-    public ArrayList<DBProductSalesOrder> getAllProductSalesOrder(boolean retriveAssociation)
+    public ArrayList<ProductSalesOrder> getAllProductSalesOrder(boolean retriveAssociation)
     {   
     	return miscWhere("", retriveAssociation);   
     }
     
     //method to find salesorders having the sales Id.
-    public SalesOrder searchBysalesId(int salesId, boolean retriveAssociation)
+    public ProductSalesOrder searchBysalesId(int salesId, boolean retriveAssociation)
     {
     	String wClause = "  salesOrder = '" + salesId + "'";
     	return singleWhere(wClause, retriveAssociation);
     }
 
     //method to find Products with product Id.
-    public Product searchByprodId(int prodId, boolean retriveAssociation)
+    public ProductSalesOrder searchByprodId(int prodId, boolean retriveAssociation)
     {
     	String wClause = "  product = '" + prodId + "'";
     	return singleWhere(wClause, retriveAssociation);
     }
 
     
+    
+    
 	//SingleWhere is used to select one product. 	
-	private Product singleWhere(String wClause, boolean retrieveAssociation)
+	private ProductSalesOrder singleWhere(String wClause, boolean retrieveAssociation)
 	{
 		ResultSet results;
 		ProductSalesOrder prodsalesorderObj = new ProductSalesOrder();        
@@ -57,9 +59,8 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
 	 		stmt.setQueryTimeout(5);
 	 		results = stmt.executeQuery(query);
 
-	 		if( results.next() )
-			{
-	 			prodsalesorderObj = ProductSalesOrder(results);
+	 		if( results.next() ){
+	 			prodsalesorderObj = buildProductSalesOrder(results);
                 //association is to be build
                 stmt.close();
                 if(retrieveAssociation)
@@ -69,38 +70,54 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
                       prodsalesorderObj.setProduct(dbprod.findProduct(prodsalesorderObj.getProduct().getProductId(), false));
                       
   					//The salesOrderId is to be selected & built as well.
-                      DBSalesOrder dbsalesOrder = new DBSalesOrder();
-                      prodsalesorderObj.setSalesOrder(dbsalesOrder.findSalesOrder(prodsalesorderObj.getSalesOrder().getSalesOrderID(), false));  //  !!!TODO
-                      
+                      DBSaleOrder dbsalesOrder = new DBSaleOrder();
+                      prodsalesorderObj.setSalesOrder(dbsalesOrder.findSaleOrder(prodsalesorderObj.getSalesOrder().getSalesOrderID(), false));
 					}
-			}
-		}
+	 		}
+	 		else{
+			 //no product was found
+	 			prodsalesorderObj = null;
+	 			}
+		}//end try	
+
+	 	catch(Exception e)
+	 	{
+	 		System.out.println("Query exception: "+e);
+	 	}
+		return prodsalesorderObj;
+	}
+    
+	
 	 		
 	 		
 
-	 		//method to build ProductSalesOrder object
-	 		private ProductSalesOrder buildProductSalesOrder(ResultSet results)
-	 	    {   
-	 			ProductSalesOrder prodsalesorderObj = new ProductSalesOrder();
-	 	        try
-	 			  {
-	 	// the columns from ProductSalesOrder table are used. The variable names in the get methods must correspond with the naming in the database.
-	 	        	prodsalesorderObj.setSalesOrder(new SalesOrder(results.getInt("salesid")));
-	 	        	System.out.println("getting salesId");
-	 	        	prodsalesorderObj.setProduct(new Product(results.getInt("productid"));
-	 	        	System.out.println("getting productId");
-	 	            prodsalesorderObj.setQuantity(results.getInt("quantity"));
-	 	            System.out.println("getting quantity");
-	 	           
-	 	        }
-	 	       catch(Exception e)
-	 	       {
-	 	           System.out.println("error in building ProductSalesOrder object");
-	 	       }
-	 	       return ProductSalesOrder;
-	 	    }
-	 	     
-	 	 
+		
+//method to build ProductSalesOrder object
+ 		private ProductSalesOrder buildProductSalesOrder(ResultSet results)
+ 	    {   
+ 			ProductSalesOrder prodsalesorderObj = new ProductSalesOrder();
+			Product prodobj = new Product();
+			SalesOrder salesorderObj = new SalesOrder();
+ 	        try
+ 			  {
+
+ //The columns from ProductSalesOrder table are used. 
+ //The variable names & order in the get methods must correspond with those in the database.
+ 	        	salesorderObj.setSalesOrderID(results.getInt("salesid"));
+ 	        	System.out.println("getting salesId");
+ 	        	prodobj.setProductId(results.getInt("productid"));
+ 	        	System.out.println("getting productId");
+ 	        	prodsalesorderObj.setQuantity(results.getInt("quantity"));
+ 	            System.out.println("getting quantity");
+ 			  }
+			
+			catch(Exception e){
+								System.out.println("Error in buildinng sale order");
+								}
+ 	        return prodsalesorderObj;
+ 	     }
+
+	 
 	 		
 	 		
 	 		
@@ -152,7 +169,7 @@ public class DBProductSalesOrder implements IFDBProductSalesOrder
     
 
 	
-	
+
 	
 	
 }//end of class DBProductSalesOrder.
