@@ -25,8 +25,14 @@ public class CtrSalesOrder {
              return allsaleorders; 
            }
     
-  
-	
-	
  
+	
+	
+    public Product searchProductSupId(int supId)
+    {
+    	 IFDBProduct dbProd = new DBProduct();
+    	 return dbProd.searchProductSupId(supId, true);
+    }
+	
+
 }
