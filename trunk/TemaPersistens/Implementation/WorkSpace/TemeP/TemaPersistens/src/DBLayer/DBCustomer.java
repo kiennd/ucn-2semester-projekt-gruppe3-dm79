@@ -16,7 +16,7 @@ public DBCustomer()
 
 public Customer findCustomerByPno(String pno, boolean retrieveAssociation)
 {
-	String wClause = "pno = " + pno;
+	String wClause = "phoneno = " + pno;
 	return singleWhere(wClause, retrieveAssociation);
 }
 
@@ -42,7 +42,7 @@ public ArrayList<Customer> getAllCustomer(boolean retrieveAssociation)
 public int insertCustomer (Customer cus) throws Exception
 {
 int rc = -1;
-String qry = "INSERT INTO Customer(custID, fname, lname, address, pno, email, custType, zipcode, city) VALUES('"+
+String qry = "INSERT INTO Customer(fname, lname, custID, address, zipcode, city, phoneno, email, type) VALUES('"+
 		cus.getCity() + "', '" +
 		cus.getFname() + "', '" +
 		cus.getLname() + "', '" +
@@ -78,9 +78,9 @@ public int updateCustomer(Customer cus)
 	String qry = "UPDATE Customer SET" + "fname = '" + cusobj.getFname()+"', " +
 			"lname ='" + cusobj.getLname() + "', " +
 			"address ='" + cusobj.getAddress() + "', " +
-			"pno ='" + cusobj.getPno() + "', " +
+			"phoneno ='" + cusobj.getPno() + "', " +
 			"email ='" + cusobj.getEmail() + "', " +
-			"custType ='" + cusobj.getCustID() + "', " +
+			"type ='" + cusobj.getCustID() + "', " +
 			"zipCode ='" + cusobj.getZipCode() + "', " +
 			"city ='" + cusobj.getCity() + "',";
 			System.out.println("Update query: " + qry);
@@ -104,7 +104,7 @@ private int deleteCustomer(String pno)
 {
 	int rc =-1;
 			
-			String qry = "DELETE FROM Customer WHERE pno = '" + pno + "'";
+			String qry = "DELETE FROM Customer WHERE phoneno = '" + pno + "'";
 			System.out.println(qry);
 			try
 			{
@@ -129,9 +129,9 @@ private Customer buildCustomer(ResultSet results)
 		cusobj.setFname(results.getString("fname"));
 		cusobj.setLname(results.getString("lname"));
 		cusobj.setAddress(results.getString("address"));
-		cusobj.setPno(results.getString("pno"));
+		cusobj.setPno(results.getString("phoneno"));
 		cusobj.setEmail(results.getString("email"));
-		cusobj.setCustType(results.getString("custType"));
+		cusobj.setCustType(results.getString("type"));
 		cusobj.setZipCode(results.getString("zipcode"));
 		cusobj.setCity(results.getString("city"));
 		
@@ -146,7 +146,7 @@ private Customer buildCustomer(ResultSet results)
 
 private String buildQuery(String wClause)
 {
-	String query = "SELECT custID, fname, lname, address, pno, email, custType, zipcode, city FROM Customer";
+	String query = "SELECT fname, lname, custID, address, zipcode, city, phoneno, email, type FROM Customer";
 	if (wClause.length()>0)
 		query = query + " WHERE " + wClause;
 	return query;
