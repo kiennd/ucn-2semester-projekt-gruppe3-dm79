@@ -27,13 +27,12 @@ public ArrayList<SalesOrder> getAllSaleOrders(boolean retriveAssociation)
 public int insertSaleOrder(SalesOrder saO) throws Exception
 {
 	int rc = -1;
-	String query= "INSERT INTO SalesOrder(salesOrderID, creationDate, deliveryDate, status, totalAmount) VALUES('"+
+	String query= "INSERT INTO SalesOrder(salesorderid, creationdate, deliverydate, deliverystatus, totalamount, customer, invoice) VALUES('"+
 	saO.getSalesOrderID() + "','" + 
 	saO.getCreationDate() + "','" + 
 	saO.getDeliveryDate() + "','" + 
-	saO.getStatus() + "','" + 
-	saO.getTotalAmount() + "','" + "', 1234)";
-	
+	saO.getDeliveryStatus() + "','" + 
+	saO.getTotalAmount() + "','" + "', 2, 5)";
 	System.out.println("insert : " + query);
 	
 	try{ // insert new employee +  dependent
@@ -130,14 +129,13 @@ private SalesOrder buildSaleOrder(ResultSet results)
 	salobj.setCustomer(cusobj);
 	try
 	{
-		salobj.setSalesOrderID(results.getInt("salesOrderID"));
-		salobj.setCreationDate(results.getString("creationDate"));
-		salobj.setDeliveryDate(results.getString("deliveryDate"));
-		salobj.setDeliveryStatus(results.getString("deliveryStatus"));
-		salobj.setStatus(results.getString("status"));
-		salobj.setTotalAmount(results.getDouble("totalAmount"));
-		cusobj.setCustID(results.getInt("custID"));
-		invobj.setInvoiceNo(results.getInt("invoiceNo"));
+		salobj.setSalesOrderID(results.getInt("salesorderid"));
+		salobj.setCreationDate(results.getString("creationdate"));
+		salobj.setDeliveryDate(results.getString("deliverydate"));
+		salobj.setDeliveryStatus(results.getString("deliverystatus"));
+		salobj.setTotalAmount(results.getDouble("totalamount"));
+		cusobj.setCustID(results.getInt("customer"));
+		invobj.setInvoiceNo(results.getInt("invoice"));
 
 	}
 	catch(Exception e)
@@ -155,14 +153,6 @@ private String buildQuery(String wClause)
 	return query;
 
 }
-
-
-
-
-
-
-
-
 
 
 

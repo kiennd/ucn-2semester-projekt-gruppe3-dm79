@@ -1,6 +1,6 @@
 package ModelLayer;
 
-import java.sql.Date;
+
 import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -16,9 +16,11 @@ public class SalesOrder
 	private String deliveryStatus;
 	private double totalAmount;
 	private Customer myCustomer;
+	private Invoice invoice;
+	
 	ArrayList <ProductSalesOrder> productsalesorderlist;
 	
-	private SalesOrder(int salesOrderID, Customer myCustomer)
+	private SalesOrder(int salesOrderID, Customer myCustomer, Invoice invoice)
 	{
 		this.salesOrderID = salesOrderID;
 		this.myCustomer = myCustomer;
@@ -28,7 +30,8 @@ public class SalesOrder
 		percentageDiscount = 0;
 		deliveryStatus = "Order Confirmed";
 		totalAmount = 0;
-		productsalesorderlist = new ArrayList<ProductSalesOrder>();   
+		productsalesorderlist = new ArrayList<ProductSalesOrder>();  
+		this.invoice = invoice;
 	}
 
 	
@@ -91,6 +94,15 @@ public class SalesOrder
 
 	public void setCustomer(Customer customer) {
 		this.myCustomer = customer;
+	}
+	
+	
+	public Invoice getInvoice(){
+		return invoice;
+	}
+	
+	public void setInvoice(Invoice invoice){
+		this.invoice = invoice;
 	}
 
 
@@ -184,9 +196,12 @@ public class SalesOrder
         }
     }
     
+    
+    
+    
 
 
 
 
 
-}
+}//end of class SalesOrder. 
