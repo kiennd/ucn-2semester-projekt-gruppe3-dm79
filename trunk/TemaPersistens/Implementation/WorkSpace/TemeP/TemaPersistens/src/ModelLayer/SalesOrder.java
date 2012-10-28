@@ -1,6 +1,10 @@
 package ModelLayer;
 
+import java.sql.Date;
 import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 public class SalesOrder 
 {
@@ -8,24 +12,23 @@ public class SalesOrder
 	private String creationDate;
 	private String deliveryDate;
 	private String deliveryStatus;
-	private String status;
 	private double totalAmount;
 	private Customer myCustomer;
-	private Invoice Myinvoice;
 	ArrayList <ProductSalesOrder> productsalesorderlist;
 	
-	private SalesOrder(int salesOrderID, String creationDate, String deliveryDate, String deliveryStatus, String status, double totalAmount, Customer customer, Invoice invoice)
+	private SalesOrder(int salesOrderID, Customer myCustomer)
 	{
 		this.salesOrderID = salesOrderID;
-		this.creationDate = creationDate;
-		this.deliveryDate = deliveryDate;
-		this.deliveryStatus = deliveryStatus;
-		this.status = status;
-		this.totalAmount = totalAmount;
-		myCustomer = customer;
-		Myinvoice = invoice;
+		this.myCustomer = myCustomer;
+		creationDate = this.getTodaysDate();
+		deliveryDate = "";
+		deliveryDate = "";
+		deliveryStatus = "Order Confirmed";
+		totalAmount = 0;
 		productsalesorderlist = new ArrayList<ProductSalesOrder>();   
 	}
+
+	
 
 	//Empty constructor for creating objects of SalesOrder.
 	public SalesOrder()
@@ -34,16 +37,18 @@ public class SalesOrder
 	}
 	
 	
-	/**
-	 * 
-	 * constructor for creating objects of salesorder with the given id.
-	 */
+	//add ProductSalesOrder - adds products and quantity to the list.
 	
-	public SalesOrder(int salesOrderID)
-	{
-		this.salesOrderID = salesOrderID;
-	}
+	public void addProductSalesOrder(SalesOrder salesOrder, Product product, int quantity)
+    {
+        totalAmount += product.getSalesPrice()*quantity;
+        ProductSalesOrder prodsale = new ProductSalesOrder(salesOrder, product, quantity);
+        productsalesorderlist.add(product.getProductId(), prodsale);
+    }
 	
+
+	
+//methods.
 	
 	public int getSalesOrderID() {
 		return salesOrderID;
@@ -77,13 +82,6 @@ public class SalesOrder
 		this.deliveryStatus = deliveryStatus;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
 
 	public double getTotalAmount() {
 		return totalAmount;
@@ -101,20 +99,24 @@ public class SalesOrder
 		this.myCustomer = customer;
 	}
 
-	public Invoice getInvoice() {
-		return Myinvoice;
-	}
 
-	public void setInvoice(Invoice invoice) {
-		this.Myinvoice = invoice;
-	}
-	
 	
     public void addProductSalesOrder(ProductSalesOrder newitem)
     {
     	productsalesorderlist.add(newitem);
     }
     
-	
+
+    
+    /** A Private Method to find todays date, and return the date in String format.
+     * @return returns todays date as a string
+     */
+    public String getTodaysDate() 
+      {
+        
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		return dateFormat.format(calendar.getTime());
+      }
 
 }
