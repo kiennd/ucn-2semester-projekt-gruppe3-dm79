@@ -11,6 +11,8 @@ public class SalesOrder
 	private int salesOrderID;
 	private String creationDate;
 	private String deliveryDate;
+	private double deliveryCost;
+	private double percentageDiscount;
 	private String deliveryStatus;
 	private double totalAmount;
 	private Customer myCustomer;
@@ -22,7 +24,8 @@ public class SalesOrder
 		this.myCustomer = myCustomer;
 		creationDate = this.getTodaysDate();
 		deliveryDate = "";
-		deliveryDate = "";
+		deliveryCost = 45;
+		percentageDiscount = 0;
 		deliveryStatus = "Order Confirmed";
 		totalAmount = 0;
 		productsalesorderlist = new ArrayList<ProductSalesOrder>();   
@@ -37,18 +40,9 @@ public class SalesOrder
 	}
 	
 	
-	//add ProductSalesOrder - adds products and quantity to the list.
-	
-	public void addProductSalesOrder(SalesOrder salesOrder, Product product, int quantity)
-    {
-        totalAmount += product.getSalesPrice()*quantity;
-        ProductSalesOrder prodsale = new ProductSalesOrder(salesOrder, product, quantity);
-        productsalesorderlist.add(product.getProductId(), prodsale);
-    }
-	
-
-	
-//methods.
+    
+    
+//Set and get methods.
 	
 	public int getSalesOrderID() {
 		return salesOrderID;
@@ -106,6 +100,26 @@ public class SalesOrder
     	productsalesorderlist.add(newitem);
     }
     
+    
+	public double getDeliveryCost() {
+		return deliveryCost;
+	}
+
+
+	public void setDeliveryCost(double deliveryCost) {
+		this.deliveryCost = deliveryCost;
+	}
+
+	
+	public double getPercentageDiscount() {
+		return percentageDiscount;
+	}
+
+
+
+	public void setPercentageDiscount(double percentageDiscount) {
+		this.percentageDiscount = percentageDiscount;
+	}
 
     
     /** A Private Method to find todays date, and return the date in String format.
@@ -118,5 +132,61 @@ public class SalesOrder
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		return dateFormat.format(calendar.getTime());
       }
+
+    
+	//add ProductSalesOrder - adds products and quantity to the list.
+	
+	public void addProductSalesOrder(SalesOrder salesOrder, Product product, int quantity)
+    {
+        
+		
+		totalAmount += product.getSalesPrice()*quantity;
+        ProductSalesOrder prodsale = new ProductSalesOrder(salesOrder, product, quantity);
+        productsalesorderlist.add(product.getProductId(), prodsale);
+        
+        //check for customertype discount
+        String custType = myCustomer.getCustType();
+        
+        if(custType == "private")
+        {
+        	if(totalAmount > 2500 )
+        		setDeliveryCost(0);
+        }
+        else if(custType == "club")
+        {
+        	if(totalAmount > 1500)
+        		setPercentageDiscount(0.05);
+        }
+    }
+	
+	
+	
+    /**
+     * removes a product and it's quantities from a salesorder and resets the price.
+     * 
+     */
+    public void removeProductSalesOrder(Product product)
+    {
+    	ProductSalesOrder pso = productsalesorderlist.get(product.getProductId());
+    	totalAmount -= product.getSalesPrice()*pso.getQuantity();
+    	productsalesorderlist.remove(product.getProductId());	
+        String custType = myCustomer.getCustType();
+        //reset customertype discount 
+        if(custType == "private")
+        {
+        	if(totalAmount <= 2500 )
+        		setDeliveryCost(45);
+        }
+        else if(custType == "club")
+        {
+        	if(totalAmount <= 1500)
+        		setPercentageDiscount(0.00);
+        }
+    }
+    
+
+
+
+
 
 }
