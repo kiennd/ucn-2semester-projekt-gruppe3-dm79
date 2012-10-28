@@ -1,29 +1,34 @@
 package ControlLayer;
-import src.ModelLayer.String;
+
 import ModelLayer.*;
+import DBLayer.*;
+
+import java.util.ArrayList;
+
 
 public class CtrInvoice {
 
 	/** Creates a new instance of CtrInvoice */
-	public CtrInvoice {
+	public CtrInvoice ()
+	{
 		
 	}
 
 	public Invoice findInvoiceNo(int invoiceNo)
 	{
 		IFDBInvoice ifdbInvoice = new DBInvoice();
-		return ifdbInvoice.findInvoiceNo(invoiceNo, true);
+		return ifdbInvoice.findInvoice(invoiceNo, true);
 	}
 	
     public ArrayList<Invoice> getAllInvoice()
     {
       IFDBInvoice  dbInvoice = new DBInvoice();
       ArrayList<Invoice> allvoice = new ArrayList<Invoice>();
-      allinvoice = dbInvoice.getAllInvoice(false);
-      return allinvoice;
+      allvoice = dbInvoice.getAllInvoice(false);
+      return allvoice;
     }
 
-	public void insertNewCustomer(int invoiceNo, String paymentDate, double totalAmount)
+	public void insertNewInvoice(int invoiceNo, String paymentDate, double totalAmount)
 	{
 		Invoice invobj = new Invoice();
 		invobj.setInvoiceNo(invoiceNo);
@@ -34,8 +39,8 @@ public class CtrInvoice {
 	{
 		
 	DbConnection1.startTransaction();
-	DBCustomer dbInvoice = new DBInvoice();
-	dbCus.insertInvoice(invobj);
+	DBInvoice dbInvoice = new DBInvoice();
+	dbInvoice.insertInvoice(invobj);
 	DbConnection1.commitTransaction();
 	}
 	catch(Exception e)
