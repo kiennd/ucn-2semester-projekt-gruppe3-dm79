@@ -43,16 +43,15 @@ public int insertCustomer (Customer cus) throws Exception
 {
 int rc = -1;
 String qry = "INSERT INTO Customer(fname, lname, custID, address, zipcode, city, phoneno, email, type) VALUES('"+
-		cus.getCity() + "', '" +
 		cus.getFname() + "', '" +
 		cus.getLname() + "', '" +
+		cus.getCustID() + "', '" +
 		cus.getAddress() + "', '" +
-		cus.getPno() + "', '" +
-		cus.getEmail() + "', '" +
-		cus.getCustType() + "', '" +
 		cus.getZipCode() + "', '" +
 		cus.getCity() + "', '" +
-		cus.getType() + "', '" + "', 1234)";
+		cus.getPno() + "', '" +
+		cus.getEmail() + "', '" +
+		cus.getType() + "')";
 
 	System.out.println("insert : " + qry);
 	try
@@ -133,7 +132,6 @@ private Customer buildCustomer(ResultSet results)
 		cusobj.setAddress(results.getString("address"));
 		cusobj.setPno(results.getString("phoneno"));
 		cusobj.setEmail(results.getString("email"));
-		cusobj.setCustType(results.getString("type"));
 		cusobj.setZipCode(results.getString("zipcode"));
 		cusobj.setCity(results.getString("city"));
 		cusobj.setType(results.getString("type"));

@@ -33,29 +33,33 @@ public class CTRCustomer {
 		IFDBCustomer ifdbCus = new DBCustomer();
 		return ifdbCus.findCustomerByFname(pno, true);
 	}
-	public int updateCustomer(String fname,String lname,String address, String zipcode, String city, String phoneno, String email)
+	public int updateCustomer(String fname,String lname, int id, String address, String zipcode, String city, String phoneno, String email, String type)
 	{
 		IFDBCustomer ifdbCus = new DBCustomer();
 		Customer cus = new Customer();
 		cus.setFname(fname);
 		cus.setLname(lname);
+		cus.setCustID(id);
 		cus.setAddress(address);
 		cus.setZipCode(zipcode);
 		cus.setCity(city);
 		cus.setPno(phoneno);
 		cus.setEmail(email);
+		cus.setType(type);
 		return ifdbCus.updateCustomer(cus);	
 	}
-	public void insertNewCustomer(String fname,String lname,String address, String zipcode, String city, String phoneno, String email)
+	public void insertNewCustomer(String fname,String lname, int id, String address, String zipcode, String city, String phoneno, String email, String type)
 			{
 				Customer cusobj = new Customer();
 				cusobj.setFname(fname);
 				cusobj.setLname(lname);
+				cusobj.setCustID(id);
 				cusobj.setAddress(address);
 				cusobj.setZipCode(zipcode);
 				cusobj.setCity(city);
 				cusobj.setPno(phoneno);
 				cusobj.setEmail(email);
+				cusobj.setType(type);
 				
 			try
 			{
