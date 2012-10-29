@@ -30,24 +30,70 @@ public class DBProductTest {
 
 	@Test
 	public void testFindProduct() {
-		fail("Not yet implemented");
+		DBProduct dbprod = new DBProduct();
+		Product prod = dbprod.findProduct(111, false);
+		if(prod != null)
+		{
+			System.out.println("returned a product with id " + prod.getProductId() + " and product name is: " + prod.getName());
+		}
+		else
+			
+		
+		fail("could not retun a product with this id.");
 	}
 
 	@Test
 	public void testSearchProductname() {
-		fail("Not yet implemented");
+		DBProduct dbprod = new DBProduct();
+		Product prod = dbprod.searchProductname("Poncho", false);
+		if(prod != null)
+		{
+			System.out.println("returned a product with name " + prod.getName() + " and there it has a minimum stock of " + prod.getMinStock());
+		}
+			
+		fail("could not retun a product with this name.");
 	}
 
 	@Test
 	public void testSearchProductSupId() {
-		fail("Not yet implemented");
+		DBProduct dbprod = new DBProduct();
+		Product prod = dbprod.searchProductSupId(333, true);
+		if(prod != null)
+		{
+			System.out.println("Product's Supplier name is: " + prod.getSupplier().getName() + " and his telephone number is: " + prod.getSupplier().getPhonenum());
+		}
+			
+			
+		fail("failed to search wit a product name.");
 	}
 
 	@Test
 	public void testInsertProduct() {
-		fail("Not yet implemented");
-	}
+		DBProduct dbprod = new DBProduct();
+		//TODO !!! redefine the constructor of Product class.
+		//Product testProd = new Product(123, "TestProduct", , 200.0, 220.0, 20.0, "Canada", 100, "", "", "Test Model", "Test Prod description", "0.0",  null);
+		
+		try{
+			int x = dbprod.insertProduct(null);
 
+		if(x > 0)
+		{
+			Product prod = dbprod.findProduct(123, false);
+			System.out.println("A new product has been created with the following values: " + "Product Id: " + prod.getProductId() + "Product name" + prod.getName() + "and the purchase price is: " + prod.getPurchasePrice());
+		}
+		else
+		{
+				
+		fail("Nothing new was created");
+		}
+	}
+	catch(Exception e)
+	{
+		System.out.println("Nothing new was created");
+	}
+	}
+	
+	
 	@Test
 	public void testUpdateProduct() {
 		fail("Not yet implemented");
