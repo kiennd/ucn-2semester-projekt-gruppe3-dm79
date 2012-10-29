@@ -1,0 +1,4 @@
+INSERT INTO Customer values('Høgni', 'Juul', '444', 'Marie Curies alle', '9220', 'Aalborg', '53501204', 'hognijuul@gmail.com', 'Kunde'
+INSERT INTO Customer values('Jakob', 'Kaspersen', '555', 'Læsøgade', '9000', 'Aalborg', '22850582', 'jakob.kaspersen@gmail.com', 'Kunde'
+INSERT INTO Customer values('Søren', 'vege', '666', 'Sigred Undsetsvej', '9220', 'Aalborg', '26402498', 'mail@vegeberg.net', 'Kunde'
+INSERT INTO Customer values('Kaj', 'Olsen', '777', 'Dannebrosgade', '9000', 'Aalborg', '61994853', 'kajnet@gmail.com', 'Kunde'
