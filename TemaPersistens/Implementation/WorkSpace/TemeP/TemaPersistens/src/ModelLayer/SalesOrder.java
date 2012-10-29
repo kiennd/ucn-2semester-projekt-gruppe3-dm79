@@ -157,7 +157,7 @@ public class SalesOrder
         productsalesorderlist.add(product.getProductId(), prodsale);
         
         //check for customertype discount
-        String custType = myCustomer.getCustType();
+        String custType = myCustomer.getType();
         
         if(custType == "private")
         {
@@ -182,7 +182,7 @@ public class SalesOrder
     	ProductSalesOrder pso = productsalesorderlist.get(product.getProductId());
     	totalAmount -= product.getSalesPrice()*pso.getQuantity();
     	productsalesorderlist.remove(product.getProductId());	
-        String custType = myCustomer.getCustType();
+        String custType = myCustomer.getType();
         //reset customertype discount 
         if(custType == "private")
         {

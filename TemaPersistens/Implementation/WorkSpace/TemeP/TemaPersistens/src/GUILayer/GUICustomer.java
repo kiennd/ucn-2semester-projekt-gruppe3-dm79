@@ -1,5 +1,8 @@
 package GUILayer;
-
+import ModelLayer.*;
+import ControlLayer.*;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -11,6 +14,8 @@ import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUICustomer extends JFrame {
 
@@ -143,10 +148,45 @@ public class GUICustomer extends JFrame {
 		contentPane.add(label_7);
 		
 		JButton btnOpretKunde = new JButton("Insert");
+		btnOpretKunde.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				
+					try
+					{
+						
+					
+					CTRCustomer ctrCus = new CTRCustomer();
+					String fname = textField_1.getText();
+					String lname = textField_2.getText();
+					int id = Integer.parseInt(textField.getText());
+					String address = textField_3.getText();
+					String zipcode = textField_4.getText();
+					String city = textField_5.getText();
+					String pno = textField_6.getText();
+					String email = textField_7.getText();
+					String type = textField_8.getText();
+					ctrCus.insertNewCustomer(fname, lname, id, address, zipcode, city, pno, email, type);
+					}
+					catch(Exception e)
+					{
+						System.out.println("FEJL!!!!!!!");
+					}
+				}
+			
+		});
 		btnOpretKunde.setBounds(298, 186, 86, 23);
 		contentPane.add(btnOpretKunde);
 		
 		JButton button = new JButton("Find");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+				
+				
+			}
+		});
 		button.setBounds(202, 186, 86, 23);
 		contentPane.add(button);
 		
@@ -155,7 +195,57 @@ public class GUICustomer extends JFrame {
 		contentPane.add(button_1);
 		
 		btnUpdate = new JButton("Update");
+		btnUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				CTRCustomer ctrCus = new CTRCustomer();
+				String fname = textField.getText();
+				System.out.println("+" + fname + "+");
+				String lname = textField_1.getText();
+				System.out.println("+" + lname + "+");
+				int id = Integer.parseInt(textField_2.getText());
+				System.out.println("+" + id + "+");
+				String address = textField_3.getText();
+				System.out.println("+" + address + "+");
+				String zipcode = textField_4.getText();
+				System.out.println("+" + zipcode + "+");
+				String city = textField_5.getText();
+				System.out.println("+" + city + "+");
+				String pno = textField_6.getText();
+				System.out.println("+" + pno + "+");
+				String email = textField_7.getText();
+				System.out.println("+" + email + "+");
+				String type = textField_8.getText();
+				System.out.println("+" + type + "+");
+				int result = ctrCus.updateCustomer(fname, lname, id, address, zipcode, city, pno, email, type);
+				
+				
+			}
+		});
 		btnUpdate.setBounds(106, 186, 86, 23);
 		contentPane.add(btnUpdate);
+	}
+	private void insertCustomer(java.awt.event.ActionEvent evt)
+	{
+		try
+		{
+			
+		
+		CTRCustomer ctrCus = new CTRCustomer();
+		String fname = textField_1.getText();
+		String lname = textField_2.getText();
+		int id = Integer.parseInt(textField.getText());
+		String address = textField_3.getText();
+		String zipcode = textField_4.getText();
+		String city = textField_5.getText();
+		String pno = textField_6.getText();
+		String email = textField_7.getText();
+		String type = textField_8.getText();
+		ctrCus.insertNewCustomer(fname, lname, id, address, zipcode, city, pno, email, type);
+		}
+		catch(Exception e)
+		{
+			System.out.println("FEJL!!!!!!!");
+		}
 	}
 }

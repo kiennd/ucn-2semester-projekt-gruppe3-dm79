@@ -9,14 +9,13 @@ public class Customer
 	private String address;
 	private String pno;
 	private String email;
-	private String custType;
 	private String zipCode;
 	private String city;
 	private String type;
 	private ArrayList<SalesOrder> saleOrder;
 	
 	
-	public Customer(int custID, String fname, String lname, String address, String pno, String email, String custType, String zipCode, String city, String type)
+	public Customer(int custID, String fname, String lname, String address, String pno, String email, String zipCode, String city, String type)
 	{
 		this.custID = custID;
 		this.fname = fname;
@@ -24,7 +23,6 @@ public class Customer
 		this.address = address;
 		this.pno = pno;
 		this.email = email;
-		this.custType = custType;
 		this.zipCode = zipCode;
 		this.city = city;
 		this.type = type;
@@ -110,15 +108,6 @@ public class Customer
 		this.email = email;
 	}
 
-
-	public String getCustType() {
-		return custType;
-	}
-
-
-	public void setCustType(String custType) {
-		this.custType = custType;
-	}
 
 
 	public String getZipCode() {
