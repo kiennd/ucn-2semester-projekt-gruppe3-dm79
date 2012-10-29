@@ -75,7 +75,8 @@ public int updateCustomer(Customer cus)
 	Customer cusobj = cus;
 	int rc= -1;
 	
-	String qry = "UPDATE Customer SET" + "fname = '" + cusobj.getFname()+"', " +
+	String qry = "UPDATE Customer SET" + 
+			"fname = '" + cusobj.getFname()+"', " +
 			"lname ='" + cusobj.getLname() + "', " +
 			"custid ='" + cusobj.getCustID() + "', " +
 			"address ='" + cusobj.getAddress() + "', " +
