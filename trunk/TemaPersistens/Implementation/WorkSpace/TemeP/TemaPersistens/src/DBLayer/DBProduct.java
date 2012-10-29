@@ -49,7 +49,7 @@ public class DBProduct implements IFDBProduct
     //method to find one product having the supplier Id.
     public Product searchProductSupId(int supId, boolean retriveAssociation)
     {
-    	String wClause = "  supplierid = '" + supId + "'";
+    	String wClause = "  supplier = '" + supId + "'";
     	return singleWhere(wClause, retriveAssociation);
     }
     

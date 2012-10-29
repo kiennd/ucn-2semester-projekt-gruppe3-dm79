@@ -20,7 +20,7 @@ public class SalesOrder
 	
 	ArrayList <ProductSalesOrder> productsalesorderlist;
 	
-	private SalesOrder(int salesOrderID, Customer myCustomer, Invoice invoice)
+	private SalesOrder(int salesOrderID, Customer myCustomer)
 	{
 		this.salesOrderID = salesOrderID;
 		this.myCustomer = myCustomer;
@@ -31,7 +31,7 @@ public class SalesOrder
 		deliveryStatus = "Order Confirmed";
 		totalAmount = 0;
 		productsalesorderlist = new ArrayList<ProductSalesOrder>();  
-		this.invoice = invoice;
+		this.invoice = null;
 	}
 
 	
@@ -154,7 +154,7 @@ public class SalesOrder
 		
 		totalAmount += product.getSalesPrice()*quantity;
         ProductSalesOrder prodsale = new ProductSalesOrder(salesOrder, product, quantity);
-        productsalesorderlist.add(product.getProductId(), prodsale);
+        productsalesorderlist.add(prodsale);
         
         //check for customertype discount
         String custType = myCustomer.getType();
