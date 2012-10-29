@@ -14,7 +14,7 @@ public void getAllCustomers()
 {
 	DBCustomer dbCus = new DBCustomer();
 	ArrayList<Customer> list = dbCus.getAllCustomer(false);
-	if(list.size() == 1)
+	if(list.size() == 5)
 	{
 		System.out.println("okey");
 	}
