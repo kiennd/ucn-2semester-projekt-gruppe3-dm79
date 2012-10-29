@@ -51,7 +51,8 @@ String qry = "INSERT INTO Customer(fname, lname, custID, address, zipcode, city,
 		cus.getEmail() + "', '" +
 		cus.getCustType() + "', '" +
 		cus.getZipCode() + "', '" +
-		cus.getCity() + "', '" + "', 1234)";
+		cus.getCity() + "', '" +
+		cus.getType() + "', '" + "', 1234)";
 
 	System.out.println("insert : " + qry);
 	try
@@ -77,12 +78,13 @@ public int updateCustomer(Customer cus)
 	
 	String qry = "UPDATE Customer SET" + "fname = '" + cusobj.getFname()+"', " +
 			"lname ='" + cusobj.getLname() + "', " +
+			"custid ='" + cusobj.getCustID() + "', " +
 			"address ='" + cusobj.getAddress() + "', " +
+			"zipCode ='" + cusobj.getZipCode() + "', " +
+			"city ='" + cusobj.getCity() + "', " +
 			"phoneno ='" + cusobj.getPno() + "', " +
 			"email ='" + cusobj.getEmail() + "', " +
-			"type ='" + cusobj.getCustID() + "', " +
-			"zipCode ='" + cusobj.getZipCode() + "', " +
-			"city ='" + cusobj.getCity() + "',";
+			"type ='" + cusobj.getType() + "',";
 			System.out.println("Update query: " + qry);
 			try
 			{
@@ -134,6 +136,7 @@ private Customer buildCustomer(ResultSet results)
 		cusobj.setCustType(results.getString("type"));
 		cusobj.setZipCode(results.getString("zipcode"));
 		cusobj.setCity(results.getString("city"));
+		cusobj.setType(results.getString("type"));
 		
 		
 	}

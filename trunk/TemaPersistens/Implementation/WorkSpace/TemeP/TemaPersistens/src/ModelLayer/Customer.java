@@ -12,10 +12,11 @@ public class Customer
 	private String custType;
 	private String zipCode;
 	private String city;
+	private String type;
 	private ArrayList<SalesOrder> saleOrder;
 	
 	
-	public Customer(int custID, String fname, String lname, String address, String pno, String email, String custType, String zipCode, String city)
+	public Customer(int custID, String fname, String lname, String address, String pno, String email, String custType, String zipCode, String city, String type)
 	{
 		this.custID = custID;
 		this.fname = fname;
@@ -26,7 +27,14 @@ public class Customer
 		this.custType = custType;
 		this.zipCode = zipCode;
 		this.city = city;
+		this.type = type;
 		ArrayList<SalesOrder> saleOrder;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	public Customer()
 	{
