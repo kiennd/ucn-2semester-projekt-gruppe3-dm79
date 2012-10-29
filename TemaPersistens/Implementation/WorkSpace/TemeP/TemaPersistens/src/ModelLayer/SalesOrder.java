@@ -20,7 +20,7 @@ public class SalesOrder
 	
 	ArrayList <ProductSalesOrder> productsalesorderlist;
 	
-	private SalesOrder(int salesOrderID, Customer myCustomer)
+	public SalesOrder(int salesOrderID, Customer myCustomer)
 	{
 		this.salesOrderID = salesOrderID;
 		this.myCustomer = myCustomer;
@@ -107,10 +107,10 @@ public class SalesOrder
 
 
 	
-    public void addProductSalesOrder(ProductSalesOrder newitem)
-    {
-    	productsalesorderlist.add(newitem);
-    }
+   // public void addProductSalesOrder(ProductSalesOrder newitem)
+    //{
+    	//productsalesorderlist.add(newitem);
+   // }
     
     
 	public double getDeliveryCost() {
