@@ -71,7 +71,7 @@ public class DBProductTest {
 	public void testInsertProduct() {
 		DBProduct dbprod = new DBProduct();
 		//TODO !!! redefine the constructor of Product class.
-		//Product testProd = new Product(123, "TestProduct", , 200.0, 220.0, 20.0, "Canada", 100, "", "", "Test Model", "Test Prod description", "0.0",  null);
+		//Product testProd = new Product(123, 200.0, 220.0, 20.0, "Canada", 100, "small", "green", null, null, null, 334, null, "Hippyhat", "Clothing");
 		
 		try{
 			int x = dbprod.insertProduct(null);
