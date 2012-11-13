@@ -4,8 +4,8 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>70</x>
-      <y>50</y>
+      <x>150</x>
+      <y>120</y>
       <w>80</w>
       <h>120</h>
     </coordinates>
@@ -16,8 +16,8 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>70</x>
-      <y>200</y>
+      <x>150</x>
+      <y>270</y>
       <w>80</w>
       <h>120</h>
     </coordinates>
@@ -25,21 +25,10 @@
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Actor</type>
-    <coordinates>
-      <x>60</x>
-      <y>380</y>
-      <w>100</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>Kopenhagen fur</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>80</x>
-      <y>50</y>
+      <x>160</x>
+      <y>120</y>
       <w>190</w>
       <h>90</h>
     </coordinates>
@@ -49,19 +38,19 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>250</x>
-      <y>100</y>
+      <x>330</x>
+      <y>170</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>manage produkt</panel_attributes>
+    <panel_attributes>manage mink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>80</x>
-      <y>90</y>
+      <x>160</x>
+      <y>160</y>
       <w>190</w>
       <h>160</h>
     </coordinates>
@@ -71,19 +60,19 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>250</x>
-      <y>50</y>
+      <x>330</x>
+      <y>120</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>mamage employee</panel_attributes>
+    <panel_attributes>mamage employee (CRUD)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>80</x>
-      <y>40</y>
+      <x>160</x>
+      <y>110</y>
       <w>190</w>
       <h>60</h>
     </coordinates>
@@ -93,118 +82,19 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>250</x>
-      <y>340</y>
+      <x>330</x>
+      <y>270</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>receive order</panel_attributes>
+    <panel_attributes>quality control</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>80</x>
-      <y>330</y>
-      <w>190</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>170;30;30;80</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.UseCase</type>
-    <coordinates>
-      <x>250</x>
-      <y>390</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>manage storage</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>80</x>
-      <y>380</y>
-      <w>190</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>170;30;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.UseCase</type>
-    <coordinates>
-      <x>250</x>
-      <y>440</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>perform auktion</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>80</x>
-      <y>380</y>
-      <w>190</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>170;80;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.UseCase</type>
-    <coordinates>
-      <x>250</x>
-      <y>150</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>feed mink</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>80</x>
-      <y>140</y>
-      <w>190</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>170;30;30;90</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>80</x>
-      <y>50</y>
-      <w>190</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>170;120;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.UseCase</type>
-    <coordinates>
-      <x>250</x>
-      <y>200</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>quality testing</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>80</x>
-      <y>50</y>
+      <x>160</x>
+      <y>120</y>
       <w>190</w>
       <h>190</h>
     </coordinates>
@@ -214,8 +104,8 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>80</x>
-      <y>190</y>
+      <x>160</x>
+      <y>260</y>
       <w>190</w>
       <h>60</h>
     </coordinates>
@@ -225,23 +115,100 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>250</x>
-      <y>490</y>
+      <x>330</x>
+      <y>320</y>
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>quality testing</panel_attributes>
+    <panel_attributes>blood samples</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>90</x>
-      <y>380</y>
-      <w>180</w>
-      <h>150</h>
+      <x>160</x>
+      <y>120</y>
+      <w>190</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>160;130;30;30</additional_attributes>
+    <additional_attributes>170;220;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>270</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>170;70;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>330</x>
+      <y>220</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>sygdom registrering</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>120</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>170;120;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>210</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>170;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>330</x>
+      <y>70</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>cage (CRUD)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>60</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>170;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>60</y>
+      <w>190</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>170;30;30;240</additional_attributes>
   </element>
 </diagram>
