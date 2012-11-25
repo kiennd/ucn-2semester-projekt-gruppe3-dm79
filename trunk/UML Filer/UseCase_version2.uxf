@@ -199,7 +199,7 @@
       <w>140</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Send Aktionspris</panel_attributes>
+    <panel_attributes>View Auction Price</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -212,5 +212,27 @@
     </coordinates>
     <panel_attributes/>
     <additional_attributes>90;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>210</x>
+      <y>530</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Manage Employees(CRUD</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>60</x>
+      <y>460</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>150;90;30;30</additional_attributes>
   </element>
 </diagram>
