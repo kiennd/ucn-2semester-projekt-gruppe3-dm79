@@ -8,6 +8,10 @@ public class Waiter {
 	private static Chopstick[] m_chopsticks = new Chopstick[5];
 	private long m_starttime;
 	
+	/**
+	 * constructor for Waiter class. gets current time, instantiates 5 chopsticks
+	 */
+	
 	public Waiter() {
 		m_starttime = System.currentTimeMillis();
 		
@@ -15,9 +19,14 @@ public class Waiter {
         	m_chopsticks[i]= new Chopstick();
 	}
 	
+	/*
+	 * method to get waiter's start time
+	 */
 	public long getStarttime() {
 		return m_starttime;
 	}
+
+	
 	
     public synchronized void lock(int philosoperNo) throws InterruptedException {
 
@@ -44,7 +53,7 @@ public class Waiter {
     	
   		System.out.println(System.currentTimeMillis() - m_starttime + " : P" + philosoperNo + " FREE his two chopsticks ["+c1+" and "+c2+"]");
   		
-  		notifyAll();
+  		notify();
   	}    
 	
 }
