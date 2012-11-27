@@ -27,7 +27,11 @@ public class Waiter {
 	}
 
 	
-	
+	/**
+	 * synchronized : When a philosopher thread puts a lock on the chopsticks, then it is 
+	 * impossible for any other thread to acquire the chopsticks. 
+	 * 
+	 */
     public synchronized void lock(int philosoperNo) throws InterruptedException {
 
     	int c1 = philosoperNo;
