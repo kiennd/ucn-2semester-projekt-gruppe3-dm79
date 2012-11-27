@@ -193,7 +193,7 @@ unlockchopsticks()</panel_attributes>
       <h>110</h>
     </coordinates>
     <panel_attributes>EAT:
-
+if left + right free
 lock()
 eat()  -random time
 unlock()
