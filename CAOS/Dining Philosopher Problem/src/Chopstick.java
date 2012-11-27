@@ -2,7 +2,7 @@
 public class Chopstick {
 
     /**
-     * if chopstick is in use set variable to true, if it is not in use set variable to false
+     * if chopstick is in use set variable to true , if it is not in use set variable to false
      */
 	private boolean m_isUsed = false;
 
