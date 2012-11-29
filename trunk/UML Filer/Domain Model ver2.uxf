@@ -25,12 +25,13 @@ heritage
       <x>300</x>
       <y>90</y>
       <w>100</w>
-      <h>50</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Quality
 --
-type
-</panel_attributes>
+furLength
+furDensity
+type</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -39,12 +40,12 @@ type
       <x>300</x>
       <y>260</y>
       <w>100</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Disease
 --
 date
-</panel_attributes>
+status</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -57,7 +58,7 @@ date
     </coordinates>
     <panel_attributes>Heritage
 --
-cageNr
+cageNo
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -69,10 +70,9 @@ cageNr
       <w>100</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>Species/rase
+    <panel_attributes>Type
 --
-kind
-</panel_attributes>
+color</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -106,7 +106,7 @@ m2=1
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>400</x>
-      <y>520</y>
+      <y>550</y>
       <w>170</w>
       <h>50</h>
     </coordinates>
@@ -120,7 +120,7 @@ m2=0..n
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>130</x>
-      <y>530</y>
+      <y>550</y>
       <w>170</w>
       <h>50</h>
     </coordinates>
@@ -136,11 +136,26 @@ m2=1
       <x>480</x>
       <y>90</y>
       <w>100</w>
-      <h>50</h>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>Bur/Cage
+    <panel_attributes>Cage
 --
-</panel_attributes>
+CageNo
+CageType</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>650</x>
+      <y>90</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Hall
+--
+HallNo
+NumOfCages</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -149,25 +164,11 @@ m2=1
       <x>480</x>
       <y>260</y>
       <w>100</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Hall
---
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>650</x>
-      <y>260</y>
-      <w>100</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Treatment
 --
-
-</panel_attributes>
+date</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
