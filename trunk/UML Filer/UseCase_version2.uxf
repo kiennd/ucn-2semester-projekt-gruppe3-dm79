@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.5.1">
+<diagram program="umlet" version="11.3">
   <zoom_level>10</zoom_level>
   <element>
     <type>com.umlet.element.Actor</type>
@@ -77,7 +77,8 @@
       <w>170</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Register Mink</panel_attributes>
+    <panel_attributes>Show Farm Info
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -105,13 +106,13 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>60</x>
+      <x>70</x>
       <y>160</y>
-      <w>170</w>
-      <h>60</h>
+      <w>160</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>150;30;30;40</additional_attributes>
+    <additional_attributes>140;30;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -234,5 +235,27 @@
     </coordinates>
     <panel_attributes/>
     <additional_attributes>150;90;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>210</x>
+      <y>120</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Register Mink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>70</x>
+      <y>110</y>
+      <w>160</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140;30;30;70</additional_attributes>
   </element>
 </diagram>
