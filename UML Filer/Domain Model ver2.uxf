@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.5">
+<diagram program="umlet" version="11.5.1">
   <zoom_level>10</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
@@ -44,7 +44,6 @@ type</panel_attributes>
     </coordinates>
     <panel_attributes>Disease
 --
-date
 status</panel_attributes>
     <additional_attributes/>
   </element>
@@ -167,6 +166,19 @@ NumOfCages</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>Treatment
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>260</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Date
 --
 date</panel_attributes>
     <additional_attributes/>
