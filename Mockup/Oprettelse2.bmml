@@ -128,9 +128,9 @@
         <text>Fag%201</text>
       </controlProperties>
     </control>
-    <control controlID="149" controlTypeID="com.balsamiq.mockups::Label" x="435" y="100" w="-1" h="-1" measuredW="152" measuredH="21" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::Label" x="434" y="102" w="-1" h="-1" measuredW="68" measuredH="21" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Oprettelse%20/%20Hal%201%20/%20Fag%201</text>
+        <text>Oprettelse</text>
       </controlProperties>
     </control>
   </controls>
