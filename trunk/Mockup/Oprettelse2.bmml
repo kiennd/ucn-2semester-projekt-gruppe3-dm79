@@ -46,7 +46,7 @@
         <text>S%F8g</text>
       </controlProperties>
     </control>
-    <control controlID="133" controlTypeID="com.balsamiq.mockups::PointyButton" x="730" y="130" w="-1" h="-1" measuredW="44" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="133" controlTypeID="com.balsamiq.mockups::PointyButton" x="732" y="130" w="-1" h="-1" measuredW="44" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <text>S%F8g</text>
       </controlProperties>
