@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.5.1">
+<diagram program="umlet" version="11.3">
   <zoom_level>12</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>828</x>
-      <y>624</y>
+      <x>564</x>
+      <y>504</y>
       <w>144</w>
       <h>120</h>
     </coordinates>
@@ -20,13 +20,13 @@ cageNo</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>672</x>
-      <y>240</y>
+      <x>408</x>
+      <y>120</y>
       <w>180</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=n
+m1=1
 m2=1..n
 </panel_attributes>
     <additional_attributes>36;36;156;36</additional_attributes>
@@ -34,8 +34,8 @@ m2=1..n
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>864</x>
-      <y>504</y>
+      <x>600</x>
+      <y>384</y>
       <w>60</w>
       <h>144</h>
     </coordinates>
@@ -48,22 +48,22 @@ m2=0..1
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>432</x>
-      <y>240</y>
+      <x>168</x>
+      <y>120</y>
       <w>156</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=n
-m2=1..n
+m1=1
+m2=0..n
 </panel_attributes>
     <additional_attributes>36;36;132;36</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>828</x>
-      <y>228</y>
+      <x>564</x>
+      <y>108</y>
       <w>144</w>
       <h>96</h>
     </coordinates>
@@ -76,8 +76,8 @@ CageType</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>324</x>
-      <y>228</y>
+      <x>60</x>
+      <y>108</y>
       <w>144</w>
       <h>96</h>
     </coordinates>
@@ -91,8 +91,8 @@ numOfCages
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>828</x>
-      <y>396</y>
+      <x>564</x>
+      <y>276</y>
       <w>144</w>
       <h>144</h>
     </coordinates>
@@ -109,8 +109,8 @@ bloodOkTestDate
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>564</x>
-      <y>228</y>
+      <x>300</x>
+      <y>108</y>
       <w>144</w>
       <h>96</h>
     </coordinates>
@@ -123,8 +123,8 @@ numOfCol</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>324</x>
-      <y>396</y>
+      <x>60</x>
+      <y>276</y>
       <w>144</w>
       <h>144</h>
     </coordinates>
@@ -139,8 +139,8 @@ email</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>564</x>
-      <y>396</y>
+      <x>300</x>
+      <y>276</y>
       <w>144</w>
       <h>144</h>
     </coordinates>
@@ -155,8 +155,8 @@ email</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1080</x>
-      <y>228</y>
+      <x>816</x>
+      <y>108</y>
       <w>144</w>
       <h>120</h>
     </coordinates>
@@ -173,22 +173,22 @@ birthdate
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>936</x>
-      <y>240</y>
+      <x>672</x>
+      <y>120</y>
       <w>168</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
-m2=0..n
+m2=0..4
 </panel_attributes>
     <additional_attributes>36;36;144;36</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>864</x>
-      <y>120</y>
+      <x>600</x>
+      <y>0</y>
       <w>456</w>
       <h>372</h>
     </coordinates>
@@ -201,8 +201,8 @@ m2=1..n
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>864</x>
-      <y>288</y>
+      <x>600</x>
+      <y>168</y>
       <w>60</w>
       <h>132</h>
     </coordinates>
@@ -215,36 +215,36 @@ m2=0..1
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>432</x>
-      <y>432</y>
+      <x>168</x>
+      <y>312</y>
       <w>156</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1..n
-m2=1
+m1=1
+m2=1...n
 </panel_attributes>
     <additional_attributes>36;36;132;36</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>672</x>
-      <y>432</y>
+      <x>408</x>
+      <y>312</y>
       <w>180</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..n
-m2=1..n
+m1=1
+m2=0..n
 </panel_attributes>
     <additional_attributes>36;36;156;36</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>288</y>
+      <x>96</x>
+      <y>168</y>
       <w>60</w>
       <h>132</h>
     </coordinates>
