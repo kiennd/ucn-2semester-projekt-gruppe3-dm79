@@ -1,0 +1,3 @@
+vi har valgt at lægge disease og transfer klasserne sammen fordi de startede med at være 1-1
+ og derfor mente vi vi ligeså godt kunne lægge dem sammen. vi har sat emplyee på vores domænemodel fordi vi mener det er 
+vigtigt at vi kan holde styr på hvor lang tid hver person bruger på hvert bur når der bliver taget blodprøver.
