@@ -5,4 +5,30 @@ furLength int,
 furDensity int,
 birthdate datetime,
 qualityType varchar(20)
-primary key (minkID))
+primary key (minkID));
+
+
+CREATE TABLE mfCage
+(cageNo int,
+minkID int,
+CageType varchar(20)
+PRIMERY KEY (cageNo)
+FOREIGN KEY (minkID) references mfMink (minkID));
+
+
+CREATE TABLE mfColumn
+(colNo int,
+numOfCol int,
+cageNo int,
+primary key (colNo)
+foreign key (cageNo) references mfCage (cageNo);
+
+
+CREATE TABLE mfHall
+(hallID int,
+hallNo int,
+numOfCages int,
+columnNo int,
+primary key (hallID),
+foreign key (columNo) references mfColumn (colNo));
+ 
