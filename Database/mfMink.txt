@@ -1,0 +1,8 @@
+CREATE TABLE mfMink
+(minkID int,
+color varchar(20),
+furLength int,
+furDensity int,
+birthdate datetime,
+qualityType varchar(20)
+primary key (minkID))
