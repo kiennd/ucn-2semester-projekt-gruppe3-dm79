@@ -1,0 +1,5 @@
+CREATE TABLE mfHall
+(hallId int,
+hallNo int,
+numbOfCages int
+primary key (hallId));
