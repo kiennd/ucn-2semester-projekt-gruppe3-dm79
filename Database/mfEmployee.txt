@@ -1,0 +1,7 @@
+create table mfEmployee
+(employeeid int,
+address varchar(30) not null,
+zipcode int, 
+phoneno int not null,
+email varchar(50) not null,
+primary key (employeeid));
