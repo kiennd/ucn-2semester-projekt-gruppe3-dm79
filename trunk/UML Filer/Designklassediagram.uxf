@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>567</x>
+      <y>27</y>
+      <w>333</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>GUImfMainMenu
+--
+- GUImfTransfer:GUImfTransfer
+- GUImfDisease:GUImfDisease
+
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
