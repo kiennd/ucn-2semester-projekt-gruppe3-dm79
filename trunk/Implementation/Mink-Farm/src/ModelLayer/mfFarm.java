@@ -3,23 +3,32 @@ package ModelLayer;
 
 public class mfFarm {
 	
+	private int cvrNo;
 	private String name;
 	private String address;
-	private String email;
-	private String zipCode;
+	private int zipCode;
 	private String city;
-	private String phoneNo;
-	private String cvrNo;
+	private int phoneNo;
+	private String email;
+
 	
-	public mfFarm(String name, String address, String email, String zipCode, String city, String phoneNo, String cvrNo)
+	public mfFarm(int cvrNo, String name, String address, int zipCode, String city, int phoneNo, String email)
 	{
+		this.cvrNo = cvrNo;
 		this.name = name;
 		this.address = address;
-		this.email = email;
 		this.zipCode = zipCode;
 		this.city = city;
 		this.phoneNo = phoneNo;
+		this.email = email;
+	}
+	
+	public void setCvrNo(int cvrNo) {
 		this.cvrNo = cvrNo;
+	}
+	
+	public int getCvrNo() {
+		return cvrNo;
 	}
 	
 	public void setName(String name) {
@@ -37,20 +46,12 @@ public class mfFarm {
 	public String getAddress() {
 		return address;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	
-	public String getEmail() {
-		return email;
-	}
-	
-	public void setZipCode(String zipCode) {
+	public void setZipCode(int zipCode) {
 		this.zipCode = zipCode;
 	}
 	
-	public String getZipCode() {
+	public int getZipCode() {
 		return zipCode;
 	}
 	
@@ -62,20 +63,20 @@ public class mfFarm {
 		return city;
 	}
 	
-	public void setPhoneNo(String phoneNo) {
+	public void setPhoneNo(int phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 	
-	public String getPhoneNo() {
+	public int getPhoneNo() {
 		return phoneNo;
 	}
 	
-	public void setCvrNo(String cvrNo) {
-		this.cvrNo = cvrNo;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
-	public String getCvrNo() {
-		return cvrNo;
+	public String getEmail() {
+		return email;
 	}
 	
 }
