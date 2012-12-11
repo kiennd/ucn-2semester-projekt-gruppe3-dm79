@@ -3,21 +3,30 @@ package ModelLayer;
 public class mfEmployee {
 	
 	private int employeeID;
+	private String fname;
+	private String lname;
 	private String address;
 	private int zipCode;
+	private String city;
 	private int phoneNo;
 	private String email;
 
 	
-	public mfEmployee(int employeeID, String address, int zipCode, int phoneNo, String email)
+	public mfEmployee(int employeeID, String fname, String lname, String address, int zipCode, String city, int phoneNo, String email)
 	{
-		this.address = address;
-		this.email = email;
-		this.zipCode = zipCode;
-		this.phoneNo = phoneNo;
 		this.employeeID = employeeID;
+		this.fname = fname;
+		this.lname = lname;
+		this.address = address;
+		this.zipCode = zipCode;
+		this.city = city;
+		this.phoneNo = phoneNo;
+		this.email = email;
 	}
-
+	
+	public mfEmployee() {
+		// EMPTY
+	}
 
 	public void setEmployeeID(int employeeID) {
 		this.employeeID = employeeID;
@@ -25,6 +34,22 @@ public class mfEmployee {
 	
 	public int getEmployeeID() {
 		return employeeID;
+	}
+	
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	
+	public String getFname() {
+		return fname;
+	}
+	
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	
+	public String getLname() {
+		return lname;
 	}
 	
 	public void setAddress(String address) {
@@ -41,6 +66,14 @@ public class mfEmployee {
 	
 	public int getZipCode() {
 		return zipCode;
+	}
+	
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getCity() {
+		return city;
 	}
 	
 	

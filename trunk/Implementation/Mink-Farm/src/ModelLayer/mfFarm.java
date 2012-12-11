@@ -1,5 +1,5 @@
 package ModelLayer;
-
+import java.util.ArrayList;
 
 public class mfFarm {
 	
@@ -10,6 +10,7 @@ public class mfFarm {
 	private String city;
 	private int phoneNo;
 	private String email;
+	private ArrayList<mfEmployee> employee;
 
 	
 	public mfFarm(int cvrNo, String name, String address, int zipCode, String city, int phoneNo, String email)
@@ -21,6 +22,12 @@ public class mfFarm {
 		this.city = city;
 		this.phoneNo = phoneNo;
 		this.email = email;
+		ArrayList<mfEmployee> employee;
+	}
+	
+	public void  addEmployee(mfEmployee myEmployee)
+	{
+		employee.add(myEmployee);
 	}
 	
 	public void setCvrNo(int cvrNo) {
