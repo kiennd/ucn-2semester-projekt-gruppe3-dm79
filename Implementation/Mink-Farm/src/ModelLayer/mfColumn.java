@@ -2,28 +2,37 @@ package ModelLayer;
 
 public class mfColumn {
 	
-	private String colNo;
-	private String numOfCol;
+	private int colNo;
+	private int numOfCol;
+	private int cageNo;
 	
-	public mfColumn(String colNo, String numOfCol) {
+	public mfColumn(int colNo, int numOfCol, int cageNo) {
 		this.colNo = colNo;
 		this.numOfCol = numOfCol;
 	}
 	
-	public void setColNo(String colNo) {
+	public void setColNo(int colNo) {
 		this.colNo = colNo;
 	}
 	
-	public String getColNo() {
+	public int getColNo() {
 		return colNo;
 	}
 	
-	public void setNumOfCol(String numOfCol) {
+	public void setNumOfCol(int numOfCol) {
 		this.numOfCol = numOfCol;
 	}
 	
-	public String getNumOfCol() {
+	public int getNumOfCol() {
 		return numOfCol;
+	}
+	
+	public void setCageNo(int cageNo) {
+		this.cageNo = cageNo;
+	}
+	
+	public int getCageNo() {
+		return cageNo;
 	}
 
 }
