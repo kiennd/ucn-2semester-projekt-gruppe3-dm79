@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>210</x>
+      <y>80</y>
+      <w>420</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Operating Contracts
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>210</x>
+      <y>150</y>
+      <w>520</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Operation: bloodTestSend
+Use case: TransferDiseasedMink
+Preconditions: 
+-Der er taget blodprøver 
+-Mink er registret i et bur
+Postconditions:
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>210</x>
+      <y>290</y>
+      <w>520</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Operation: moveMink
+Use case: TransferDiseasedMink
+Preconditions: 
+-Der er tomme bure på minkfarmen
+-Mink er registret i et bur
+Postconditions:
+-Minkene er blevet flyttet til et andet bur
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
