@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class mfCage {
 	private int cageNo;
-	private ArrayList<mfMink> myMink;
 	private String cageType;
+	private ArrayList<mfMink> myMink;
 
 	public mfCage(int cageNo, String cageType)
 	{
