@@ -5,8 +5,8 @@ public class mfHall
 {
 	private int hallID;
 	private int hallNo;
-	private ArrayList<mfColumn> myColumn;
 	private int numbOfCages;
+	private ArrayList<mfColumn> myColumn;
 	
 	public mfHall(int hallID, int hallNo, int numbOfCages)
 	{
