@@ -4,4 +4,13 @@ address varchar(30) not null,
 zipcode int, 
 phoneno int not null,
 email varchar(50) not null,
-primary key (employeeid));
+cvrNo int not null,
+primary key (employeeid)
+foreign key (cvrNo) references mfFarm(cvrNo));
+
+
+ALTER:
+
+ALTER TABLE mfEmployee
+ADD FOREIGN KEY (cvrNo)
+REFERENCES mfFarm(cvrNo)
