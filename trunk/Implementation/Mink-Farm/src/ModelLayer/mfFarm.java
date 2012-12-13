@@ -11,8 +11,17 @@ public class mfFarm {
 	private int phoneNo;
 	private String email;
 	private ArrayList<mfEmployee> employee;
+	private ArrayList<mfHall> myHall;
 
 	
+	public ArrayList<mfHall> getMyHall() {
+		return myHall;
+	}
+
+	public void setMyHall(ArrayList<mfHall> myHall) {
+		this.myHall = myHall;
+	}
+
 	public mfFarm(int cvrNo, String name, String address, int zipCode, String city, int phoneNo, String email)
 	{
 		this.cvrNo = cvrNo;
@@ -23,6 +32,11 @@ public class mfFarm {
 		this.phoneNo = phoneNo;
 		this.email = email;
 		ArrayList<mfEmployee> employee;
+	}
+	
+	public mfFarm()
+	{
+		
 	}
 	
 	public void  addEmployee(mfEmployee myEmployee)

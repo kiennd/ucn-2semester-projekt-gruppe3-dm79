@@ -12,6 +12,10 @@ public class mfCage {
 		this.cageType = cageType;
 		ArrayList<mfMink> myMink;
 	}
+	public mfCage()
+	{
+		
+	}
 
 	public int getCageNo() {
 		return cageNo;

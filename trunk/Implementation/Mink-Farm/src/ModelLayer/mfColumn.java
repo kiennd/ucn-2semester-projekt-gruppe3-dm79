@@ -1,11 +1,29 @@
 package ModelLayer;
+import java.util.ArrayList;
 
 public class mfColumn {
 	
 	private int colNo;
 	private int numOfCol;
-	private int cageNo;
+	private ArrayList<mfCage> myCage;
 	
+	
+	public mfColumn(int colNo, int numOfCol)
+	{
+		this.colNo = colNo;
+		this.numOfCol = numOfCol;
+	}
+	
+	public mfColumn()
+	{
+		
+	}
+	
+	
+	public void setMyCage(ArrayList<mfCage> myCage) {
+		this.myCage = myCage;
+	}
+
 	public mfColumn(int colNo, int numOfCol, int cageNo) {
 		this.colNo = colNo;
 		this.numOfCol = numOfCol;
@@ -25,14 +43,6 @@ public class mfColumn {
 	
 	public int getNumOfCol() {
 		return numOfCol;
-	}
-	
-	public void setCageNo(int cageNo) {
-		this.cageNo = cageNo;
-	}
-	
-	public int getCageNo() {
-		return cageNo;
 	}
 
 }
