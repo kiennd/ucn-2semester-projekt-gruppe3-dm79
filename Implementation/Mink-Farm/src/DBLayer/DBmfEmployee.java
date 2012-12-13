@@ -32,7 +32,7 @@ public class DBmfEmployee implements IFDBmfEmployee
 	public mfEmployee findEmployeeByLname(String lname, boolean retrieveAssociation) 
 	{
 		String wClause = "lname like '%" + lname + "%'";
-		System.out.println("SearchCustomer" + wClause);
+		System.out.println("SearchEmployee" + wClause);
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	
@@ -45,7 +45,7 @@ public class DBmfEmployee implements IFDBmfEmployee
 	public int insertEmployee (mfEmployee emp) throws Exception 
 	{
 	int rc = -1;
-	String qry = "INSERT INTO Employee(fname, lname, custID, address, zipcode, city, phoneno, email, type) VALUES('"+
+	String qry = "INSERT INTO mfEmployee(fname, lname, custID, address, zipcode, city, phoneno, email, type) VALUES('"+
 			emp.getEmployeeID() + "', '" +
 			emp.getFname() + "', '" +
 			emp.getLname() + "', '" +
@@ -77,7 +77,7 @@ public class DBmfEmployee implements IFDBmfEmployee
 		mfEmployee empObj = emp;
 		int rc= -1;
 		
-		String qry = "UPDATE Customer SET" + 
+		String qry = "UPDATE mfEmployee SET" + 
 				"employeeID ='" + empObj.getEmployeeID() + "', " +
 				"fname = '" + empObj.getFname()+"', " +
 				"lname ='" + empObj.getLname() + "', " +
@@ -97,7 +97,7 @@ public class DBmfEmployee implements IFDBmfEmployee
 				}
 				catch(Exception ex)
 				{
-					System.out.println("Update exception in employee db: " + ex);
+					System.out.println("Update exception in mfEmployee db: " + ex);
 				}
 				return(rc);
 				
@@ -107,7 +107,7 @@ public class DBmfEmployee implements IFDBmfEmployee
 	{
 		int rc =-1;
 				
-				String qry = "DELETE FROM Employee WHERE employeeID = '" + employeeID + "'";
+				String qry = "DELETE FROM mfEmployee WHERE employeeID = '" + employeeID + "'";
 				System.out.println(qry);
 				try
 				{
@@ -118,7 +118,7 @@ public class DBmfEmployee implements IFDBmfEmployee
 				}
 				 catch(Exception ex)
 				 {
-				 	  	System.out.println("Delete exception in Employee db: "+ex);
+				 	  	System.out.println("Delete exception in mfEmployee db: "+ex);
 			   	 }
 				return(rc);
 	}
