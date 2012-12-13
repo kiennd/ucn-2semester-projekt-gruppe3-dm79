@@ -6,36 +6,43 @@ import java.sql.*;
 import java.util.ArrayList;
 
 
-public class DBmfEmployee implements IFDBmfEmployee {
+public class DBmfEmployee implements IFDBmfEmployee 
+{
 	
 	private Connection con;
 	
-	public DBmfEmployee()
+	public DBmfEmployee() 
 	{
 		//**Opretter en ny instance af DBmfEmployee
 		con = DbConnection.getInstance().getDBcon();
 	}
 	
-	public mfEmployee findEmployeeByFname(String fname, boolean retrieveAssociation) {
+	public ArrayList<mfEmployee> getAllEmployees(boolean retrieveAssociation) 
+	{
+		return miscWhere("", retrieveAssociation);
+	}
+	
+	public mfEmployee findEmployeeByFname(String fname, boolean retrieveAssociation) 
+	{
 		String wClause = "fname like '%" + fname + "%'";
 		System.out.println("SearchEmployee" + wClause);
 		return singleWhere(wClause, retrieveAssociation);
 	}
 
-	public mfEmployee findEmployeeByLname(String lname, boolean retrieveAssociation)
+	public mfEmployee findEmployeeByLname(String lname, boolean retrieveAssociation) 
 	{
 		String wClause = "lname like '%" + lname + "%'";
 		System.out.println("SearchCustomer" + wClause);
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	
-	public mfEmployee findEmployeeByID(int employeeID, boolean retrieveAssociation)
+	public mfEmployee findEmployeeByID(int employeeID, boolean retrieveAssociation) 
 	{
 		String wClause = "employeeID = " + employeeID;
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	
-	public int insertEmployee (mfEmployee emp) throws Exception
+	public int insertEmployee (mfEmployee emp) throws Exception 
 	{
 	int rc = -1;
 	String qry = "INSERT INTO Employee(fname, lname, custID, address, zipcode, city, phoneno, email, type) VALUES('"+
@@ -58,8 +65,8 @@ public class DBmfEmployee implements IFDBmfEmployee {
 		}
 		catch(SQLException ex)
 		{
-			System.out.println("Customer er ikke oprettet");
-			throw new Exception("Customer er ikke tilføjet");
+			System.out.println("Employee er ikke oprettet");
+			throw new Exception("Employee er ikke tilføjet");
 		}
 		return (rc);
 			
@@ -90,7 +97,7 @@ public class DBmfEmployee implements IFDBmfEmployee {
 				}
 				catch(Exception ex)
 				{
-					System.out.println("Update exception in Employee db: " + ex);
+					System.out.println("Update exception in employee db: " + ex);
 				}
 				return(rc);
 				
