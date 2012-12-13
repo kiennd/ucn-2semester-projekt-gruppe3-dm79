@@ -3,25 +3,15 @@ import java.util.ArrayList;
 
 public class mfHall 
 {
-	private int hallID;
 	private int hallNo;
 	private int numbOfCages;
 	private ArrayList<mfColumn> myColumn;
 	
-	public mfHall(int hallID, int hallNo, int numbOfCages)
+	public mfHall(int hallNo, int numbOfCages)
 	{
-		this.hallID = hallID;
 		this.hallNo = hallNo;
 		this.numbOfCages = numbOfCages;
 		ArrayList<mfColumn> myColumn;
-	}
-
-	public int getHallID() {
-		return hallID;
-	}
-
-	public void setHallID(int hallID) {
-		this.hallID = hallID;
 	}
 
 	public int getHallNo() {
