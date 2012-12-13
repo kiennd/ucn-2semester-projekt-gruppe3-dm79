@@ -2,7 +2,6 @@ package ModelLayer;
 import java.util.ArrayList;
 
 public class mfMink {
-	private int minkID;
 	private String color;
 	private int furLength;
 	private int furDensity;
@@ -10,23 +9,16 @@ public class mfMink {
 	private String qualityType;
 
 	
-	public mfMink(int minkID, String color, int furLength, int furDensity, int birthDate, String qualityType)
+	public mfMink(String color, int furLength, int furDensity, int birthDate, String qualityType)
 	{
-		this.minkID = minkID;
 		this.color = color;
 		this.furLength = furLength;
 		this.furDensity = furDensity;
 		this.qualityType = qualityType;
 	}
-
-
-	public int getMinkID() {
-		return minkID;
-	}
-
-
-	public void setMinkID(int minkID) {
-		this.minkID = minkID;
+	public mfMink()
+	{
+		
 	}
 
 
