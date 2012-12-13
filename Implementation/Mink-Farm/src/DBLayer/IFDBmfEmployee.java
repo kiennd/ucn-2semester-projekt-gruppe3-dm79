@@ -9,7 +9,7 @@ public interface IFDBmfEmployee {
 	
 	// Get all employees
 	public ArrayList<mfEmployee> getAllEmployees(boolean retriveAssociation);
-	//get one employee by id
+	//get one employee by id.
 	public mfEmployee findEmployeeByID(int employeeID, boolean retriveAssociation);
 	//get employee by fName.
 	public mfEmployee findEmployeeByFname(String fname, boolean retriveAssociation);
@@ -18,6 +18,6 @@ public interface IFDBmfEmployee {
 	//insert a new employee
 	public int insertEmployee(mfEmployee emp) throws Exception;
 	//update information about an employee
-	public int updateCustomer(mfEmployee emp);
+	public int updateEmployee(mfEmployee emp);
 	
 }
