@@ -8,7 +8,7 @@ public interface IFDBMink
 	//Creates a new mink
 	public int createMink(Mink mfmink) throws Exception;
 	//Update mink
-	public int updateMink(Mink mfmink);
+	public int updateMink(Mink mink);
 	//Delete mink
-	public int deleteMink(int minkID);
+	public int deleteMink(int cageNr);
 }
