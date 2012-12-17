@@ -1,20 +1,193 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="11.5.1">
-  <zoom_level>9</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>567</x>
-      <y>27</y>
-      <w>333</w>
-      <h>216</h>
+      <x>260</x>
+      <y>30</y>
+      <w>370</w>
+      <h>150</h>
     </coordinates>
-    <panel_attributes>GUImfMainMenu
+    <panel_attributes>GUIMink
 --
-- GUImfTransfer:GUImfTransfer
-- GUImfDisease:GUImfDisease
 
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>310</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>CTRCage
 --
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>470</x>
+      <y>310</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>CTRMink
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>100</x>
+      <y>80</y>
+      <w>180</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;230;30;30;160;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>600</x>
+      <y>80</y>
+      <w>180</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160;230;160;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>500</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBCage
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>470</x>
+      <y>500</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBColumn
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>500</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBConnection
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>320</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBEmployee
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1360</x>
+      <y>500</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBFarm
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1360</x>
+      <y>320</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBHall
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>140</y>
+      <w>370</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>DBMink
+--
+
+
 
 
 </panel_attributes>
