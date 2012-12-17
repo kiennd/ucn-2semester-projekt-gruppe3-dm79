@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>260</x>
+      <x>280</x>
       <y>30</y>
       <w>370</w>
       <h>150</h>
@@ -21,7 +21,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>60</x>
       <y>310</y>
       <w>370</w>
       <h>150</h>
@@ -38,7 +38,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>470</x>
+      <x>490</x>
       <y>310</y>
       <w>370</w>
       <h>150</h>
@@ -55,7 +55,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>100</x>
+      <x>120</x>
       <y>80</y>
       <w>180</w>
       <h>250</h>
@@ -66,7 +66,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>600</x>
+      <x>620</x>
       <y>80</y>
       <w>180</w>
       <h>250</h>
@@ -77,7 +77,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>0</x>
+      <x>70</x>
       <y>500</y>
       <w>370</w>
       <h>150</h>
@@ -94,7 +94,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>470</x>
+      <x>490</x>
       <y>500</y>
       <w>370</w>
       <h>150</h>
@@ -111,7 +111,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>920</x>
+      <x>940</x>
       <y>500</y>
       <w>370</w>
       <h>150</h>
@@ -128,7 +128,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>920</x>
+      <x>940</x>
       <y>320</y>
       <w>370</w>
       <h>150</h>
@@ -145,7 +145,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1360</x>
+      <x>1380</x>
       <y>500</y>
       <w>370</w>
       <h>150</h>
@@ -162,7 +162,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1360</x>
+      <x>1380</x>
       <y>320</y>
       <w>370</w>
       <h>150</h>
@@ -179,7 +179,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>920</x>
+      <x>940</x>
       <y>140</y>
       <w>370</w>
       <h>150</h>
@@ -192,5 +192,27 @@
 
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>320</y>
+      <w>90</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>70;200;30;200;30;30;60;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>140</y>
+      <w>160</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;Z.</panel_attributes>
+    <additional_attributes>30;170;30;30;140;30</additional_attributes>
   </element>
 </diagram>
