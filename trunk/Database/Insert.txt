@@ -1,0 +1,55 @@
+INSERT INTO mfFarm values('123456789', 'MinkInq', 'Minkvej 123', '9000', 'Aalborg', '12345678', 'mink@mink.dk');
+
+
+INSERT INTO mfHall VALUES('1','123456789');
+
+INSERT INTO mfColumn VALUES('1','1');
+INSERT INTO mfColumn VALUES('2','1');
+INSERT INTO mfColumn VALUES('3','1');
+INSERT INTO mfColumn VALUES('4','1');
+INSERT INTO mfColumn VALUES('5','1');
+INSERT INTO mfColumn VALUES('6','1');
+INSERT INTO mfColumn VALUES('7','1');
+INSERT INTO mfColumn VALUES('8','1');
+INSERT INTO mfColumn VALUES('9','1');
+INSERT INTO mfColumn VALUES('10','1');
+INSERT INTO mfColumn VALUES('11','1');
+
+
+INSERT INTO mfCage VALUES('100','1','Stål');
+INSERT INTO mfCage VALUES('101','1','Stål');
+INSERT INTO mfCage VALUES('102','1','Stål');
+INSERT INTO mfCage VALUES('103','1','Stål');
+INSERT INTO mfCage VALUES('104','1','Stål');
+INSERT INTO mfCage VALUES('105','1','Stål');
+INSERT INTO mfCage VALUES('200','2','Stål');
+INSERT INTO mfCage VALUES('201','2','Stål');
+INSERT INTO mfCage VALUES('202','2','Stål');
+INSERT INTO mfCage VALUES('203','2','Stål');
+INSERT INTO mfCage VALUES('204','2','Stål');
+INSERT INTO mfCage VALUES('205','2','Stål');
+INSERT INTO mfCage VALUES('300','3','Stål');
+INSERT INTO mfCage VALUES('301','3','Stål');
+INSERT INTO mfCage VALUES('302','3','Stål');
+INSERT INTO mfCage VALUES('303','3','Stål');
+INSERT INTO mfCage VALUES('304','3','Stål');
+INSERT INTO mfCage VALUES('305','3','Stål');
+INSERT INTO mfCage VALUES('400','4','Stål');
+INSERT INTO mfCage VALUES('401','4','Stål');
+INSERT INTO mfCage VALUES('402','4','Stål');
+INSERT INTO mfCage VALUES('403','4','Stål');
+INSERT INTO mfCage VALUES('404','4','Stål');
+INSERT INTO mfCage VALUES('405','4','Stål');
+
+INSERT INTO mfMink VALUES('Mahogny','2','3','2012','A','100');
+INSERT INTO mfMink VALUES('Mahogny','1','4','2012','A','100');
+INSERT INTO mfMink VALUES('Mahogny','3','3','2012','A','101');
+INSERT INTO mfMink VALUES('Mahogny','1','1','2012','A','101');
+INSERT INTO mfMink VALUES('White','3','4','2012','B','200');
+INSERT INTO mfMink VALUES('White','4','4','2012','B','200');
+INSERT INTO mfMink VALUES('White','2','1','2012','B','201');
+INSERT INTO mfMink VALUES('White','3','3','2012','B','201');
+INSERT INTO mfMink VALUES('Silver','4','4','2012','C','300');
+INSERT INTO mfMink VALUES('Silver','3','2','2012','C','300');
+INSERT INTO mfMink VALUES('Silver','2','4','2012','C','301');
+INSERT INTO mfMink VALUES('Silver','3','4','2012','C','301');
