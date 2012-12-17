@@ -15,10 +15,10 @@ public class Transfer
 {
 	private int transferId;
 	private String transferDate;
-	private mfCage cage;
+	private Cage cage;
 	private PlasmaDisease disease_p;
 	private BiteDisease disease_b;
-	private mfEmployee employee; 
+	private Employee employee; 
 	
 	
 	
@@ -66,22 +66,22 @@ public class Transfer
 		this.disease_p = disease_p;
 	}
 	
-	public mfEmployee getEmployee() 
+	public Employee getEmployee() 
 	{
 		return employee;
 	}
 	
-	public void setEmployee(mfEmployee employee) 
+	public void setEmployee(Employee employee) 
 	{
 		this.employee = employee;
 	}
 	
-	public mfCage getCage() 
+	public Cage getCage() 
 	{
 		return cage;
 	}
 	
-	public void setCage(mfCage cage) 
+	public void setCage(Cage cage) 
 	{
 		this.cage = cage;
 	}
@@ -91,7 +91,7 @@ public class Transfer
 	 * Constructor with parameters.
 	 */
 	
-	public Transfer(int transferId, String transferDate, mfCage cage, PlasmaDisease disease_p, BiteDisease disease_b, mfEmployee employee) 
+	public Transfer(int transferId, String transferDate, Cage cage, PlasmaDisease disease_p, BiteDisease disease_b, Employee employee) 
 	{
 		this.transferId = transferId;
 		this.transferDate = transferDate;
