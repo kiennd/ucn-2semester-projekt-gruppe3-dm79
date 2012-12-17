@@ -1,0 +1,5 @@
+CREATE TABLE mfCageHealthStatus
+(cageId int,
+disease_present varchar(10),
+diseaseId int,
+okayDate varchar(50));

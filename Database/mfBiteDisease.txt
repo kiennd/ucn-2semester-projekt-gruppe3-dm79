@@ -1,0 +1,9 @@
+CREATE TABLE mfBiteDisease
+(diseaseId int,
+diseaseType varchar(30),
+bitelocation varchar(50),
+diagnosisDate varchar(40),
+treatmentStartDate varchar(40),
+treatmentType varchar(40),
+description varchar(30),
+primary key (diseaseId));
