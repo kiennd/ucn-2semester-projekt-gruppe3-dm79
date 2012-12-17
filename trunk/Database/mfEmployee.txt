@@ -1,11 +1,13 @@
-create table mfEmployee
+CREATE TABLE mfEmployee
 (employeeid int,
+fname varchar(40) not null,
+lname varchar(30) not null,
 address varchar(30) not null,
 zipcode int, 
 phoneno int not null,
 email varchar(50) not null,
 cvrNo int not null,
-primary key (employeeid)
+primary key (employeeid),
 foreign key (cvrNo) references mfFarm(cvrNo));
 
 
