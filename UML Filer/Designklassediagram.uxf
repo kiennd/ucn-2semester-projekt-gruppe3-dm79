@@ -21,14 +21,16 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>60</x>
+      <x>70</x>
       <y>310</y>
       <w>370</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>CTRCage
 --
-
+ + findCage(int cageNo)
+ + createCage(int cageNo, String cageType)
+ + updateCage(int cageNo, String cageType)
 
 
 
@@ -45,9 +47,8 @@
     </coordinates>
     <panel_attributes>CTRMink
 --
-
-
-
+ + createMink(String color, int furLength, int furDensity, int birthDate, String qualityType, int cageNr)
+ + updateMink(String color, int furLength, int furDensity, int birthDate, String qualityType, int cageNr)
 
 </panel_attributes>
     <additional_attributes/>
@@ -55,13 +56,13 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>120</x>
+      <x>130</x>
       <y>80</y>
-      <w>180</w>
+      <w>170</w>
       <h>250</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>30;230;30;30;160;30</additional_attributes>
+    <additional_attributes>30;230;30;30;150;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -79,16 +80,18 @@
     <coordinates>
       <x>70</x>
       <y>500</y>
-      <w>370</w>
-      <h>150</h>
+      <w>410</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>DBCage
 --
-
-
-
-
-</panel_attributes>
+ + findCage(int cageNo, boolean retrieveAssociation)
+ + createCage(Cage cag) 
+ + deleteCage(int cageNo)
+ + updateCage(Cage cage)
+ - buildCage(ResultSet results)
+ - buildquery(String wClause)
+ - singleWhere(String wClause, boolean retrieveAssociation)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -101,8 +104,8 @@
     </coordinates>
     <panel_attributes>DBColumn
 --
-
-
+ + getAllColumn()
+ + findColumn(int colNo, boolean retriveAssociation)
 
 
 </panel_attributes>
@@ -202,7 +205,7 @@
       <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>70;200;30;200;30;30;60;30</additional_attributes>
+    <additional_attributes>70;200;30;200;30;30;70;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
