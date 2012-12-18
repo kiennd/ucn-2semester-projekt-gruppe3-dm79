@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>320</x>
+      <x>160</x>
       <y>70</y>
       <w>80</w>
       <h>120</h>
@@ -16,7 +16,7 @@ Actor</panel_attributes>
   <element>
     <type>com.umlet.element.custom.Systemborder</type>
     <coordinates>
-      <x>1000</x>
+      <x>840</x>
       <y>120</y>
       <w>80</w>
       <h>30</h>
@@ -28,29 +28,29 @@ bg=green</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1010</x>
+      <x>850</x>
       <y>120</y>
       <w>50</w>
-      <h>650</h>
+      <h>500</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;630;30;30</additional_attributes>
+    <additional_attributes>30;480;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
+      <x>170</x>
       <y>140</y>
       <w>50</w>
-      <h>590</h>
+      <h>480</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;570;30;30</additional_attributes>
+    <additional_attributes>30;460;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>340</x>
+      <x>180</x>
       <y>0</y>
       <w>420</w>
       <h>40</h>
@@ -62,8 +62,8 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>130</y>
+      <x>1120</x>
+      <y>40</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -74,8 +74,8 @@ updateCageHealthStatus(cageNo,disease_present)</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>210</y>
+      <x>170</x>
+      <y>170</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -86,32 +86,32 @@ return cageHealthStatus</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>170</y>
+      <x>170</x>
+      <y>130</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=0&lt;
-checkHealthStatus()</panel_attributes>
+checkCageHealthStatus()</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>490</y>
+      <x>170</x>
+      <y>450</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;
-StartTransferCage(transferID,transferDate,cageNO,diseaseType,employeeID)</panel_attributes>
+startTransfer(transferID,transferDate,cageNO,diseaseType,employeeID)</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>330</y>
+      <x>170</x>
+      <y>290</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -122,8 +122,8 @@ findDiseaseType(diseaseID)</panel_attributes>
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>1180</x>
-      <y>0</y>
+      <x>1010</x>
+      <y>10</y>
       <w>420</w>
       <h>40</h>
     </coordinates>
@@ -134,54 +134,43 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.custom.Systemborder</type>
     <coordinates>
-      <x>1210</x>
-      <y>150</y>
+      <x>1320</x>
+      <y>110</y>
       <w>360</w>
-      <h>120</h>
+      <h>130</h>
     </coordinates>
-    <panel_attributes>Operation: bloodTestSend
+    <panel_attributes>Operation: updateCageHealthStatus
 Use case: TransferDiseasedMink
 Preconditions: 
 - Der er taget blodprøver 
-- Mink er registret i et bur
+- Resultat fra blodprøve viser at der er sygdom i et bur
 Postconditions:
+- De bure med sygdom er blevet opdateret i systemet
   </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.custom.Systemborder</type>
     <coordinates>
-      <x>1210</x>
+      <x>1050</x>
       <y>290</y>
       <w>360</w>
       <h>130</h>
     </coordinates>
-    <panel_attributes>Operation: moveMink
+    <panel_attributes>Operation: findDiseaseType
 Use case: TransferDiseasedMink
 Preconditions: 
-- Der er tomme bure på minkfarmen
-- Mink er registret i et bur
+- Der er sygdom i et eller flere bure
 Postconditions:
-- Minkene er blevet flyttet til et andet bur
-  </panel_attributes>
+- Der er blevet defineret hvilken af de to sygdomme
+ minkene har</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>1010</x>
-      <y>150</y>
-      <w>220</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&gt;-</panel_attributes>
-    <additional_attributes>30;30;200;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>1010</x>
-      <y>270</y>
+      <x>850</x>
+      <y>350</y>
       <w>220</w>
       <h>50</h>
     </coordinates>
@@ -191,8 +180,8 @@ Postconditions:
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>420</x>
-      <y>890</y>
+      <x>170</x>
+      <y>660</y>
       <w>420</w>
       <h>40</h>
     </coordinates>
@@ -203,134 +192,97 @@ Interaction Diagram for Transfer Diseased Mink</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>550</x>
-      <y>950</y>
-      <w>140</w>
+      <x>440</x>
+      <y>720</y>
+      <w>150</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>GUImfTransfer</panel_attributes>
+    <panel_attributes>GUITransfer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>550</x>
-      <y>1120</y>
-      <w>140</w>
+      <x>440</x>
+      <y>1150</y>
+      <w>150</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>CtrmfDisease</panel_attributes>
+    <panel_attributes>DBTransfer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>550</x>
-      <y>1260</y>
-      <w>140</w>
+      <x>130</x>
+      <y>930</y>
+      <w>150</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>mfDisease</panel_attributes>
+    <panel_attributes>CTRCage</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>270</x>
-      <y>1120</y>
-      <w>140</w>
+      <x>1020</x>
+      <y>990</y>
+      <w>150</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>CtrmfTransfer</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>890</x>
-      <y>1260</y>
-      <w>140</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>DBmfDisease</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>890</x>
-      <y>1120</y>
-      <w>140</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>DBmfTransfer</panel_attributes>
+    <panel_attributes>CTRCageHealthStatus</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>590</x>
-      <y>950</y>
-      <w>50</w>
-      <h>190</h>
+      <x>250</x>
+      <y>720</y>
+      <w>528</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>lt=0&lt;
+4. findCage(cageNo)
+6. findDiseaseType(diseaseID)
+8. findEmployee(employeeID)
+10. startTransfer(transferID,transferDate,cageNO,diseaseType,employeeID)
 </panel_attributes>
-    <additional_attributes>30;170;30;30</additional_attributes>
+    <additional_attributes>270;270;270;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>660</x>
-      <y>1110</y>
-      <w>250</w>
-      <h>50</h>
+      <x>250</x>
+      <y>990</y>
+      <w>528</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=0&lt;
-</panel_attributes>
-    <additional_attributes>230;30;30;30</additional_attributes>
+
+
+.
+.
+
+11. startTransfer(transferID,transferDate,cageNO,diseaseType,employeeID)</panel_attributes>
+    <additional_attributes>270;160;270;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>590</x>
-      <y>1120</y>
-      <w>50</w>
-      <h>160</h>
-    </coordinates>
-    <panel_attributes>lt=0&lt;
-</panel_attributes>
-    <additional_attributes>30;140;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>660</x>
-      <y>1250</y>
-      <w>240</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=0&lt;
-</panel_attributes>
-    <additional_attributes>230;30;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>380</x>
-      <y>1110</y>
-      <w>190</w>
-      <h>50</h>
+      <x>220</x>
+      <y>920</y>
+      <w>244</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=0&gt;
-</panel_attributes>
-    <additional_attributes>170;30;30;30</additional_attributes>
+5. c = findCage(cageNo)Cage</panel_attributes>
+    <additional_attributes>220;80;130;80;130;30;60;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>250</y>
+      <x>170</x>
+      <y>210</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -341,8 +293,8 @@ findCage(cageNo)</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>290</y>
+      <x>170</x>
+      <y>250</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -353,8 +305,8 @@ return cage</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>370</y>
+      <x>170</x>
+      <y>330</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -365,8 +317,8 @@ return diseaseType</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>410</y>
+      <x>170</x>
+      <y>370</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -377,8 +329,8 @@ findEmployee(employeeID)</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
-      <y>450</y>
+      <x>170</x>
+      <y>410</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
@@ -389,13 +341,239 @@ return employee</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>330</x>
+      <x>170</x>
+      <y>490</y>
+      <w>730</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+return transfer</panel_attributes>
+    <additional_attributes>710;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>850</x>
+      <y>510</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;-</panel_attributes>
+    <additional_attributes>30;30;200;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>1050</x>
+      <y>430</y>
+      <w>360</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Operation: startTransfer
+Use case: TransferDiseasedMink
+Preconditions: 
+- Der er fundet et bur
+- Der er defineret en type sygdom
+- Der er fundet en medhjælper
+Postconditions:
+- Der er blevet oprettet transfer objekt som er blevet
+ gemt med ID og transfer dato</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>170</x>
       <y>530</y>
       <w>730</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;
-return transferCage</panel_attributes>
+endTransfer()</panel_attributes>
     <additional_attributes>710;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1020</x>
+      <y>830</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>GUICageHealthStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>970</x>
+      <y>830</y>
+      <w>232</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+1. checkCageHealthStatus()</panel_attributes>
+    <additional_attributes>120;160;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>990</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>CTRTransfer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1020</x>
+      <y>1150</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>DBCageHealthStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>970</x>
+      <y>990</y>
+      <w>234</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+2. checkCageHealthStatus()</panel_attributes>
+    <additional_attributes>120;160;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1020</x>
+      <y>1310</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>CageHealthStatus</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>970</x>
+      <y>1150</y>
+      <w>232</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+3. checkCageHealthStatus()</panel_attributes>
+    <additional_attributes>120;160;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>1310</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Transfer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>1150</y>
+      <w>548</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+12. t = startTransfer(transferID,transferDate,cageNO,diseaseType,employeeID)</panel_attributes>
+    <additional_attributes>280;160;280;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>750</x>
+      <y>930</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>CTRBiteDisease</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>750</x>
+      <y>1050</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>CTRPlasmaDisease</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>510</x>
+      <y>920</y>
+      <w>344</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+.
+7.d = findDiseaseType(diseaseID)DiseaseBite</panel_attributes>
+    <additional_attributes>240;30;180;30;180;80;80;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>500</x>
+      <y>980</y>
+      <w>366</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+7.d = findDiseaseType(diseaseID)DiseasePlasma</panel_attributes>
+    <additional_attributes>250;80;190;80;190;30;90;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>130</x>
+      <y>1060</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>CTREmployee</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>180</x>
+      <y>980</y>
+      <w>328</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=0&gt;
+9. e = findEmployee(employeeID)Employee</panel_attributes>
+    <additional_attributes>260;30;170;30;170;90;100;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1120</x>
+      <y>70</y>
+      <w>730</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>bg=red</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
