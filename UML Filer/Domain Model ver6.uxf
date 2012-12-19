@@ -198,7 +198,7 @@ m2=0..4
     </coordinates>
     <panel_attributes>lt=-
 m1=1
-m2=0..n
+m2=0..1
 </panel_attributes>
     <additional_attributes>30;90;30;30;360;30;360;290;90;290</additional_attributes>
   </element>
@@ -300,15 +300,16 @@ description
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>220</x>
+      <x>180</x>
       <y>490</y>
-      <w>120</w>
+      <w>160</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>CageHealthStatus
 --
 cageNo
-diseaseType
+BiteSore disease
+Plasmacytosis disease
 disease_present
 okayDate
 
@@ -328,7 +329,7 @@ okayDate
 m1=1...n
 m2=1
 </panel_attributes>
-    <additional_attributes>500;70;500;30;30;30;30;510;200;510</additional_attributes>
+    <additional_attributes>500;70;500;30;30;30;30;510;160;510</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
