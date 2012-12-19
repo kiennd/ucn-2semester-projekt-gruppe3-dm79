@@ -1,5 +1,8 @@
 CREATE TABLE mfCageHealthStatus
-(cageId int,
+(cageNo int,
+diseaseId_p int, 
+diseaseId_b int,
 disease_present varchar(10),
-diseaseId int,
-okayDate varchar(50));
+okayDate varchar(50)
+foreign key (diseaseId_p) references mfPlasmaDisease(diseaseId),
+foreign key (diseaseId_b) references mfBiteDisease(diseaseId));
