@@ -11,8 +11,6 @@ public class Cage {
 	{
 		this.cageNo = cageNo;
 		this.colNr = colNr;
-		this.cageType = cageType;
-		
 		ArrayList<Mink> myMink;
 	}
 	public int getColNr() {

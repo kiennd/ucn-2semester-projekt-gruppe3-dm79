@@ -3,15 +3,17 @@ import java.util.ArrayList;
 
 public class Column {
 	
-	private int colNo;
-	private int numOfCol;
+	private int colNo, hallNr;
+	
 	private ArrayList<Cage> myCage;
 	
 	
-	public Column(int colNo, int numOfCol)
+	public Column(int colNo, int hallNr)
 	{
 		this.colNo = colNo;
-		this.numOfCol = numOfCol;
+		this.hallNr = hallNr;
+		ArrayList<Cage> myCage;
+		
 	}
 	
 	public Column()
@@ -31,13 +33,14 @@ public class Column {
 	public int getColNo() {
 		return colNo;
 	}
-	
-	public void setNumOfCol(int numOfCol) {
-		this.numOfCol = numOfCol;
+
+	public int getHallNr() {
+		return hallNr;
+	}
+
+	public void setHallNr(int hallNr) {
+		this.hallNr = hallNr;
 	}
 	
-	public int getNumOfCol() {
-		return numOfCol;
-	}
 
 }
