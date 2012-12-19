@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="11.5.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>280</x>
-      <y>30</y>
-      <w>370</w>
-      <h>150</h>
+      <x>252</x>
+      <y>0</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>GUIMink
 --
-
+ + GUIMink
 
 
 
@@ -21,10 +21,10 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>70</x>
-      <y>310</y>
-      <w>370</w>
-      <h>150</h>
+      <x>63</x>
+      <y>252</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>CTRCage
 --
@@ -40,10 +40,10 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>490</x>
-      <y>310</y>
-      <w>370</w>
-      <h>150</h>
+      <x>468</x>
+      <y>252</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>CTRMink
 --
@@ -56,32 +56,32 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>130</x>
-      <y>80</y>
-      <w>170</w>
-      <h>250</h>
+      <x>117</x>
+      <y>45</y>
+      <w>153</w>
+      <h>225</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>30;230;30;30;150;30</additional_attributes>
+    <additional_attributes>27;207;27;27;135;27</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>620</x>
-      <y>80</y>
-      <w>180</w>
-      <h>250</h>
+      <x>558</x>
+      <y>45</y>
+      <w>189</w>
+      <h>225</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>160;230;160;30;30;30</additional_attributes>
+    <additional_attributes>171;207;171;27;27;27</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>70</x>
-      <y>500</y>
-      <w>410</w>
-      <h>180</h>
+      <x>63</x>
+      <y>423</y>
+      <w>369</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>DBCage
 --
@@ -97,16 +97,22 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>490</x>
-      <y>500</y>
-      <w>370</w>
-      <h>150</h>
+      <x>1620</x>
+      <y>450</y>
+      <w>333</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>DBColumn
 --
  + getAllColumn()
  + findColumn(int colNo, boolean retriveAssociation)
-
+ + createColumn(Column column)
+ + deleteColumn(int colNo)
+ + updateColumn(Column column)
+ - buildquery(String wClause)
+ - miscWhere(String wClause, boolean retrieveAssociation)
+ - singleWhere(String wClause, boolean retrieveAssociation)
+ - buildColums(ResultSet results)
 
 </panel_attributes>
     <additional_attributes/>
@@ -114,30 +120,37 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>940</x>
-      <y>500</y>
-      <w>370</w>
-      <h>150</h>
+      <x>2349</x>
+      <y>450</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>DBConnection
 --
 
 
-
-
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>940</x>
-      <y>320</y>
-      <w>370</w>
-      <h>150</h>
+      <x>846</x>
+      <y>450</y>
+      <w>387</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>DBEmployee
 --
+ + findEmployeeByFname(String fname, boolean retrieveAssociation)
+ + findEmployeeByLname(String lname, boolean retrieveAssociation)
+ + findEmployeeByID(int employeeID, boolean retrieveAssociation)
+ + insertEmployee(Employee emp)
+ + updateEmployee(Employee emp)
+ - deleteEmployee(int employeeID)
+ - buildEmployee(ResultSet results)
+ - buildQuery(String wClause)
+ - singleWhere(String wClause, boolean retrieveAssociation)
 
 
 
@@ -148,13 +161,15 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1380</x>
-      <y>500</y>
-      <w>370</w>
-      <h>150</h>
+      <x>1260</x>
+      <y>450</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>DBFarm
 --
+ + insertFarm(Farm farm)
+ + updateFarm(Farm farm)
 
 
 
@@ -165,10 +180,10 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1380</x>
-      <y>320</y>
-      <w>370</w>
-      <h>150</h>
+      <x>1989</x>
+      <y>450</y>
+      <w>333</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>DBHall
 --
@@ -182,13 +197,19 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>940</x>
-      <y>140</y>
-      <w>370</w>
-      <h>150</h>
+      <x>468</x>
+      <y>450</y>
+      <w>342</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>DBMink
 --
+ + createMink(Mink mink)
+ + updateMink(Mink mink)
+ + deleteMink(int cageNr)
+ + buildQuery(String wClause)
+ + singleWhere(String wClause, boolean retrieveAssociation)
+ + buildMink(ResultSet results)
 
 
 
@@ -200,22 +221,114 @@
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>0</x>
-      <y>320</y>
-      <w>90</w>
-      <h>220</h>
+      <y>261</y>
+      <w>81</w>
+      <h>198</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>70;200;30;200;30;30;70;30</additional_attributes>
+    <additional_attributes>63;180;27;180;27;27;63;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>846</x>
+      <y>252</y>
+      <w>378</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>CTREmployee
+--
+ + Employee findByFname(String fname)
+ + Employee findByLname(String lname)
+ + Employee findEmployeeByID(int employeeID)
+ + updateEmployee(int employeeID, String fname, String lname,
+ String address, int zipCode, String city, int phoneNo, String email)
+ + insertEmployee(int employeeID, String fname, String lname,
+ String address, int zipCode, String city, int phoneNo, String email)</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>800</x>
-      <y>140</y>
-      <w>160</w>
-      <h>190</h>
+      <x>702</x>
+      <y>324</y>
+      <w>144</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>lt=&gt;Z.</panel_attributes>
-    <additional_attributes>30;170;30;30;140;30</additional_attributes>
+    <panel_attributes>lt=&lt;Z.</panel_attributes>
+    <additional_attributes>27;126;27;99;126;99;126;27;99;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2736</x>
+      <y>450</y>
+      <w>369</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>DBBiteDisease
+--
+ + searchBiteDiseaseById(int attValue, boolean retriveAssociation)
+ - singleWhere(String wClause, boolean retrieveAssociation)
+ - buildQuery(String wClause)
+ - buildBiteDisease(ResultSet results)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>3555</x>
+      <y>450</y>
+      <w>333</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>DBCageHealthStatus
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>3177</x>
+      <y>450</y>
+      <w>333</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>DBPlasmaDisease
+--
+ + searchDiseaseById(int disId, boolean retriveAssociation)
+ - singleWhere(String wClause, boolean retrieveAssociation)
+ - buildQuery(String wClause)
+ - buildPlasmaDisease(ResultSet results)
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>3933</x>
+      <y>450</y>
+      <w>333</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>DBTransfer
+--
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
