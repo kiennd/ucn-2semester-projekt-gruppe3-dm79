@@ -8,8 +8,8 @@ public class Mink {
 	private int birthDate;
 	private String qualityType;
 	private int cageNr;
-
 	
+
 	public Mink(String color, int furLength, int furDensity, int birthDate, String qualityType, int cageNr)
 	{
 		this.color = color;
