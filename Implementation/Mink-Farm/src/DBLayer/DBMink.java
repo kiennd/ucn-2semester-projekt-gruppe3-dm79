@@ -10,11 +10,13 @@ import ModelLayer.*;
 	public int createMink(Mink mink) throws Exception
 	{
 		int rc = -1;
-		String query = "INSERT INTO mfMink(color, furLength, furDensity, qualityType) VALUES ('"+
+		String query = "INSERT INTO mfMink(color, furLength, furDensity, birthdate, qualityType, cageNr) VALUES ('"+
 				mink.getColor() + "', '" +
 				mink.getFurLength() + "', '" +
 				mink.getFurDensity() + "', '" +
-				mink.getBirthDate() + "')";
+				mink.getBirthDate() + "', '" +
+				mink.getQualityType() + "', '" +
+				mink.getCageNr() + "')";
 		System.out.println("insert : " + query);
 		
 		try
@@ -44,6 +46,7 @@ import ModelLayer.*;
 				"birthdate ='" + minkobj.getBirthDate() + "', " +
 				"qualityType ='" + minkobj.getQualityType() + "', " +
 				"cageNr ='" + minkobj.getCageNr() + "',";
+			
 				
 				System.out.println("Update query: " + qry);
 				try
@@ -125,6 +128,8 @@ import ModelLayer.*;
 			minkObj.setFurDensity(results.getInt("furDensity"));
 			minkObj.setBirthDate(results.getInt("birthDate"));
 			minkObj.setQualityType(results.getString("qualityType"));
+			minkObj.setCageNr(results.getInt("cageNr"));
+		
 		}
 		catch(Exception e)
 		{

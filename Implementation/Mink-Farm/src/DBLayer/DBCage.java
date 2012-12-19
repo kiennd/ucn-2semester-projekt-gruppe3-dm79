@@ -28,8 +28,9 @@ public class DBCage implements IFDBCage
 	public int createCage(Cage cag) throws Exception
 	{
 		int rc = -1;
-		String query = "INSERT INTO mfCage(cageNo, CageType) VALUES ('"+
+		String query = "INSERT INTO mfCage(cageNo, colNr, CageType) VALUES ('"+
 				cag.getCageNo() + "', '" +
+				cag.getColNr() + "', '" +
 				cag.getCageType() + "')";
 		System.out.println("insert : " + query);
 		
@@ -74,10 +75,10 @@ public class DBCage implements IFDBCage
 		Cage cagekobj = cage;
 		int rc= -1;
 		
-		String qry = "UPDATE mfMink SET" + 
+		String qry = "UPDATE mfCage SET" + 
 				"cageNo = '" + cagekobj.getCageNo()+"', " +
-				"colNr ='" + cagekobj.getCageType() + "', " +
-				"CageType ='" + cagekobj.getMyMink() + "', ";
+				"colNr ='" + cagekobj.getColNr() + "', " +
+				"CageType ='" + cagekobj.getCageType() + "', ";
 				
 				System.out.println("Update query: " + qry);
 				try
@@ -104,6 +105,7 @@ public class DBCage implements IFDBCage
 		try
 		{
 			cageObj.setCageNo(results.getInt("cageNo"));
+			cageObj.setCageNo(results.getInt("colNo"));
 			cageObj.setCageType(results.getString("CageType"));
 		}
 		catch(Exception e)
