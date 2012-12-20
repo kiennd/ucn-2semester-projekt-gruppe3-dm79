@@ -71,37 +71,35 @@ public class DBEmployeeTest {
 	@Test
 	public void testInsertEmployee() {
 		DBEmployee dbEmp = new DBEmployee();
-		//TODO !!! redefine the constructor of Product class.
+		//TODO !!! redefine the constructor of Employee class.
 		//Product testProd = new Product(123, 200.0, 220.0, 20.0, "Canada", 100, "small", "green", null, null, null, 334, null, "Hippyhat", "Clothing");
 		
 		try{
-			int x = dbprod.insertProduct(null);
+			int x = dbEmp.insertEmployee(null);
 
 		if(x > 0)
 		{
-			Product prod = dbprod.findProduct(123, false);
-			System.out.println("A new product has been created with the following values: " + "Product Id: " + prod.getProductId() + "Product name" + prod.getName() + "and the purchase price is: " + prod.getPurchasePrice());
+			Employee emp = dbEmp.findEmployeeByID(3003, false);
+			System.out.println("A new employee has been created with the following values: " + "Employee ID: " + emp.getEmployeeID() + "First name: " + emp.getFname() + "Last name: " + emp.getLname() + "lives at: " + emp.getAddress() + "zipcode: " + emp.getZipCode() + "city: " + emp.getCity() + "Phone number: " + emp.getPhoneNo() + "Email: " + emp.getEmail());
 		}
 		else
 		{
-				
-		fail("Nothing new was created");
+		fail("Nothing new was created FAILS");
 		}
 	}
-	catch(Exception e)
-	{
-		System.out.println("Nothing new was created");
+		catch(Exception e)
+		{
+			System.out.println("Nothing new was created");
+		}
 	}
-	}
-	
 	
 //	@Test
-//	public void testUpdateProduct() {
+//	public void testUpdateEmployee() {
 //		fail("Not yet implemented");
 //	}
 //
 //	@Test
-//	public void testDeleteProduct() {
+//	public void testDeleteEmployee() {
 //		fail("Not yet implemented");
 //	}
 
