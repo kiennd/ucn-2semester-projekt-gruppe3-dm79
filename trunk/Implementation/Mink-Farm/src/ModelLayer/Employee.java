@@ -27,6 +27,15 @@ public class Employee {
 	public Employee() {
 		// EMPTY
 	}
+	
+	
+	//constructor to get employee id.
+	
+	public Employee(int employeeID) 
+	{
+		this.employeeID = employeeID;
+	}
+	
 
 	public void setEmployeeID(int employeeID) {
 		this.employeeID = employeeID;

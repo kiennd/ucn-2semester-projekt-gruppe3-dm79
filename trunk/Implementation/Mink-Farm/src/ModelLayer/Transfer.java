@@ -1,3 +1,4 @@
+
 package ModelLayer;
 
 /**
@@ -16,8 +17,8 @@ public class Transfer
 	private int transferId;
 	private String transferDate;
 	private Cage cage;
-	private PlasmaDisease disease_p;
-	private BiteDisease disease_b;
+	private PlasmaDisease diseaseId_p;
+	private BiteDisease diseaseId_b;
 	private Employee employee; 
 	
 	
@@ -48,22 +49,22 @@ public class Transfer
 	
 	public BiteDisease getDisease_b() 
 	{
-		return disease_b;
+		return diseaseId_b;
 	}
 	
 	public void setDisease_b(BiteDisease disease_b) 
 	{
-		this.disease_b = disease_b;
+		this.diseaseId_b = disease_b;
 	}
 	
-	public PlasmaDisease getDisease_p() 
+	public PlasmaDisease getdiseaseId_p() 
 	{
-		return disease_p;
+		return diseaseId_p;
 	}
 	
-	public void setDisease_p(PlasmaDisease disease_p) 
+	public void setdiseaseId_p(PlasmaDisease diseaseId_p) 
 	{
-		this.disease_p = disease_p;
+		this.diseaseId_p = diseaseId_p;
 	}
 	
 	public Employee getEmployee() 
@@ -91,13 +92,13 @@ public class Transfer
 	 * Constructor with parameters.
 	 */
 	
-	public Transfer(int transferId, String transferDate, Cage cage, PlasmaDisease disease_p, BiteDisease disease_b, Employee employee) 
+	public Transfer(int transferId, String transferDate, Cage cage, PlasmaDisease diseaseId_p, BiteDisease disease_b, Employee employee) 
 	{
 		this.transferId = transferId;
 		this.transferDate = transferDate;
 		this.cage = cage;
-		this.disease_p = disease_p;
-		this.disease_b = disease_b;
+		this.diseaseId_p = diseaseId_p;
+		this.diseaseId_b = disease_b;
 		this.employee = employee;
 		
 	}

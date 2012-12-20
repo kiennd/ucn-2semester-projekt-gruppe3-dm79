@@ -23,6 +23,11 @@ public interface IFDBTransfer
 	    
 	    //update transfer information.
 	    public int updateTransfer(Transfer transfer);
+	    
+	    
+	  //inserts a new transfer.
+	    public int insertTransfer(Transfer transfer) throws Exception;
+	    
 	
 	}//end of interface 
 

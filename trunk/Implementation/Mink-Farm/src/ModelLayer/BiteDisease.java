@@ -14,7 +14,7 @@ package ModelLayer;
 
 public class BiteDisease {
 	private int diseaseId;
-	private String diseaseType, bitelocation, diagnosisDate, treatmentStartDate, treatmentType;
+	private String bitelocation, diagnosisDate, treatmentStartDate, treatmentType, description, diseaseName;
 
 	
 /*
@@ -31,14 +31,14 @@ public class BiteDisease {
 		this.diseaseId = diseaseId;
 	}
 	
-	public String getDiseaseType() 
+	public String getDiseaseName() 
 	{
-		return diseaseType;
+		return diseaseName;
 	}
 	
-	public void setDiseaseType(String diseaseType) 
+	public void setDiseaseName(String diseaseName) 
 	{
-		this.diseaseType = diseaseType;
+		this.diseaseName = diseaseName;
 	}
 	
 	public String getBitelocation() 
@@ -80,19 +80,31 @@ public class BiteDisease {
 	}
 	
 	
+	public String getDescription() 
+	{
+		return description;
+	}
+
+	public void setDescription(String description) 
+	{
+		this.description = description;
+	}
+	
+	
 	
 	/*
 	 * Constructor with parameters.
 	 */
 	
-	public BiteDisease(int diseaseId, String diseaseType, String bitelocation, String diagnosisDate, String treatmentStartDate, String treatmentType) 
+	public BiteDisease(int diseaseId, String bitelocation, String diagnosisDate, String treatmentStartDate, String treatmentType, String description, String diseaseName) 
 	{
 		this.diseaseId = diseaseId;
-		this.diseaseType = diseaseType;
 		this.bitelocation = bitelocation;
 		this.diagnosisDate = diagnosisDate;
 		this.treatmentStartDate = treatmentStartDate;
 		this.treatmentType = treatmentType;
+		this.description = description;
+		this.diseaseName = diseaseName;
 	}
 	
 	
@@ -104,6 +116,15 @@ public class BiteDisease {
 	{
 		
 	}
+
 	
+	//constructor to get disease id.
+	
+	public BiteDisease(int diseaseId) 
+	{
+		this.diseaseId = diseaseId;
+	}
+	
+
 
 }//end of class BiteDisease

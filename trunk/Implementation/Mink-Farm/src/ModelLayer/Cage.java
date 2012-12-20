@@ -13,6 +13,14 @@ public class Cage {
 		this.colNr = colNr;
 		ArrayList<Mink> myMink;
 	}
+	
+	//Cage constructor, used in some classes in DBlayer for constructing objects of cage when reading from fk tables.
+	
+	public Cage(int cageNo)
+	{
+		this.cageNo = cageNo;
+	}
+	
 	public int getColNr() {
 		return colNr;
 	}

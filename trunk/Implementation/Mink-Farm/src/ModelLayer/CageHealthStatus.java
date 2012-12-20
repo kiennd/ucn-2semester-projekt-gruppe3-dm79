@@ -15,7 +15,7 @@ package ModelLayer;
 
 public class CageHealthStatus 
 {
-	private int cageId, diseaseId;
+	private int cageNo, diseaseId_p, diseaseId_b;
 	private String disease_present, okayDate;
 	
 	
@@ -26,23 +26,35 @@ public class CageHealthStatus
 	
 	public int getCageId() 
 	{
-		return cageId;
+		return cageNo;
 	}
 	
-	public void setCageId(int cageId) 
+	public void setCageNo(int cageNo) 
 	{
-		this.cageId = cageId;
+		this.cageNo = cageNo;
 	}
 	
-	public int getDiseaseId() 
+	
+	public int getDiseaseId_b() 
 	{
-		return diseaseId;
+		return diseaseId_b;
+	}
+
+	public void setDiseaseId_b(int diseaseId_b) 
+	{
+		this.diseaseId_b = diseaseId_b;
+	}
+
+	public int getDiseaseId_p() 
+	{
+		return diseaseId_p;
+	}
+
+	public void setDiseaseId_p(int diseaseId_p) 
+	{
+		this.diseaseId_p = diseaseId_p;
 	}
 	
-	public void setDiseaseId(int diseaseId) 
-	{
-		this.diseaseId = diseaseId;
-	}
 	
 	public String getDisease_present() 
 	{
@@ -70,10 +82,11 @@ public class CageHealthStatus
 	 * 
 	 */
 	
-	public CageHealthStatus(int cageId, int diseaseId, String disease_present, String okayDate) 
+	public CageHealthStatus(int cageNo, int diseaseId_p, int diseaseId_b, String disease_present, String okayDate) 
 	{
-		this.cageId = cageId;
-		this.diseaseId = diseaseId;
+		this.cageNo = cageNo;
+		this.diseaseId_p = diseaseId_p;
+		this.diseaseId_b = diseaseId_b;
 		this.disease_present = disease_present;
 		this.okayDate = okayDate;
 	}
