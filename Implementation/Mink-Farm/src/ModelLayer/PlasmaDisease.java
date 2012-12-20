@@ -16,7 +16,7 @@ package ModelLayer;
 public class PlasmaDisease 
 {
 	private int diseaseId;
-	private String diseaseType, clinicName, nextTestDate, treatmentType, diagnosisDate, treatmentStartDate, testDate;
+	private String clinicName, nextTestDate, treatmentType, diagnosisDate, treatmentStartDate, testDate, diseaseName;
 	
 	
 	
@@ -34,14 +34,14 @@ public class PlasmaDisease
 		this.diseaseId = diseaseId;
 	}
 	
-	public String getDiseaseType() 
+	public String getDiseaseName() 
 	{
-		return diseaseType;
+		return diseaseName;
 	}
 	
-	public void setDiseaseType(String diseaseType) 
+	public void setDiseaseName(String diseaseName) 
 	{
-		this.diseaseType = diseaseType;
+		this.diseaseName = diseaseName;
 	}
 	
 	public String getClinicName() 
@@ -109,17 +109,17 @@ public class PlasmaDisease
 	 * Constructor with parameters.
 	 */
 	
-	public PlasmaDisease(int diseaseId, String diseaseType, String clinicName, String nextTestDate, String treatmentType, 
-			String diagnosisDate,String treatmentStartDate, String testDate) 
+	public PlasmaDisease(int diseaseId, String clinicName, String nextTestDate, String treatmentType, 
+			String diagnosisDate,String treatmentStartDate, String testDate, String diseaseName) 
 	{
 		this.diseaseId = diseaseId;
-		this.diseaseType = diseaseType;
 		this.clinicName = clinicName;
 		this.nextTestDate = nextTestDate;
 		this.treatmentType = treatmentType;
 		this.diagnosisDate = diagnosisDate;
 		this.treatmentStartDate = treatmentStartDate;
 		this.testDate = testDate;
+		this.diseaseName = diseaseName;
 	}
 	
 	
@@ -132,6 +132,14 @@ public class PlasmaDisease
 	{
 		
 	}
+	
+	//constructor to get disease id.
+	
+	public PlasmaDisease(int diseaseId) 
+	{
+		this.diseaseId = diseaseId;
+	}
+	
 
 
 }//End of class PlasmaDisease

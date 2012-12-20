@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class DBCageHealthStatus implements IFDBCageHealthStatus
 {
 	private Connection con;
-	private PreparedStatement pStmtSelect;
+	//private PreparedStatement pStmtSelect;
 	
 // Creates a new instance of DBPlasmDisease 
 	public DBCageHealthStatus()
@@ -23,9 +23,9 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	}
 
 	@Override
-	public CageHealthStatus findHealthStatusByCageId(int id, boolean retriveAssociation) 
+	public CageHealthStatus findHealthStatusByCageNo(int cageNo, boolean retriveAssociation) 
 	{
-    	String wClause = "  cageId = '" + id + "'";
+    	String wClause = "  cageNo = '" + cageNo + "'";
     	return singleWhere(wClause, retriveAssociation);
 	}
 
@@ -41,15 +41,16 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	{
         int rc = -1; 
         PreparedStatement pstmt = null;
-        String insert = "insert into mfCageHealthStatus(cageId, disease_present, diseaseId, okayDate)"+"values(?,?,?,?)";
+        String insert = "insert into mfCageHealthStatus(cageNo, diseaseId_p, diseaseId_b, disease_present, okayDate)"+"values(?,?,?,?,?)";
         System.out.println(insert);
         try
         {
             pstmt = con.prepareStatement(insert);
             pstmt.setInt(1,healthstatus.getCageId());
-            pstmt.setString(2, healthstatus.getDisease_present());
-            pstmt.setInt(3,healthstatus.getDiseaseId());
-            pstmt.setString(4, healthstatus.getOkayDate());
+            pstmt.setInt(2,healthstatus.getDiseaseId_p());
+            pstmt.setInt(3,healthstatus.getDiseaseId_b());
+            pstmt.setString(4, healthstatus.getDisease_present());
+            pstmt.setString(5, healthstatus.getOkayDate());
             rc = pstmt.executeUpdate();
         }
         
@@ -67,10 +68,34 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	}
 
 	@Override
-	public int updateHealthStatus(CageHealthStatus healthstatus) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	public int updateHealthStatus(CageHealthStatus healthstatus) 
+	{
+		CageHealthStatus cageHealthStatObj  = healthstatus;
+			int rc=-1;
+
+			String query="UPDATE healthstatus SET "+
+					"cageNo ='"+ cageHealthStatObj.getCageId()+"', "+
+					"diseaseId_p ='"+ cageHealthStatObj.getDiseaseId_p() + "', " +	
+					"diseaseId_b ='"+ cageHealthStatObj.getDiseaseId_b() + "', " +
+		            "disease_present ='"+ cageHealthStatObj.getDisease_present() + "', " +
+				    "okayDate ='"+ cageHealthStatObj.getOkayDate() + "', ";
+
+		              System.out.println("Update query:" + query);
+					try
+					{
+					//update mfHealthstatus.
+			 		Statement stmt = con.createStatement();
+			 		stmt.setQueryTimeout(5);
+			 	 	rc = stmt.executeUpdate(query);
+			 	 	stmt.close();
+					}//end try
+					catch(Exception ex)
+					{
+					System.out.println("Update exception in Cage Health Status DB: "+ex);
+					}
+					return(rc);
+			}
+		
 
 	
 	//Singelwhere is used when we only select one CageHealthStatus.
@@ -146,7 +171,7 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	
 	private String buildQuery(String wClause)
 	{
-		String query = "SELECT cageId, disease_present, diseaseId, okayDate FROM mfCageHealthStatus";	
+		String query = "SELECT cageNo, diseaseId_p, diseaseId_b, disease_present, okayDate FROM mfCageHealthStatus";	
 		if (wClause.length()>0)
 			query=query+" WHERE "+ wClause;
 		return query;
@@ -161,9 +186,10 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 		try
 		{
 			//use columns from mfCageHealthStatus table.
-			cagehealthstatObj.setCageId(results.getInt("cageId"));
+			cagehealthstatObj.setCageNo(results.getInt("cageId"));
+			cagehealthstatObj.setDiseaseId_p(results.getInt("diseaseId"));
+			cagehealthstatObj.setDiseaseId_b(results.getInt("diseaseId"));
 			cagehealthstatObj.setDisease_present(results.getString("disease_present"));
-			cagehealthstatObj.setDiseaseId(results.getInt("diseaseId"));
 			cagehealthstatObj.setOkayDate(results.getString("okayDate"));
 
 		}
@@ -172,9 +198,33 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 			System.out.println("Error building the Health status object.");
 		}
 		return cagehealthstatObj;
-	}	
-	
-	
-	
+	}
 
-}//end of class DBCageHealthStatus
+
+	@Override
+	public int deleteHealthStatusWithCageNo(int cageNo)
+	{
+			int rc = -1;
+	        PreparedStatement pstmt = null;
+	        String delete = "delete from mfCageHealthStatus where cageNo = ?";
+	        System.out.println(delete);
+	          try{
+	             pstmt = con.prepareStatement(delete);
+	             pstmt.setInt(1,cageNo);
+	             rc = pstmt.executeUpdate();                       
+	          }
+	          catch(SQLException sqlE)
+	          {
+	              System.out.println("SQL Error");
+	              System.out.println(sqlE.getMessage());   
+	          }
+	          catch(Exception e){
+	              e.getMessage();
+	              
+	          }
+	         return rc;
+	     }
+	     
+	}	//end of class DBCageHealthStatus
+
+	

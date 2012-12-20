@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class DBTransfer implements IFDBTransfer
 {
 	private Connection con;
+	private PreparedStatement pStmtSelect;
 	// Creates a new instance of DBPlasmDisease 
 	public DBTransfer()
 	{
@@ -107,6 +108,45 @@ public class DBTransfer implements IFDBTransfer
      
 
 	
+	
+	@Override
+	public int insertTransfer(Transfer transfer) throws Exception 
+	{
+	    {  
+	    	//call to get the next transfer Id 
+	            int nexttransferId = GetMax.getMaxId("Select max(transferId) from mfTransfer");
+	            nexttransferId = nexttransferId + 1;
+	            System.out.println("next transferId = " +  nexttransferId);
+	      
+	           int rc = -1;
+	    	   String query="INSERT INTO mfTransfer(transferId, transferDate, cageNumber, diseaseId_p, diseaseId_b, employeeId)  " +
+	    	   		"VALUES('"+
+	    	   nexttransferId  + "','"  +
+	    	   transfer.getTransferDate()  + "','"  +
+	    	   transfer.getCage().getCageNo()  + "','"  +
+	    	   transfer.getdiseaseId_p()  + "','"  +
+	    	   transfer.getDisease_b()  + "','"  +
+	    	   transfer.getEmployee().getEmployeeID();
+	    	   
+	           System.out.println("insert : " + query);
+	           try{ 
+	        	   
+	               Statement stmt = con.createStatement();
+	               stmt.setQueryTimeout(5);
+	          	   rc = stmt.executeUpdate(query);
+	               stmt.close();
+	           }//end try
+	            catch(SQLException ex){
+	               System.out.println("Transfer not created");
+	               throw new Exception ("Transfer is not inserted correctly");
+	            }
+	            return(rc);
+	    }
+			   
+	}
+	
+	
+	
 	private Transfer singleWhere(String wClause, boolean retrieveAssociation)
 	{
 		ResultSet results;
@@ -125,6 +165,27 @@ public class DBTransfer implements IFDBTransfer
 	 		{
 	 			transferObj = buildTransfer(results);
 	 			stmt.close();
+	 			if(retrieveAssociation)
+	 			{
+            		DBCage dbcage = new DBCage();
+            		Cage cageObj = transferObj.getCage();
+            		transferObj.setCage(dbcage.findCage(cageObj.getCageNo(), false));
+            		
+            		
+            		DBEmployee dbemp = new DBEmployee();
+            		transferObj.setEmployee(dbemp.findEmployeeByID(transferObj.getEmployee().getEmployeeID(), false));
+            		System.out.println("Employee Id is selected");
+            		
+            		
+            		DBBiteDisease dbbite = new DBBiteDisease();
+            		transferObj.setDisease_b(dbbite.searchBiteDiseaseById(transferObj.getDisease_b().getDiseaseId(), false));
+            		
+            		
+            		DBPlasmaDisease dbplasma = new DBPlasmaDisease();
+            		transferObj.setdiseaseId_p(dbplasma.searchDiseaseById(transferObj.getdiseaseId_p().getDiseaseId(), false));
+            		
+	 				
+	 			}
 	 		}
 	 		else{ 
 	 			//No health status info was found.
@@ -154,19 +215,15 @@ public class DBTransfer implements IFDBTransfer
 	
 	//method to build transfer object.
 	private Transfer buildTransfer(ResultSet results)
-	{
-		Transfer transferObj = new Transfer();
-		try
-		{
-			//use columns from transfer table.
-			transferObj.setTransferId(results.getInt("transferId"));
-			transferObj.setTransferDate(results.getString("transferDate"));
-			transferObj.getCage().setCageNo(results.getInt("cageNumber"));
-			transferObj.getDisease_p().setDiseaseId(results.getInt("diseaseId_p"));
-			transferObj.getDisease_b().setDiseaseId(results.getInt("diseaseId_b"));
-			transferObj.getEmployee().setEmployeeID(results.getInt("employeeId"));
-
-
+    {   Transfer transferObj = new Transfer();
+        try{ 
+        	// the columns from the table transfer are used
+              transferObj.setTransferId(results.getInt("transferId"));
+              transferObj.setTransferDate(results.getString("transferDate"));
+              transferObj.setCage(new Cage(results.getInt("cageNumber")));
+              transferObj.setdiseaseId_p(new PlasmaDisease(results.getInt("diseaseId_p")));
+              transferObj.setDisease_b(new BiteDisease(results.getInt("diseaseId_b")));
+              transferObj.setEmployee(new Employee(results.getInt("employeeId")));
 		}
 		catch (Exception e)
 		{
@@ -180,7 +237,7 @@ public class DBTransfer implements IFDBTransfer
 	  private ArrayList<Transfer> miscWhere(String wClause, boolean retrieveAssociation)
 	    {
 	        ResultSet results;
-	        ArrayList<Transfer> list = new ArrayList <Transfer>();
+	        ArrayList<Transfer> listT = new ArrayList <Transfer>();
 
 	        String query = buildQuery(wClause);
 	        System.out.println(query);
@@ -194,10 +251,37 @@ public class DBTransfer implements IFDBTransfer
 				{
 	            	Transfer transferObj = new Transfer();
 	            	transferObj = buildTransfer(results);
-	                list.add(transferObj);
+	                listT.add(transferObj);
 	            }
 	            stmt.close();
-	            return list;
+	            
+	            if(retrieveAssociation)
+	            {
+	            		
+	            		for(Transfer trans : listT)
+	            		{
+	            		
+	            		DBCage dbcage = new DBCage();
+	            		trans.setCage(dbcage.findCage(trans.getCage().getCageNo(), false));
+	            		System.out.println("Employee Id is selected");
+	            		
+	            		DBEmployee dbemp = new DBEmployee();
+	            		trans.setEmployee(dbemp.findEmployeeByID(trans.getEmployee().getEmployeeID(), false));
+	            		System.out.println("Employee Id is selected");
+	            		
+	            		
+	            		DBBiteDisease dbbite = new DBBiteDisease();
+	            		trans.setDisease_b(dbbite.searchBiteDiseaseById(trans.getDisease_b().getDiseaseId(), false));
+	            		System.out.println("Employee Id is selected");
+	            		
+	            		
+	            		DBPlasmaDisease dbplasma = new DBPlasmaDisease();
+	            		trans.setdiseaseId_p(dbplasma.searchDiseaseById(trans.getdiseaseId_p().getDiseaseId(), false));
+	            		System.out.println("Employee Id is selected");
+	            		
+	            	}
+	            }
+	            return listT;
 	         }
 
 	         catch(Exception e)
@@ -207,8 +291,7 @@ public class DBTransfer implements IFDBTransfer
 	         }
 	    }
 
-	
-	
-	
+
+
 
 }// end of class DBTransfer.

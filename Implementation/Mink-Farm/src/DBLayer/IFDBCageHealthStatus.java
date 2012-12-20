@@ -1,5 +1,6 @@
 package DBLayer;
 import ModelLayer.*;
+
 import java.util.ArrayList;
 
 
@@ -10,7 +11,8 @@ public interface IFDBCageHealthStatus
 	
 
 	//find a single health status using the cage Id.
-	public CageHealthStatus findHealthStatusByCageId(int cageId, boolean retriveAssociation);
+	public CageHealthStatus findHealthStatusByCageNo(int cageNo, boolean retriveAssociation);
+	
 	
 	//find a single health status using the disease id.
 	public CageHealthStatus findHealthStatusBydiseaseId(int diseaseId, boolean retriveAssociation);
@@ -20,4 +22,10 @@ public interface IFDBCageHealthStatus
     
     //update information about a health status
     public int updateHealthStatus(CageHealthStatus healthstatus);
+    
+    //delete a health record using a CageNo.
+    public int deleteHealthStatusWithCageNo(int cageNo);
+    
+    
+    
 }
