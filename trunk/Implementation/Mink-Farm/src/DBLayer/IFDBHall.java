@@ -10,10 +10,10 @@ public interface IFDBHall
 	//find hall
 	public Hall findHall(int hallNo, boolean retriveAssociation);
 	//create new hall.
-	public int createHall(Hall mfhall) throws Exception;
+	public int createHall(Hall hall) throws Exception;
 	//delete hall
 	public int deleteHall(int hallNo);
 	//update hall
-	public int updateHall(Hall mfhall);
+	public int updateHall(Hall hall);
 
 }
