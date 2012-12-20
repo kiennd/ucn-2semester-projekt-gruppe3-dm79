@@ -28,7 +28,7 @@ public class DBColumn implements IFDBColumn
 		int rc = -1;
 		String query = "INSERT INTO mfColumn(colNo, numOfCol) VALUES ('"+
 				column.getColNo() + "', '" +
-				column.getNumOfCol() + "')";
+				column.getHallNr() + "')";
 		System.out.println("insert : " + query);
 		
 		try
@@ -73,7 +73,7 @@ public class DBColumn implements IFDBColumn
 		
 		String qry = "UPDATE mfColumn SET" + 
 				"colNo = '" + colkobj.getColNo() +"', " +
-				"numOfCol ='" + colkobj.getNumOfCol() + "', ";
+				"hallNr ='" + colkobj.getHallNr() + "', ";
 				
 				
 				System.out.println("Update query: " + qry);
@@ -94,7 +94,7 @@ public class DBColumn implements IFDBColumn
 	
 	private String buildquery(String wClause)
 	{
-		String query = "SELECT colNo, numOfCol, cageNr";
+		String query = "SELECT colNo, hallNr";
 		if(wClause.length()>0)
 			query=query + "WHERE" + wClause;
 		return query;
@@ -163,7 +163,7 @@ public class DBColumn implements IFDBColumn
 		try
 		{
 			colObj.setColNo(results.getInt("colNo"));
-			colObj.setNumOfCol(results.getInt("numOfCol"));
+			colObj.setHallNr(results.getInt("hallNr"));
 		}
 		catch(Exception e)
 		{
