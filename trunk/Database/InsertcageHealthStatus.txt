@@ -1,0 +1,9 @@
+
+INSERT INTO mfCageHealthStatus VALUES(100, 'JA', 'NEJ', 'UNKNOWN');
+INSERT INTO mfCageHealthStatus VALUES(101, 'NEJ', 'JA', 'UNKNOWN');
+INSERT INTO mfCageHealthStatus VALUES(102, 'JA', 'NEJ', 'UNKNOWN');
+INSERT INTO mfCageHealthStatus VALUES(103, 'NEJ', 'NEJ', 'UNKNOWN');
+INSERT INTO mfCageHealthStatus VALUES(104, 'JA', 'NEJ', 'UNKNOWN');
+INSERT INTO mfCageHealthStatus VALUES(200, 'NEJ', 'NEJ', 'UNKNOWN');
+INSERT INTO mfCageHealthStatus VALUES(201, 'NEJ', 'JA', 'UNKNOWN');
+
