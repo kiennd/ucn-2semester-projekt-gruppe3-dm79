@@ -15,90 +15,84 @@ package ModelLayer;
 
 public class CageHealthStatus 
 {
-	private int cageNo, diseaseId_p, diseaseId_b;
-	private String disease_present, okayDate;
+	private int cageNumber;
+	private String plasmacytosisObserveret, bideSårObserveret, okayDate;
 	
-	
-/*
- * set and get methods.
- * 
- */
-	
-	public int getCageId() 
+	/*
+	 * set and get methods.
+	 * 
+	 */
+	public int getCageNumber()
 	{
-		return cageNo;
-	}
-	
-	public void setCageNo(int cageNo) 
-	{
-		this.cageNo = cageNo;
-	}
-	
-	
-	public int getDiseaseId_b() 
-	{
-		return diseaseId_b;
+		return cageNumber;
 	}
 
-	public void setDiseaseId_b(int diseaseId_b) 
+
+	public void setCageNumber(int cageNumber) 
 	{
-		this.diseaseId_b = diseaseId_b;
+		this.cageNumber = cageNumber;
 	}
 
-	public int getDiseaseId_p() 
+
+	public String getPlasmacytosisObserveret() 
 	{
-		return diseaseId_p;
+		return plasmacytosisObserveret;
 	}
 
-	public void setDiseaseId_p(int diseaseId_p) 
+
+	public void setPlasmacytosisObserveret(String plasmacytosisObserveret) 
 	{
-		this.diseaseId_p = diseaseId_p;
+		this.plasmacytosisObserveret = plasmacytosisObserveret;
 	}
-	
-	
-	public String getDisease_present() 
+
+
+	public String getBideSårObserveret() 
 	{
-		return disease_present;
+		return bideSårObserveret;
 	}
-	
-	public void setDisease_present(String disease_present) 
+
+
+	public void setBideSårObserveret(String bideSårObserveret) 
 	{
-		this.disease_present = disease_present;
+		this.bideSårObserveret = bideSårObserveret;
 	}
-	
+
+
 	public String getOkayDate() 
 	{
 		return okayDate;
 	}
-	
-	public void setOkayDate(String okayDate)
+
+
+	public void setOkayDate(String okayDate) 
 	{
 		this.okayDate = okayDate;
 	}
+
 	
-	
-	/*
-	 * Constructor with parameters.
-	 * 
+//constructor with parameters.
+	/**
+	 * @param cageNumber
+	 * @param plasmacytosisObserveret
+	 * @param bideSårObserveret
+	 * @param okayDate
 	 */
-	
-	public CageHealthStatus(int cageNo, int diseaseId_p, int diseaseId_b, String disease_present, String okayDate) 
+	public CageHealthStatus(int cageNumber, String plasmacytosisObserveret, String bideSårObserveret, String okayDate) 
 	{
-		this.cageNo = cageNo;
-		this.diseaseId_p = diseaseId_p;
-		this.diseaseId_b = diseaseId_b;
-		this.disease_present = disease_present;
+		this.cageNumber = cageNumber;
+		this.plasmacytosisObserveret = plasmacytosisObserveret;
+		this.bideSårObserveret = bideSårObserveret;
 		this.okayDate = okayDate;
 	}
-	
-	
+
+
 	/*
 	 * Empty Parameters Constructor.
 	 */
-	
 	public CageHealthStatus()
 	{
 		
 	}
+
 
 }// end of CageHealthStatus class.
