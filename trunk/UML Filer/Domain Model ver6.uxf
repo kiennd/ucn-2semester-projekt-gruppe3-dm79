@@ -300,17 +300,16 @@ description
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>180</x>
+      <x>110</x>
       <y>490</y>
-      <w>160</w>
+      <w>230</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>CageHealthStatus
 --
-cageNo
-BiteSore disease
-Plasmacytosis disease
-disease_present
+cageNumber
+plasmacytosisObserveret
+bideSårObserveret
 okayDate
 
 
@@ -329,20 +328,6 @@ okayDate
 m1=1...n
 m2=1
 </panel_attributes>
-    <additional_attributes>500;70;500;30;30;30;30;510;160;510</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>310</x>
-      <y>420</y>
-      <w>220</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
-m2=1
-</panel_attributes>
-    <additional_attributes>30;100;100;100;100;30;200;30</additional_attributes>
+    <additional_attributes>500;70;500;30;30;30;30;510;90;510</additional_attributes>
   </element>
 </diagram>
