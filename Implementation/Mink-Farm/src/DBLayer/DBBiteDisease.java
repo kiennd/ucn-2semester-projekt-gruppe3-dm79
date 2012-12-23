@@ -12,7 +12,6 @@ import java.sql.*;
 public class DBBiteDisease implements IFDBBiteDisease
 {
 	private Connection con;
-	private PreparedStatement pStmtSelect;
 	
 	public DBBiteDisease()
 	{
@@ -20,10 +19,10 @@ public class DBBiteDisease implements IFDBBiteDisease
 	}
 	
 	
-	public BiteDisease searchBiteDiseaseById(int attValue, boolean retriveAssociation)
+	public BiteDisease searchBiteDiseaseById(int diseaseId, boolean retriveAssociation)
 	{
-		//String  wClause = "diseaseId like '%" + attValue + "%'";
-		String  wClause = "diseaseId =" + attValue;
+		String  wClause = "diseaseId like '%" + diseaseId + "%'";
+		//String  wClause = "diseaseId =" + attValue;
 		System.out.println("SearchBiteDisease " + wClause);
 		return singleWhere(wClause, retriveAssociation);
 	}
@@ -110,7 +109,7 @@ public class DBBiteDisease implements IFDBBiteDisease
 	
 	
 	@Override  
-	public int deleteBiteDisease(int bitedisId) 
+	public int deleteBiteDiseaseWithId(int bitedisId) 
     {
         int rc = -1;
         PreparedStatement pstmt = null;
@@ -190,12 +189,13 @@ public class DBBiteDisease implements IFDBBiteDisease
 		{
 			//use columns from mfBiteDisease table.
 			bitedisObj.setDiseaseId(results.getInt("diseaseId"));
-			System.out.println("bite disease"+bitedisObj.getDiseaseName());
 			bitedisObj.setBitelocation(results.getString("bitelocation"));
 			bitedisObj.setDiagnosisDate(results.getString("diagnosisDate"));
 			bitedisObj.setTreatmentStartDate(results.getString("treatmentStartDate"));
 			bitedisObj.setTreatmentType(results.getString("treatmentType"));
 			bitedisObj.setBitelocation(results.getString("description"));
+			bitedisObj.setDiseaseName(results.getString("diseaseName"));
+		
 		}
 		catch (Exception e)
 		{

@@ -25,7 +25,7 @@ public interface IFDBBiteDisease
 	public int insertBiteDisease(BiteDisease bitedis);
     
     //deletes bite disease using the Id.
-    public int deleteBiteDisease(int disId);
+    public int deleteBiteDiseaseWithId(int disId);
 
 	
 

@@ -11,11 +11,8 @@ public interface IFDBCageHealthStatus
 	
 
 	//find a single health status using the cage Id.
-	public CageHealthStatus findHealthStatusByCageNo(int cageNo, boolean retriveAssociation);
+	public CageHealthStatus searchHealthStatusByCageNumber(int cageNo, boolean retriveAssociation);
 	
-	
-	//find a single health status using the disease id.
-	public CageHealthStatus findHealthStatusBydiseaseId(int diseaseId, boolean retriveAssociation);
 	
 	//inserts a new health record.
     public int insertHealthStatus(CageHealthStatus healthstatus) throws Exception;
