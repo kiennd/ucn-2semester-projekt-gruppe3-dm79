@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class DBTransfer implements IFDBTransfer
 {
 	private Connection con;
-	private PreparedStatement pStmtSelect;
+
 	// Creates a new instance of DBPlasmDisease 
 	public DBTransfer()
 	{

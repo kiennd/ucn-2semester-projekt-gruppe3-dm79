@@ -7,15 +7,14 @@ import java.util.ArrayList;
 public class DBCageHealthStatus implements IFDBCageHealthStatus
 {
 	private Connection con;
-	//private PreparedStatement pStmtSelect;
+
 	
 // Creates a new instance of DBPlasmDisease 
 	public DBCageHealthStatus()
 	{
 		con = DbConnection.getInstance().getDBcon();
 	}
-		
-
+	
 	@Override
 	public ArrayList<CageHealthStatus> getAllCageHealthStatus(boolean retriveAssociation) 
 	{
@@ -23,34 +22,28 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	}
 
 	@Override
-	public CageHealthStatus findHealthStatusByCageNo(int cageNo, boolean retriveAssociation) 
+	public CageHealthStatus searchHealthStatusByCageNumber(int cageNo, boolean retriveAssociation) 
 	{
-    	String wClause = "  cageNo = '" + cageNo + "'";
+    	String wClause = "  cageNumber = '" + cageNo + "'";
     	return singleWhere(wClause, retriveAssociation);
 	}
 
-	@Override
-	public CageHealthStatus findHealthStatusBydiseaseId(int diseId, boolean retriveAssociation) 
-	{
-    	String wClause = "  diseaseId = '" + diseId + "'";
-    	return singleWhere(wClause, retriveAssociation);
-	}
+
 
 	@Override
 	public int insertHealthStatus(CageHealthStatus healthstatus) 
 	{
         int rc = -1; 
         PreparedStatement pstmt = null;
-        String insert = "insert into mfCageHealthStatus(cageNo, diseaseId_p, diseaseId_b, disease_present, okayDate)"+"values(?,?,?,?,?)";
+        String insert = "insert into mfCageHealthStatus(cageNumber, plasmacytosisObserveret, bideSårObserveret, okayDate)"+"values(?,?,?,?)";
         System.out.println(insert);
         try
         {
             pstmt = con.prepareStatement(insert);
-            pstmt.setInt(1,healthstatus.getCageId());
-            pstmt.setInt(2,healthstatus.getDiseaseId_p());
-            pstmt.setInt(3,healthstatus.getDiseaseId_b());
-            pstmt.setString(4, healthstatus.getDisease_present());
-            pstmt.setString(5, healthstatus.getOkayDate());
+            pstmt.setInt(1,healthstatus.getCageNumber());
+            pstmt.setString(2,healthstatus.getPlasmacytosisObserveret());
+            pstmt.setString(3,healthstatus.getBideSårObserveret());
+            pstmt.setString(4,healthstatus.getOkayDate());
             rc = pstmt.executeUpdate();
         }
         
@@ -71,22 +64,22 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	public int updateHealthStatus(CageHealthStatus healthstatus) 
 	{
 		CageHealthStatus cageHealthStatObj  = healthstatus;
+
 			int rc=-1;
 
-			String query="UPDATE healthstatus SET "+
-					"cageNo ='"+ cageHealthStatObj.getCageId()+"', "+
-					"diseaseId_p ='"+ cageHealthStatObj.getDiseaseId_p() + "', " +	
-					"diseaseId_b ='"+ cageHealthStatObj.getDiseaseId_b() + "', " +
-		            "disease_present ='"+ cageHealthStatObj.getDisease_present() + "', " +
-				    "okayDate ='"+ cageHealthStatObj.getOkayDate() + "', ";
+					String query="UPDATE mfCageHealthstatus SET "+
+					"cageNumber ='"+ cageHealthStatObj.getCageNumber()+"', "+
+					"plasmacytosisObserveret ='"+ cageHealthStatObj.getPlasmacytosisObserveret() + "', " +	
+					"bideSårObserveret ='"+ cageHealthStatObj.getBideSårObserveret() + "', " + 
+					"okayDate ='"+ cageHealthStatObj.getOkayDate();
 
-		              System.out.println("Update query:" + query);
+		            System.out.println("Update query:" + query);
 					try
 					{
 					//update mfHealthstatus.
-			 		Statement stmt = con.createStatement();
+					Statement stmt = con.createStatement();	
 			 		stmt.setQueryTimeout(5);
-			 	 	rc = stmt.executeUpdate(query);
+			 		rc = stmt.executeUpdate(query);
 			 	 	stmt.close();
 					}//end try
 					catch(Exception ex)
@@ -96,7 +89,6 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 					return(rc);
 			}
 		
-
 	
 	//Singelwhere is used when we only select one CageHealthStatus.
 	
@@ -171,7 +163,7 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	
 	private String buildQuery(String wClause)
 	{
-		String query = "SELECT cageNo, diseaseId_p, diseaseId_b, disease_present, okayDate FROM mfCageHealthStatus";	
+		String query = "SELECT cageNumber, plasmacytosisObserveret, bideSårObserveret, okayDate FROM mfCageHealthStatus";	
 		if (wClause.length()>0)
 			query=query+" WHERE "+ wClause;
 		return query;
@@ -186,13 +178,12 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 		try
 		{
 			//use columns from mfCageHealthStatus table.
-			cagehealthstatObj.setCageNo(results.getInt("cageId"));
-			cagehealthstatObj.setDiseaseId_p(results.getInt("diseaseId"));
-			cagehealthstatObj.setDiseaseId_b(results.getInt("diseaseId"));
-			cagehealthstatObj.setDisease_present(results.getString("disease_present"));
+			cagehealthstatObj.setCageNumber(results.getInt("cageNumber"));
+			cagehealthstatObj.setPlasmacytosisObserveret(results.getString("plasmacytosisObserveret"));
+			cagehealthstatObj.setBideSårObserveret(results.getString("bideSårObserveret"));
 			cagehealthstatObj.setOkayDate(results.getString("okayDate"));
-
 		}
+		
 		catch (Exception e)
 		{
 			System.out.println("Error building the Health status object.");
@@ -201,30 +192,31 @@ public class DBCageHealthStatus implements IFDBCageHealthStatus
 	}
 
 
+	
 	@Override
 	public int deleteHealthStatusWithCageNo(int cageNo)
 	{
-			int rc = -1;
-	        PreparedStatement pstmt = null;
-	        String delete = "delete from mfCageHealthStatus where cageNo = ?";
-	        System.out.println(delete);
-	          try{
-	             pstmt = con.prepareStatement(delete);
-	             pstmt.setInt(1,cageNo);
-	             rc = pstmt.executeUpdate();                       
-	          }
-	          catch(SQLException sqlE)
-	          {
-	              System.out.println("SQL Error");
-	              System.out.println(sqlE.getMessage());   
-	          }
-	          catch(Exception e){
-	              e.getMessage();
-	              
-	          }
-	         return rc;
-	     }
-	     
+            int rc=-1;
+		  	String query="delete from mfCageHealthStatus where cageNumber = '" +
+				cageNo + "'";
+            System.out.println(query);
+            try
+            { 
+            	// delete from health status
+	 		Statement stmt = con.createStatement();
+	 		stmt.setQueryTimeout(5);
+	 	  	rc = stmt.executeUpdate(query);
+	 	  	stmt.close();
+            }//end try	
+   	        catch(Exception ex)
+   	        {
+	 	  	System.out.println("Delete exception in cageHealthStatus db: "+ex);
+   	        }
+		return(rc);
+	}
+	
+
 	}	//end of class DBCageHealthStatus
 
 	
+
