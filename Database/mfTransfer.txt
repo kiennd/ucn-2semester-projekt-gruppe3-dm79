@@ -1,12 +1,9 @@
 CREATE TABLE mfTransfer
 (transferId int,
-transferDate varchar(40),
-cageNumber int,
-diseaseId_p int,
-diseaseId_b int,
+cageNo int,
+diseaseId int,
 employeeId int,
+transferDate varchar(40),
 primary key (transferId),
-foreign key (cageNumber) references mfCage(cageNumber),
-foreign key (diseaseId_p) references mfPlasmaDisease(diseaseId),
-foreign key (diseaseId_b) references mfBiteDisease(diseaseId),
+foreign key (cageNo) references mfCage(cageNo),
 foreign key (employeeId) references mfEmployee(employeeId));
