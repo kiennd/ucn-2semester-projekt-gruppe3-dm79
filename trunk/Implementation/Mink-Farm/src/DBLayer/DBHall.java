@@ -13,7 +13,6 @@ public class DBHall implements IFDBHall
 	{
 		con = DbConnection.getInstance().getDBcon();
 	}
-	
 	public ArrayList<Hall> getAllHalls (boolean retriveAssociation)
 	{
 		return miscWhere("", retriveAssociation);
@@ -21,7 +20,7 @@ public class DBHall implements IFDBHall
 	
 	public Hall findHall(int hallNo, boolean retriveAssociation)
 	{
-		String wClause = "hallNo" + hallNo;
+		String wClause = " hallNo = ' " + hallNo + "'";
 		return singleWhere(wClause, retriveAssociation);
 	}
 	
@@ -74,8 +73,8 @@ int rc =-1;
 		int rc= -1;
 		
 		String qry = "UPDATE mfHall SET" + 
-				"cageNo = '" + hallkobj.getHallNo()+"', " +
-				"CageType ='" + hallkobj.getFarmCvr() + "', ";
+				"hallNo = '" + hallkobj.getHallNo()+"', " +
+				"FarmCvr ='" + hallkobj.getFarmCvr() + "', ";
 				
 				System.out.println("Update query: " + qry);
 				try
@@ -92,17 +91,14 @@ int rc =-1;
 				}
 				return(rc);
 	}
-	
-	
-	
-	
+
 	private ArrayList<Hall> miscWhere(String wClause, boolean retrieveAssociation)
 	{
 		ResultSet results;
 		ArrayList<Hall> hall = new ArrayList<Hall>();
 		
 		String query = buildquery(wClause);
-		
+		System.out.println(query);
 		try
 		{
 			Statement stmt = con.createStatement();
@@ -142,9 +138,9 @@ int rc =-1;
 	}
 	private String buildquery(String wClause)
 	{
-		String query = "SELECT hallNo, farmCvr";
+		String query = "SELECT hallNo, farmCvr FROM mfHall";
 		if(wClause.length()>0)
-			query=query + "WHERE" + wClause;
+			query=query + " WHERE " + wClause;
 		return query;
 	}
 	private Hall singleWhere(String wClause, boolean retrieveAssociation)
@@ -168,7 +164,7 @@ int rc =-1;
 		}
 		catch(Exception e)
 		{
-			System.out.println("Query exception: " + e);
+			System.out.println(" Query exception: " + e);
 		}
 		return hallobj;
 	}
