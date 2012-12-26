@@ -3,14 +3,15 @@ import java.util.ArrayList;
 
 public class Cage {
 	private int cageNo;
-	private String cageType;
 	private int colNr;
+	private String cageType;
 	private ArrayList<Mink> myMink;
 
 	public Cage(int cageNo, int colNr, String cageType)
 	{
 		this.cageNo = cageNo;
 		this.colNr = colNr;
+		this.cageType = cageType;
 		ArrayList<Mink> myMink;
 	}
 	
@@ -29,7 +30,7 @@ public class Cage {
 	}
 	public Cage()
 	{
-		
+		//TOM
 	}
 
 	public int getCageNo() {
