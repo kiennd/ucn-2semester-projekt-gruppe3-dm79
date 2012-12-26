@@ -19,14 +19,14 @@ public class DBColumn implements IFDBColumn
 	
 	public Column findColumn(int colNo, boolean retriveAssociation)
 	{
-		String wClause = "colNo" + colNo;
+		String wClause = " colNo = ' " + colNo + "'";
 		return singleWhere(wClause, retriveAssociation);
 	}
 	
 	public int createColumn(Column column) throws Exception
 	{
 		int rc = -1;
-		String query = "INSERT INTO mfColumn(colNo, numOfCol) VALUES ('"+
+		String query = "INSERT INTO mfColumn(colNo, hallNr) VALUES ('"+
 				column.getColNo() + "', '" +
 				column.getHallNr() + "')";
 		System.out.println("insert : " + query);
@@ -94,9 +94,9 @@ public class DBColumn implements IFDBColumn
 	
 	private String buildquery(String wClause)
 	{
-		String query = "SELECT colNo, hallNr";
+		String query = "SELECT colNo, hallNr FROM mfColumn";
 		if(wClause.length()>0)
-			query=query + "WHERE" + wClause;
+			query=query + " WHERE " + wClause;
 		return query;
 	}
 	

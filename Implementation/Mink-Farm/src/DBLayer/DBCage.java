@@ -20,7 +20,7 @@ public class DBCage implements IFDBCage
 	
 	public Cage findCage(int cageNo, boolean retrieveAssociation)
 	{
-		String wClause = "cageNo" + cageNo;
+		String wClause = " cageNo = ' " + cageNo + "'";
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	
@@ -105,7 +105,7 @@ public class DBCage implements IFDBCage
 		try
 		{
 			cageObj.setCageNo(results.getInt("cageNo"));
-			cageObj.setCageNo(results.getInt("colNo"));
+			cageObj.setColNr(results.getInt("colNr"));
 			cageObj.setCageType(results.getString("CageType"));
 		}
 		catch(Exception e)
@@ -118,9 +118,9 @@ public class DBCage implements IFDBCage
 	
 	private String buildquery(String wClause)
 	{
-		String query = "SELECT cageNo, CageType";
+		String query = "SELECT cageNo, colNr, CageType FROM mfCage";
 		if(wClause.length()>0)
-			query=query + "WHERE" + wClause;
+			query=query + " WHERE " + wClause;
 		return query;
 	}
 	
@@ -156,7 +156,7 @@ public class DBCage implements IFDBCage
 		ArrayList<Cage> cages = new ArrayList<Cage>();
 		
 		String query = buildquery(wClause);
-		
+	
 		try
 		{
 			Statement stmt = con.createStatement();
