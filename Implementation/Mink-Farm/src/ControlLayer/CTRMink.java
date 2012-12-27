@@ -9,7 +9,7 @@ public class CTRMink
 		
 	}
 	
-	public void createMink(String color, int furLength, int furDensity, int birthDate, String qualityType, int cageNr)
+	public void createMink(String color, int furLength, int furDensity, String birthDate, String qualityType, int cageNr)
 	{
 		Mink minkobj = new Mink();
 		minkobj.setColor(color);
@@ -32,7 +32,7 @@ public class CTRMink
 
 	}
 
-	public int updateMink(String color, int furLength, int furDensity, int birthDate, String qualityType, int cageNr)
+	public int updateMink(String color, int furLength, int furDensity, String birthDate, String qualityType, int cageNr)
 	{
 		IFDBMink ifmink = new DBMink();
 		Mink minkobj = new Mink();
