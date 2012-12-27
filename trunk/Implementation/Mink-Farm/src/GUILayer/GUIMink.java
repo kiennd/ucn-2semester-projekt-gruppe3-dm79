@@ -79,9 +79,9 @@ public class GUIMink extends JFrame {
 		lblArt.setBounds(29, 31, 46, 14);
 		contentPane.add(lblArt);
 		
-		JLabel lblFurLength = new JLabel("Fur length:");
+		JLabel lblFurLength = new JLabel("Pels l\u00E6ngde");
 		lblFurLength.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblFurLength.setBounds(29, 68, 63, 14);
+		lblFurLength.setBounds(29, 68, 76, 14);
 		contentPane.add(lblFurLength);
 		
 		textField = new JTextField();
@@ -108,5 +108,10 @@ public class GUIMink extends JFrame {
 		textField_2.setColumns(10);
 		textField_2.setBounds(336, 133, 99, 23);
 		contentPane.add(textField_2);
+	}
+	
+	public void createMink(java.awt.event.ActionEvent evt)
+	{
+		
 	}
 }

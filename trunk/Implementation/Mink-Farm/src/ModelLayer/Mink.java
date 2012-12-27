@@ -33,7 +33,6 @@ public class Mink {
 	}
 	
 
-
 	public String getColor() {
 		return color;
 	}
