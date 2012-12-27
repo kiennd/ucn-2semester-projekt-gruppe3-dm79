@@ -5,12 +5,12 @@ public class Mink {
 	private String color;
 	private int furLength;
 	private int furDensity;
-	private int birthDate;
+	private String birthDate;
 	private String qualityType;
 	private int cageNr;
 	
 
-	public Mink(String color, int furLength, int furDensity, int birthDate, String qualityType, int cageNr)
+	public Mink(String color, int furLength, int furDensity, String birthDate, String qualityType, int cageNr)
 	{
 		this.color = color;
 		this.furLength = furLength;
@@ -64,12 +64,12 @@ public class Mink {
 	}
 
 
-	public int getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
 
 
-	public void setBirthDate(int birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 
