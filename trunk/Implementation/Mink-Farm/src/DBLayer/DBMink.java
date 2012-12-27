@@ -86,7 +86,7 @@ import ModelLayer.*;
 	
 	public String buildQuery(String wClause)
 	{
-		String qry = "SELECT color, furLength, furDensity, birthDate, qualityType";
+		String qry = "SELECT color, furLength, furDensity, birthDate, qualityType, cageNr";
 		if(wClause.length()>0)
 			qry=qry + "WHERE" + wClause;
 		return qry;
@@ -126,7 +126,7 @@ import ModelLayer.*;
 			minkObj.setColor(results.getString("color"));
 			minkObj.setFurLength(results.getInt("furLength"));
 			minkObj.setFurDensity(results.getInt("furDensity"));
-			minkObj.setBirthDate(results.getInt("birthDate"));
+			minkObj.setBirthDate(results.getString("birthDate"));
 			minkObj.setQualityType(results.getString("qualityType"));
 			minkObj.setCageNr(results.getInt("cageNr"));
 		
