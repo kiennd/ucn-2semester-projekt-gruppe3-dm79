@@ -1,0 +1,6 @@
+CREATE TABLE mfDiseaseReport
+(cageNumber int,
+diseaseId int,
+reportDate varchar(40),
+FOREIGN KEY (cageNumber) REFERENCES mfCage(cageNo)); 
+
