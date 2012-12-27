@@ -228,16 +228,24 @@ public class MasterGUI extends JFrame {
 	}
 	public void createMink()
 	{
-		try
-		{
-			CTRMink ctr = new CTRMink();
-			ctr.createMink(txtColor.getText(),Integer.parseInt(txtFur.getText()), Integer.parseInt(txtDensity.getText()), txtDate.getText(), txtQuality.getText(), Integer.parseInt(txtCageMink.getText()));
-			
-		}
-		catch(Exception e)
+		CTRMink ctr = new CTRMink();
+		
+		String color = txtColor.getText();
+		int fur = Integer.parseInt(txtFur.getText());
+		int density =  Integer.parseInt(txtDensity.getText());
+		String date = txtDate.getText();
+		String quality = txtQuality.getText();
+		int cage = Integer.parseInt(txtCageMink.getText());
+		if(color.length() == 0)
 		{
 			System.out.println("ERROR");
 		}
-	
+		else
+		{
+			ctr.createMink(color, fur, density, date, quality, cage);
+		}
+		
+		
+				
 	}
 }
