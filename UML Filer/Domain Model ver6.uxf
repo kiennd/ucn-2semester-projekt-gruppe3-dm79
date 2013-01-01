@@ -26,7 +26,7 @@ treatmentType</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
-m2=1..n
+m2=0..n
 </panel_attributes>
     <additional_attributes>30;30;130;30</additional_attributes>
   </element>
@@ -39,8 +39,8 @@ m2=1..n
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..1
-m2=0..1
+m1=1
+m2=0..n
 </panel_attributes>
     <additional_attributes>30;100;30;30</additional_attributes>
   </element>
@@ -271,7 +271,7 @@ testDate</panel_attributes>
     <panel_attributes>Bite
 --
 bitelocation
-description
+
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -305,12 +305,11 @@ description
       <w>230</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>CageHealthStatus
+    <panel_attributes>DiseaseReport
 --
 cageNumber
-plasmacytosisObserveret
-bideSårObserveret
-okayDate
+diseaseId
+reportDate
 
 
 </panel_attributes>
@@ -325,9 +324,23 @@ okayDate
       <h>530</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1...n
+m1=0...n
 m2=1
 </panel_attributes>
     <additional_attributes>500;70;500;30;30;30;30;510;90;510</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>310</x>
+      <y>460</y>
+      <w>220</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1
+</panel_attributes>
+    <additional_attributes>30;70;110;70;110;30;200;30</additional_attributes>
   </element>
 </diagram>
