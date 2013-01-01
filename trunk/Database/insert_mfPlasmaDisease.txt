@@ -1,0 +1,1 @@
+INSERT INTO mfPlasmaDisease VALUES(1500, 'Aalborg Plasma Clinic', '234475886543-5576', 'Plasmacytosis');
