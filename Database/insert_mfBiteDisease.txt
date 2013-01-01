@@ -1,0 +1,1 @@
+INSERT INTO mfBiteDisease VALUES(1600,  'BidSår');
