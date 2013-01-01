@@ -2,9 +2,6 @@ CREATE TABLE mfPlasmaDisease
 (diseaseId int,
 diseaseType varchar(30),
 clinicName varchar(40),
-nextTestDate varchar(30),
-treatmentType varchar(40),
-diagnosisDate varchar(40),
-treatmentStartDate varchar(40),
-testDate varchar(40),
+clinicCVR varchar(40),
+diseaseName  varchar(40),
 primary key (diseaseId));
