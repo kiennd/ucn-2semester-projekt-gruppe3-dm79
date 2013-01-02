@@ -24,6 +24,11 @@ public class DBCage implements IFDBCage
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	
+	public Cage findOneCage(int cageNo, boolean retriveAssociation)
+	{
+		String wClause = "cageNo like '%" + cageNo + "%'";
+	}
+	
 	//Creates a new cage
 	public int createCage(Cage cag) throws Exception
 	{
