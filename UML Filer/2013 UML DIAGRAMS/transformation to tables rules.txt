@@ -1,0 +1,12 @@
+Her beskriver vi, hvordan vi har omformulerede domæne modellen til relationelle model, ved hjælp af følgende regler
+
+Tabeller og Nøgler
+Hver klass i vores domæne model er blevet transformerede til tabeller. Klass navne er blevet til tabel navn, attribute navne er blevet til column navn i tabellerne. Vi har valgt de unikke kolonner som primær nøgler. ex: mfCage, mfEmployee...
+
+Associering og Aggregering
+1-1 - Opret to tabeller og inkluderede ene sides primærnøgle som fjerne nøgle på den anden tabel.ex: mfCage - mfTransfer
+1..n - Opret to tabeller, den ene sides primærnøgle bliver brugt som fremmednøgle på n sides tabel. ex: mfFarm - mfEmployee
+
+Generalisering
+Opret to tabeller for de to specialiseringsklasser med deres attributer. Hver tabel også indholder generaliseringsklass attributer. ex:
+mfBiteDisease og mfPlasmacytosis.
