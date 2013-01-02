@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>20</x>
+      <y>100</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>540</x>
+      <y>130</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_:System_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>540</x>
+      <y>130</y>
+      <w>50</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;490;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>160</y>
+      <w>50</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;460;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>470</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+registerTransfer(transferId, cage, disease, employee, transferDate)</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>310</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+findDiseaseType(diseaseId)</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>220</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+findCage(cageNo)</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>260</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+return cage</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>350</y>
+      <w>550</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+return diseaseType</panel_attributes>
+    <additional_attributes>530;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>390</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+findEmployee(employeeId)</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>430</y>
+      <w>550</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+return employee</panel_attributes>
+    <additional_attributes>530;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>510</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+return newTransfer</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>180</y>
+      <w>560</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+createNewTransfer(transferId, cageNo, diseaseId, employeeId, transferDate)</panel_attributes>
+    <additional_attributes>540;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>310</x>
+      <y>40</y>
+      <w>360</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>System Sequence Diagram: Transfer Diseased Mink </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>650</x>
+      <y>240</y>
+      <w>290</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Operation: findDiseaseType
+UC: TransferDiseasedMink
+Preconditions: 
+- Der er enten bidsår eller plasmacytosis 
+  sygdom i et eller flere bure
+Postconditions:
+- Der er blevet defineret hvilken af de to 
+  sygdomme minkene har.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>650</x>
+      <y>430</y>
+      <w>310</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Operation: registerTransfer
+UC: TransferDiseasedMink
+Preconditions: 
+- Der eksistere et bur nummer, en medarbejder
+  og sygdom i et eller flere bure (som enten 
+  er bidesår eller plasmacytosis). 
+
+Postconditions:
+- En instans af Transfer t blev oprettet
+  t.id, t.cageNo, t.diseaseId, t.employeeId
+  og t.transferdate blev tilskrevet værdier.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>550</x>
+      <y>330</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>550</x>
+      <y>490</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100;30;30;30</additional_attributes>
+  </element>
+</diagram>

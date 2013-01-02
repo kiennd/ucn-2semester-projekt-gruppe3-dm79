@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>410</x>
+      <y>80</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_:System_
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>420</x>
+      <y>80</y>
+      <w>50</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;150;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>90</y>
+      <w>50</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;150;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>120</y>
+      <w>440</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+return DiseaseReport</panel_attributes>
+    <additional_attributes>420;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>30</x>
+      <y>80</y>
+      <w>440</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=0&lt;
+updateDiseaseReport(diseaeId, cageNo, reportDate)</panel_attributes>
+    <additional_attributes>420;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>500</x>
+      <y>30</y>
+      <w>360</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>System Sequence Diagram: Register Disease Report </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Systemborder</type>
+    <coordinates>
+      <x>520</x>
+      <y>120</y>
+      <w>360</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Operation: Update DiseaseReport
+Use case: Transfer Diseased Mink
+Preconditions: 
+- Der er enten opstået bidsår sygdom i et bur 
+- Eller der er taget blodprøver og resultat fra blodprøve 
+  viser at der er plasmacytosis sygdom i et bur
+Postconditions:
+- De bure med sygdom er blevet opdateret i systemet
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
