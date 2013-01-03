@@ -24,7 +24,7 @@ public class CTRCage
 		return dbCage.findCage(cageNo, true);
 	}
 	
-	public void createCage(int cageNo, String cageType)
+	public void insertCage(int cageNo, String cageType)
 	{
 		Cage cageObj = new Cage();
 		cageObj.setCageNo(cageNo);
@@ -33,7 +33,7 @@ public class CTRCage
 		{
 			DbConnection.startTransaction();
 			DBCage dbCuge = new DBCage();
-			dbCuge.createCage(cageObj);
+			dbCuge.insertCage(cageObj);
 			DbConnection.commitTransaction();
 		}
 		catch(Exception e)
