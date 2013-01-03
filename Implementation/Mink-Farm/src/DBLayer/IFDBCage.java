@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface IFDBCage 
 {
-	//Get all cages.
+	//Get all cages.FISK
 	public ArrayList<Cage> getAllCages(boolean retriveAssociation);
 	//Finds a cage by cage number.
 	public Cage findCage(int cageNo, boolean retrieveAssociation);
