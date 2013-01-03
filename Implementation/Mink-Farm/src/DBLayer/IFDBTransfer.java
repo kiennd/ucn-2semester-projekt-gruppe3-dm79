@@ -11,14 +11,19 @@ public interface IFDBTransfer
 		public ArrayList<Transfer> getAllTransfer(boolean retriveAssociation);
 		
 		//find a single transfer using the cage Id.
-		public Transfer searchTransfersByCageId(int cageId, boolean retriveAssociation);
+		public Transfer searchTransfersByTransferId(int transferId, boolean retriveAssociation);
+		
+		//find a single transfer using the cage Id.
+		public Transfer searchTransfersByCageNo(int cageNo, boolean retriveAssociation);
 		
 		//find a single transfer using the disease id
-		public Transfer findTransfersBydiseaseid(int diseaseId_p, boolean retriveAssociation);
-		
+		public ArrayList<Transfer> findTransfersByEmployeeId(int employeeId, boolean retriveAssociation);
+
+		//find a single transfer using the disease id
+		public ArrayList<Transfer> findTransfersBydiseaseId(int diseaseId, boolean retriveAssociation);
 		
 		//find a single transfer using the transfer date.
-		public Transfer findtransferByDate(String tranferdate, boolean retriveAssociation);
+		public ArrayList<Transfer> findtransferByDate(String tranferdate, boolean retriveAssociation);
 		
 	    
 	    //update transfer information.
@@ -26,7 +31,9 @@ public interface IFDBTransfer
 	    
 	    
 	  //inserts a new transfer.
-	    public int insertTransfer(Transfer transfer) throws Exception;
+	    public int insertTransfer(Transfer transfer);
+
+		public int deleteTransfer(Transfer transferObj);
 	    
 	
 	}//end of interface 

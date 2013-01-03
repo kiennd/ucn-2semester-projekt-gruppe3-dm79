@@ -12,12 +12,11 @@ import ModelLayer.*;
 public interface IFDBBiteDisease 
 {
 	//Finds the disease using the Id.
-	public BiteDisease searchBiteDiseaseById(int attValue, boolean retriveAssociation);
+	public BiteDisease searchBiteDiseaseById(int diseaseId, boolean retriveAssociation);
 	
 	//Finds the disease using the Name.
 	public BiteDisease searchBiteDiseaseByName(String diseaseName, boolean retriveAssociation);
 
-	
 	//update bite Disease information.
 	public int updateBiteDisease(BiteDisease bitedis);
 	
@@ -25,7 +24,7 @@ public interface IFDBBiteDisease
 	public int insertBiteDisease(BiteDisease bitedis);
     
     //deletes bite disease using the Id.
-    public int deleteBiteDiseaseWithId(int disId);
+	public int deleteBiteDiseaseWithId(int diseaseId);
 
 	
 
