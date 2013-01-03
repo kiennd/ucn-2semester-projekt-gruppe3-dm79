@@ -72,14 +72,14 @@ public class DBEmployeeTest {
 	public void testInsertEmployee() {
 		DBEmployee dbEmp = new DBEmployee();
 		//TODO !!! redefine the constructor of Employee class.
-		//Product testProd = new Product(123, 200.0, 220.0, 20.0, "Canada", 100, "small", "green", null, null, null, 334, null, "Hippyhat", "Clothing");
+		Employee testEmp = new Employee(3006,"Frodo", "Bagins", "Shire Ave 342", 6558, "The Shire", 88339955, "hobbit@lame.com");
 		
 		try{
 			int x = dbEmp.insertEmployee(null);
 
 		if(x > 0)
 		{
-			Employee emp = dbEmp.findEmployeeByID(3003, false);
+			Employee emp = dbEmp.findEmployeeByID(3006, false);
 			System.out.println("A new employee has been created with the following values: " + "Employee ID: " + emp.getEmployeeID() + "First name: " + emp.getFname() + "Last name: " + emp.getLname() + "lives at: " + emp.getAddress() + "zipcode: " + emp.getZipCode() + "city: " + emp.getCity() + "Phone number: " + emp.getPhoneNo() + "Email: " + emp.getEmail());
 		}
 		else
