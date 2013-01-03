@@ -6,12 +6,11 @@ import ModelLayer.*;
 public class DBCage implements IFDBCage
 {
 	private Connection con;
-	
+	//FISK
 	public DBCage()
 	{
 		con = DbConnection.getInstance().getDBcon();
 	}
-	
 	
 	public ArrayList<Cage> getAllCages(boolean retriveAssociation)
 	{
