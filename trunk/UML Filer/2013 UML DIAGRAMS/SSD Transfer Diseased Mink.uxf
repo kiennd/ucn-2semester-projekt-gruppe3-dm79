@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.3">
+<diagram program="umlet" version="11.5.1">
   <zoom_level>10</zoom_level>
   <element>
     <type>com.umlet.element.Actor</type>
@@ -158,12 +158,13 @@ createNewTransfer(transferId, cageNo, diseaseId, employeeId, transferDate)</pane
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>310</x>
-      <y>40</y>
+      <x>60</x>
+      <y>20</y>
       <w>360</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>System Sequence Diagram: Transfer Diseased Mink </panel_attributes>
+    <panel_attributes>System Sequence Diagram: Transfer Diseased Mink 
+bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
