@@ -20,7 +20,7 @@ public class DBCage implements IFDBCage
 	
 	public Cage findCage(int cageNo, boolean retrieveAssociation)
 	{
-		String wClause = " cageNo = ' " + cageNo + "'";
+		String wClause = " cageNo = '" + cageNo + "'";
 		return singleWhere(wClause, retrieveAssociation);
 	}
 	
@@ -30,7 +30,7 @@ public class DBCage implements IFDBCage
 	}
 	
 	//Creates a new cage
-	public int createCage(Cage cag) throws Exception
+	public int insertCage(Cage cag) throws Exception
 	{
 		int rc = -1;
 		String query = "INSERT INTO mfCage(cageNo, colNr, CageType) VALUES ('"+
@@ -185,6 +185,5 @@ public class DBCage implements IFDBCage
 		
 		
 	}
-	
-	
+
 }
