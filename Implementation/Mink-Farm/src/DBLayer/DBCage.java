@@ -96,7 +96,7 @@ public class DBCage implements IFDBCage
 				return(rc);
 	}
 	
-	//Method will build cage object
+	//Method will build cage objectfg
 	private Cage buildCage(ResultSet results)
 	{
 		Cage cageObj = new Cage();
