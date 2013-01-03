@@ -103,7 +103,7 @@ public class DBEmployee implements IFDBEmployee
 				
 	}
 
-	private int deleteEmployee(int employeeID)
+	public int deleteEmployee(int employeeID)
 	{
 		int rc =-1;
 				

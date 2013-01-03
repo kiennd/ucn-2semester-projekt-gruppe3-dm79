@@ -19,5 +19,7 @@ public interface IFDBEmployee {
 	public int insertEmployee(Employee emp) throws Exception;
 	//update information about an employee
 	public int updateEmployee(Employee emp);
+	//delete employee
+	public int deleteEmployee(int employeeID);
 	
 }
