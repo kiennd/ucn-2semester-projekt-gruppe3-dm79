@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.3">
+<diagram program="umlet" version="11.5.1">
   <zoom_level>8</zoom_level>
   <element>
     <type>com.umlet.element.Note</type>
@@ -155,26 +155,26 @@ Interaction Diagram for Transfer Diseased Mink</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>176</x>
+      <x>168</x>
       <y>280</y>
-      <w>264</w>
+      <w>272</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 4. e= findEmployee(employeeId) </panel_attributes>
-    <additional_attributes>24;48;24;64;248;64;248;24</additional_attributes>
+    <additional_attributes>24;48;24;64;256;64;256;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>488</x>
+      <x>496</x>
       <y>184</y>
-      <w>184</w>
+      <w>192</w>
       <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 3. bd= findDisease(diseaseId)</panel_attributes>
-    <additional_attributes>168;64;168;40;24;40;24;96</additional_attributes>
+    <additional_attributes>168;64;168;40;32;40;32;96</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
