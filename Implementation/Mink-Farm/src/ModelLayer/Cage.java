@@ -22,12 +22,7 @@ public class Cage {
 		this.cageNo = cageNo;
 	}
 	
-	public int getColNr() {
-		return colNr;
-	}
-	public void setColNr(int colNr) {
-		this.colNr = colNr;
-	}
+
 	public Cage()
 	{
 		//TOM
@@ -39,6 +34,14 @@ public class Cage {
 
 	public void setCageNo(int cageNo) {
 		this.cageNo = cageNo;
+	}
+	
+	public int getColNr() {
+		return colNr;
+	}
+	
+	public void setColNr(int colNr) {
+		this.colNr = colNr;
 	}
 
 	public ArrayList<Mink> getMyMink() {
