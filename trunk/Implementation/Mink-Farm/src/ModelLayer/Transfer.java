@@ -12,106 +12,98 @@ package ModelLayer;
  * Objects of this class are created whenever Bites or Plasmacytosis disease is found in a cage.  
  */
 
-public class Transfer 
+public class Transfer
 {
 	private int transferId;
-	private String transferDate;
+	private String transferDate; 
 	private Cage cage;
-	private PlasmaDisease diseaseId_p;
-	private BiteDisease diseaseId_b;
-	private Employee employee; 
+	private BiteDisease bitedisease;
+	private PlasmaDisease plasmadisease;
+	private Employee employee;
 	
 	
-	
-	/*
-	 * set and get methods.
-	 */
-	
-	public int getTransferId() 
-	{
+//setters and getters.
+	public int getTransferId() {
 		return transferId;
 	}
-	
-	public void setTransferId(int transferId) 
-	{
+
+	public void setTransferId(int transferId) {
 		this.transferId = transferId;
 	}
-	
-	public String getTransferDate() 
-	{
+
+	public String getTransferDate() {
 		return transferDate;
 	}
-	
-	public void setTransferDate(String transferDate) 
-	{
+
+	public void setTransferDate(String transferDate) {
 		this.transferDate = transferDate;
 	}
-	
-	public BiteDisease getDisease_b() 
-	{
-		return diseaseId_b;
-	}
-	
-	public void setDisease_b(BiteDisease disease_b) 
-	{
-		this.diseaseId_b = disease_b;
-	}
-	
-	public PlasmaDisease getdiseaseId_p() 
-	{
-		return diseaseId_p;
-	}
-	
-	public void setdiseaseId_p(PlasmaDisease diseaseId_p) 
-	{
-		this.diseaseId_p = diseaseId_p;
-	}
-	
-	public Employee getEmployee() 
-	{
-		return employee;
-	}
-	
-	public void setEmployee(Employee employee) 
-	{
-		this.employee = employee;
-	}
-	
-	public Cage getCage() 
-	{
+
+	public Cage getCage() {
 		return cage;
 	}
-	
-	public void setCage(Cage cage) 
-	{
+
+	public void setCage(Cage cage) {
 		this.cage = cage;
 	}
 
-	
-	/*
-	 * Constructor with parameters.
-	 */
-	
-	public Transfer(int transferId, String transferDate, Cage cage, PlasmaDisease diseaseId_p, BiteDisease disease_b, Employee employee) 
-	{
-		this.transferId = transferId;
-		this.transferDate = transferDate;
-		this.cage = cage;
-		this.diseaseId_p = diseaseId_p;
-		this.diseaseId_b = disease_b;
+	public BiteDisease getBitedisease() {
+		return bitedisease;
+	}
+
+	public void setBitedisease(BiteDisease bitedisease) {
+		this.bitedisease = bitedisease;
+	}
+
+	public PlasmaDisease getPlasmadisease() {
+		return plasmadisease;
+	}
+
+	public void setPlasmadisease(PlasmaDisease plasmadisease) {
+		this.plasmadisease = plasmadisease;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
 		this.employee = employee;
-		
+	}
+
+	//this constructor is called when there is plasmacytosis.
+	public Transfer(int transferId, Cage cage, BiteDisease bitedisease, Employee employee, String transferDate) 
+	{	
+		this.transferId = transferId;
+		this.cage = cage;
+		this.bitedisease = bitedisease;
+		this.employee = employee;
+		this.transferDate = transferDate;
 	}
 	
+	//constructor is called when there is bite Sår.
+	public Transfer(int transferId, Cage cage, PlasmaDisease plasmadisease, Employee employee, String transferDate) 
+	{	
+		this.transferId = transferId;
+		this.cage = cage;
+		this.plasmadisease = plasmadisease;
+		this.employee = employee;
+		this.transferDate = transferDate;
+	}
 	
-	/*
-	 * Empty Parameters Constructor.
-	 */
-	
+	//Empty Parameter Constructor.
 	public Transfer()
 	{
-		
+			
 	}
+	
+	//constructor with only transferId.
+	public Transfer(int transferId)
+	{
+		this.transferId = transferId;
+	}
+
+
 
 
 }//end of Transfer class.

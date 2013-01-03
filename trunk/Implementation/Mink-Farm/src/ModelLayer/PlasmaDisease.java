@@ -16,9 +16,7 @@ package ModelLayer;
 public class PlasmaDisease 
 {
 	private int diseaseId;
-	private String clinicName, nextTestDate, treatmentType, diagnosisDate, treatmentStartDate, testDate, diseaseName;
-	
-	
+	private String clinicName, clinicCVR, diseaseName;
 	
 	/**
 	 * get and set methods.
@@ -29,9 +27,29 @@ public class PlasmaDisease
 		return diseaseId;
 	}
 	
-	public void setDiseaseId(int diseaseId) 
-	{
+	public void setDiseaseId(int diseaseId) {
 		this.diseaseId = diseaseId;
+	}
+
+	
+	public String getClinicName() 
+	{
+		return clinicName;
+	}
+	
+	public void setClinicName(String clinicName) 
+	{
+		this.clinicName = clinicName;
+	}
+	
+	public String getClinicCVR() 
+	{
+		return clinicCVR;
+	}
+	
+	public void setClinicCVR(String clinicCVR) 
+	{
+		this.clinicCVR = clinicCVR;
 	}
 	
 	public String getDiseaseName() 
@@ -44,102 +62,29 @@ public class PlasmaDisease
 		this.diseaseName = diseaseName;
 	}
 	
-	public String getClinicName() 
-	{
-		return clinicName;
-	}
-	
-	public void setClinicName(String clinicName) 
-	{
-		this.clinicName = clinicName;
-	}
-	
-	public String getNextTestDate() 
-	{
-		return nextTestDate;
-	}
-	
-	public void setNextTestDate(String nextTestDate) 
-	{
-		this.nextTestDate = nextTestDate;
-	}
-	
-	public String getTreatmentType() 
-	{
-		return treatmentType;
-	}
-	
-	public void setTreatmentType(String treatmentType) 
-	{
-		this.treatmentType = treatmentType;
-	}
-	
-	public String getDiagnosisDate() 
-	{
-		return diagnosisDate;
-	}
-	
-	public void setDiagnosisDate(String diagnosisDate) 
-	{
-		this.diagnosisDate = diagnosisDate;
-	}
-	
-	public String getTreatmentStartDate() 
-	{
-		return treatmentStartDate;
-	}
-	
-	public void setTreatmentStartDate(String treatmentStartDate) 
-	{
-		this.treatmentStartDate = treatmentStartDate;
-	}
-	
-	public String getTestDate() 
-	{
-		return testDate;
-	}
-	
-	public void setTestDate(String testDate) 
-	{
-		this.testDate = testDate;
-	}
-
-	
 	/*
 	 * Constructor with parameters.
 	 */
 	
-	public PlasmaDisease(int diseaseId, String clinicName, String nextTestDate, String treatmentType, 
-			String diagnosisDate,String treatmentStartDate, String testDate, String diseaseName) 
+	public PlasmaDisease(int diseaseId, String clinicName, String clinicCVR, String diseaseName) 
 	{
 		this.diseaseId = diseaseId;
 		this.clinicName = clinicName;
-		this.nextTestDate = nextTestDate;
-		this.treatmentType = treatmentType;
-		this.diagnosisDate = diagnosisDate;
-		this.treatmentStartDate = treatmentStartDate;
-		this.testDate = testDate;
+		this.clinicCVR = clinicCVR;
 		this.diseaseName = diseaseName;
 	}
 	
 	
-	
-	/*
-	 * Empty Parameters Constructor.
-	 */
-	
-	public PlasmaDisease()
-	{
-		
-	}
-	
-	//constructor to get disease id.
+	//constructor with disease id.
 	
 	public PlasmaDisease(int diseaseId) 
 	{
 		this.diseaseId = diseaseId;
 	}
 	
-
-
+	public PlasmaDisease()
+	{
+		
+	}
+	
 }//End of class PlasmaDisease
