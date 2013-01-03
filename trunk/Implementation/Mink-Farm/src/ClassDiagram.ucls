@@ -1,8 +1,8 @@
-<class-diagram version="1.0.11" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true">  
+<class-diagram version="1.0.11" icons="true" automaticImage="PNG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
   <class id="1" corner="BOTTOM_RIGHT" language="java" name="GUILayer.MasterGUI" project="Mink-Farm" 
     file="/Mink-Farm/src/GUILayer/MasterGUI.java" binary="false">    
-    <position height="622" width="171" x="211" y="-59"/>    
+    <position height="622" width="171" x="4263" y="37"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -10,7 +10,7 @@
   </class>  
   <class id="2" corner="BOTTOM_RIGHT" language="java" name="GUILayer.GUIEmployee" project="Mink-Farm" 
     file="/Mink-Farm/src/GUILayer/GUIEmployee.java" binary="false">    
-    <position height="316" width="146" x="422" y="-59"/>    
+    <position height="316" width="146" x="1724" y="37"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -18,12 +18,520 @@
   </class>  
   <class id="3" corner="BOTTOM_RIGHT" language="java" name="GUILayer.GUIMink" project="Mink-Farm" 
     file="/Mink-Farm/src/GUILayer/GUIMink.java" binary="false">    
-    <position height="197" width="165" x="608" y="-59"/>    
+    <position height="197" width="165" x="577" y="37"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="ControlLayer.CTRMink" project="Mink-Farm" 
+    file="/Mink-Farm/src/ControlLayer/CTRMink.java" binary="false">    
+    <position height="112" width="239" x="1200" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="ControlLayer.CTREmployee" project="Mink-Farm" 
+    file="/Mink-Farm/src/ControlLayer/CTREmployee.java" binary="false">    
+    <position height="180" width="322" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="ControlLayer.CTRCage" project="Mink-Farm" 
+    file="/Mink-Farm/src/ControlLayer/CTRCage.java" binary="false">    
+    <position height="146" width="175" x="4025" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBCageHealthStatusTest" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBCageHealthStatusTest.java" binary="false">    
+    <position height="163" width="223" x="2134" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DbConnection" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DbConnection.java" binary="false">    
+    <position height="282" width="158" x="2635" y="1564"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBCage" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBCage.java" binary="false">    
+    <position height="265" width="240" x="2739" y="1259"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBPlasmaDisease" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBPlasmaDisease.java" binary="false">    
+    <position height="231" width="324" x="2397" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBBiteDisease" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBBiteDisease.java" binary="false">    
+    <position height="231" width="292" x="2761" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBBiteDisease" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBBiteDisease.java" binary="false">    
+    <position height="146" width="292" x="2761" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBMink" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBMink.java" binary="false">    
+    <position height="197" width="185" x="3093" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DbConnection1Test" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DbConnection1Test.java" binary="false">    
+    <position height="95" width="134" x="403" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBColumn" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBColumn.java" binary="false">    
+    <position height="146" width="227" x="3758" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBEmployee" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBEmployee.java" binary="false">    
+    <position height="282" width="261" x="3318" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="17" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBPlasmaDisease" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBPlasmaDisease.java" binary="false">    
+    <position height="146" width="324" x="2397" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="18" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBMink" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBMink.java" binary="false">    
+    <position height="112" width="121" x="3093" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBCageHealthStatus" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBCageHealthStatus.java" binary="false">    
+    <position height="248" width="343" x="1752" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="20" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBHall" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBHall.java" binary="false">    
+    <position height="146" width="197" x="5586" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="21" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBFarm" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBFarm.java" binary="false">    
+    <position height="61" width="101" x="3617" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="22" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBFarm" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBFarm.java" binary="false">    
+    <position height="129" width="127" x="3619" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="23" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBColumn" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBColumn.java" binary="false">    
+    <position height="248" width="250" x="3786" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="24" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBCageHealthStatus" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBCageHealthStatus.java" binary="false">    
+    <position height="146" width="343" x="1752" y="1259"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="25" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBPlasmaDiseaseTest" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBPlasmaDiseaseTest.java" binary="false">    
+    <position height="163" width="221" x="782" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="26" corner="BOTTOM_RIGHT" language="java" name="DBLayer.GetMax" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/GetMax.java" binary="false">    
+    <position height="95" width="117" x="1043" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="27" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBEmployee" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBEmployee.java" binary="false">    
+    <position height="163" width="259" x="3318" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="28" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBTransfer" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBTransfer.java" binary="false">    
+    <position height="163" width="257" x="1455" y="1259"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="29" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBTransfer" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBTransfer.java" binary="false">    
+    <position height="282" width="257" x="1455" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="30" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBBiteDiseaseTest" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBBiteDiseaseTest.java" binary="false">    
+    <position height="163" width="205" x="1479" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="31" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBHall" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBHall.java" binary="false">    
+    <position height="248" width="232" x="5551" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="32" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBEmployeeTest" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/DBEmployeeTest.java" binary="false">    
+    <position height="163" width="184" x="1910" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="33" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBCage" project="Mink-Farm" 
+    file="/Mink-Farm/src/DBLayer/IFDBCage.java" binary="false">    
+    <position height="163" width="213" x="2843" y="1564"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Transfer" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Transfer.java" binary="false">    
+    <position height="333" width="329" x="4575" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="35" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Column" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Column.java" binary="false">    
+    <position height="214" width="191" x="4282" y="1259"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="36" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.CageHealthStatus" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/CageHealthStatus.java" binary="false">    
+    <position height="299" width="222" x="2135" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="37" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.PlasmaDisease" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/PlasmaDisease.java" binary="false">    
+    <position height="520" width="333" x="4575" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="38" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Mink" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Mink.java" binary="false">    
+    <position height="401" width="185" x="4535" y="1903"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="39" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Farm" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Farm.java" binary="false">    
+    <position height="503" width="219" x="4944" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="40" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Cage" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Cage.java" binary="false">    
+    <position height="299" width="183" x="4242" y="1564"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="41" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.BiteDisease" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/BiteDisease.java" binary="false">    
+    <position height="469" width="286" x="4948" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="42" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Employee" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Employee.java" binary="false">    
+    <position height="520" width="272" x="5274" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="43" corner="BOTTOM_RIGHT" language="java" name="ModelLayer.Hall" project="Mink-Farm" 
+    file="/Mink-Farm/src/ModelLayer/Hall.java" binary="false">    
+    <position height="231" width="211" x="4303" y="699"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="44">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="45" name="myHall"/>      
+      <multiplicity id="46" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="48" name="instance"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <bendpoint x="4230" y="699"/>    
+    <bendpoint x="4230" y="1259"/>    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="51" name="cage"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="53">    
+    <bendpoint x="4251" y="699"/>    
+    <bendpoint x="4251" y="1259"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="54" name="cag"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="57" name="employee"/>      
+      <multiplicity id="58" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <bendpoint x="4272" y="699"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="60" name="col"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="62">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <association id="63">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="64" name="myColumn"/>      
+      <multiplicity id="65" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="66">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <realization id="67">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <realization id="68">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <association id="69">    
+    <end type="SOURCE" refId="35" navigable="false">      
+      <attribute id="70" name="myCage"/>      
+      <multiplicity id="71" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="73" name="diseaseId_p"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="75">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <realization id="76">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <realization id="77">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="17"/>  
+  </realization>  
+  <realization id="78">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <dependency id="79">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <realization id="80">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="81">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="82" name="hal"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="84">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="85" name="cagCTR"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="87">    
+    <bendpoint x="4544" y="699"/>    
+    <bendpoint x="4544" y="1259"/>    
+    <bendpoint x="4544" y="1564"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="88" name="mink"/>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="90">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <realization id="91">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="28"/>  
+  </realization>  
+  <association id="92">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="93" name="employee"/>      
+      <multiplicity id="94" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="95">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="20"/>  
+  </realization>  
+  <dependency id="96">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="97">    
+    <end type="SOURCE" refId="40" navigable="false">      
+      <attribute id="98" name="myMink"/>      
+      <multiplicity id="99" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="100">    
+    <end type="SOURCE" refId="34" navigable="false">      
+      <attribute id="101" name="diseaseId_b"/>      
+      <multiplicity id="102" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="103">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     visibility="true">    
     <attributes public="true" package="true" protected="true" private="true"/>    
