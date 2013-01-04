@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>210</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>CTRPlasmaDisease
+--
+-
+--
++ CTRPlasmaDisease()
++ PlasmaDisease findDiseaseById(int):PlasmaDisease
++ PlasmaDisease findDiseaseByName(String):PlasmaDisease
++ updatePlasmaDisease(int,String,String,String):int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>315</x>
+      <y>210</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>CTRBiteDisease
+--
+-
+--
++ CTRBiteDisease()
++ BiteDisease findDiseaseById(int):BiteDisease
++ BiteDisease findDiseaseByName(String):BiteDisease
++ updateDiseaseBite(int,String):int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1260</x>
+      <y>210</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>CTREmployee
+--
+-
+--
++ CTREmployee()
++ findAllEmployees():ArrayList&lt;Employee&gt;
++ findByFname(String):Employee
++ findByLname(String):Employee
++ findEmployeeByID(int):Employee
++ updateEmployee(int,String,String,String,int,String,int,String):int
++ insertEmployee(int,String,String,String,int,String,int,String):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2170</x>
+      <y>679</y>
+      <w>294</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>DBPlasmaDisease
+--
+- con:Connection
+--
++ DBPlasmaDisease()
++ searchDiseaseById(int,boolean):PlasmaDisease
++ searchPlasmaDiseaseByName(String,boolean):PlasmaDisease
++ updatePlasmaDisease(PlasmaDisease):int
++ insertPlasmaDisease(PlasmaDisease):int
++ deletePlasmaDisease(int):int
+- singleWhere(String,boolean):PlasmaDisease
+- buildQuery(String):String
+- buildPlasmaDisease(ResultSet):PlasmaDisease
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>945</x>
+      <y>210</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>CTRCage
+--
+-
+--
++ CTRCage()
++ getAllCages():ArrayList&lt;Cage&gt;
++ findCage(int):Cage
++ insertCage(int,String):void
++ updateCage(int,String):int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2170</x>
+      <y>938</y>
+      <w>294</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>IFDBPlasmaDisease
+--
+-
+--
++ searchDiseaseById(int,boolean):PlasmaDisease
++ searchPlasmaDiseaseByName(String,boolean):PlasmaDisease
++ updatePlasmaDisease(PlasmaDisease):int
++ insertPlasmaDisease(PlasmaDisease):int
++ deletePlasmaDisease(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2492</x>
+      <y>938</y>
+      <w>294</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>IFDBBiteDisease
+--
+-
+--
++ searchBiteDiseaseById(int,boolean):BiteDisease
++ searchBiteDiseaseByName(String,boolean):BiteDisease
++ updateBiteDisease(BiteDisease):int
++ insertBiteDisease(BiteDisease):int
++ deleteBiteDiseaseWithId(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>0</y>
+      <w>294</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>GUITransfer
+--
++ GUITransfer()
+- createTransferPane():void
+- insertTransfer():void
+- deleteTransfer():void
+- createTransferList():void
+- createDiseaseReport():void
+- createReportList():void
+- refreshScreen():void
+- checkCage(int):Cage
+- checkEmployee(int):Employee
+- checkBite(int):BiteDisease
+- checkPlasma(int):PlasmaDisease
+- checkCageNoTransfer(int):Transfer
+- findTransfer():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>945</x>
+      <y>679</y>
+      <w>294</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>Cage
+--
+- cageNo: int
+- colNr: int
+- cageType: String
+- myMink: ArrayList&lt;Mink&gt;
+--
++ Cage(int, int, String)
++ Cage(int)
++ Cage()
++ getCage(): int
++ setCage(int): void
++ getColNr(): int
++ setColNr(int): void
++ getMyMink():ArrayList&lt;Mink&gt;
++ setMyMink(ArrayList&lt;Mink&gt;): void
++ getCageType(): String
++ setCageType(String): void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2807</x>
+      <y>938</y>
+      <w>294</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>IFDBEmployee
+--
+
++ getAllEmployees(boolean): ArrayList&lt;Employee&gt;
++ findEmployeeByFname(String, boolean): Employee
++ findEmployeeByLname(String, boolean): Employee
++ findEmployeeById(int, boolean):Employee
++ insertEmployee(Employee): int
++ updateEmployee(Employee):int
++ deleteEmployee(int): int
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2807</x>
+      <y>679</y>
+      <w>294</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>DBEmployee
+--
+- con: Connection
+--
++ DBEmployee()
++ getAllEmployees(boolean): ArrayList&lt;Employee&gt;
++ findEmployeeByFname(String, boolean): Employee
++ findEmployeeByLname(String, boolean): Employee
++ findEmployeeById(int, boolean):Employee
++ insertEmployee(Employee): int
++ updateEmployee(Employee):int
++ deleteEmployee(int): int
+- buildEmployee(ResultSet): Employee
+- buildQuery(String): String
+- miscWhere(String, boolean): ArrayList&lt;Employee&gt;
+- singleWhere(String, boolean): Employee
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1596</x>
+      <y>679</y>
+      <w>259</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>DBTransfer
+--
+-con: Connection
+--
++ DBTransfer()
++ getAllTransfer(boolean):ArrayList&lt;Transfer&gt;
++ searchTransferBysearchTransferId(int,boolean):Transfer
++ searchTransfersByCageNo(int,boolean):Transfer
++ findTransfersByEmployeeId(int,boolean):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseId(int,boolean):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String,boolean):ArrayList&lt;Transfer&gt;
++ updateTransfer(Transfer):int
++ deleteTransfer(int):int
++ insertTransfer(Transfer):int
++ deleteTransfer(transfer):int
+- singleWhere(String,boolean):Transfer
+- buildQuery(String):String
+- buildTransfer(ResultSet):Transfer
+- miscWhere(String,boolean):ArrayList&lt;Transfer&gt;
+- getDiseaseValue(transfer):int
+- getTodaysDate():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1596</x>
+      <y>938</y>
+      <w>259</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>IFDBTransfer
+--
+-
+--
++ getAllTransfer(boolean):ArrayList&lt;Transfer&gt;
++ searchTransfersByTransferId(int,boolean):Transfer
++ searchTransfersByCageNo(int,boolean):Transfer
++ findTransfersByEmployeeId(int,boolean):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseId(int,boolean):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String,boolean):ArrayList&lt;Transfer&gt;
++ updateTransfer(Transfer):int
++ insertTransfer(Transfer):int
++ deleteTransfer(Transfer):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1883</x>
+      <y>679</y>
+      <w>259</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>DBCage
+--
+-con: Connection
+--
++ DBCage()
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(int,boolean):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int
+- buildCage(ResuntSet):Cage
+- buildquery(String):String
+- singleWhere(String,boolean):Cage
+- miscWhere(String,boolean):ArrayList&lt;Cage&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1883</x>
+      <y>938</y>
+      <w>259</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>IFDBCage
+--
+-con: Connection
+--
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(Cage):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2492</x>
+      <y>679</y>
+      <w>287</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>DBBiteDisease
+--
+-con: Connection
+--
++ DBBiteDisease()
++ searchBiteDiseaseById(int,boolean):BiteDisease
++ searchBiteDiseaseByName(String,boolean):BiteDisease
++ updateBiteDisease(BiteDisease):int
++ insertBiteDisease(BiteDisease):int
++ deleteBiteDiseaseWithId(int):int
+- singleWhere(String,boolean):BiteDisease
+- buildQuery(String,boolean):String
+- BuildBiteDisease(ResultSet):BiteDisease</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>112</x>
+      <y>119</y>
+      <w>531</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;91;21;21;518;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>434</x>
+      <y>133</y>
+      <w>209</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;77;21;21;196;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>756</x>
+      <y>154</y>
+      <w>34</w>
+      <h>69</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;56;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>903</x>
+      <y>119</y>
+      <w>524</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>511;91;511;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>903</x>
+      <y>133</y>
+      <w>195</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>182;77;182;21;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>679</y>
+      <w>294</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>PlasmaDisease
+--
+- diseaseid: int
+- clinicName: String
+- clinicCVR: String
+- diseaseName: String
+--
++ getDiseaseId(): int
++ setDisease(int): void
++ getClinicName() String
++ setClinicName(String) void
++ getClinicCVR(): String
++ setClinicName(String) void
++ getDiseaseName() String
++ setDiseaseName(String) void
++ PlasmaDisease(int, String, String, String)
++ PlasmaDisease(int)
++ PlasmaDisease()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>112</x>
+      <y>343</y>
+      <w>34</w>
+      <h>349</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;336;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>315</x>
+      <y>679</y>
+      <w>294</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>BiteDisease
+--
+- diseaseId: int
+- diseaseName: String
+--
++ getDiseaseId(): int
++ setDiseaseId(int) void
++ getDiseaseName(): String
++ setDiseaseName(String): void
++ BiteDisease(int, String)
++ BiteDisease(int)
++ BiteDisease()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>434</x>
+      <y>343</y>
+      <w>34</w>
+      <h>349</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;336;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1260</x>
+      <y>679</y>
+      <w>294</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+- employeeID:int
+- fname:String
+- lname:String
+- address:String
+- zipCode:int
+- city:String
+- phoneNo:int
+- email:String
+--
++ Employee(int,String,String,String,int,String, int,String)
++ Employee()
++ Employee(int)
++ setEmployeeID(int):void
++ getEmployeeID():int
++ setFname(string):void
++ getFname():String
++ setLname(String):void
++ getLname():String
++ setAddress(String):void
++ getAddress():String
++ setZipCode(int):void
++ getZipCode():int
++ setCity(String):void
++ getCity():int
++ setPhoneNo(int):void
++ getPhoneNo():int
++ setEmail(String):void
++ getEmail():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1386</x>
+      <y>343</y>
+      <w>34</w>
+      <h>349</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;336;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1071</x>
+      <y>343</y>
+      <w>34</w>
+      <h>349</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;336;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>210</y>
+      <w>294</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>CTRTransfer
+--
+-
+--
++ CTRTransfer()
++ getAllTransfer():ArrayList&lt;Transfer&gt;
++ searchTransferByCageId(int):Transfer
++ findTransfersByEmployeeId(int):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseid(int):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String):ArrayList&lt;Transfer&gt;
++ instertTransfer(int,int,int):int
++ deleteTransfer(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>763</x>
+      <y>343</y>
+      <w>34</w>
+      <h>62</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;49;21;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>630</x>
+      <y>392</y>
+      <w>294</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>Trasfer
+--
+- transferId: int
+- transferDate: void
+--
++ getTrasferId(): int
++ setTrasferId(int): void
++ getTransferDate(): String
++ setTransferDate(String): void
++ getCage(): Cage
++ setCage(Cage): void
++ getBiteDisease(): BiteDisease
++ setBiteDisease(BiteDisease): void
++ getPlasmaDisease(): PlasmaDisease
++ setPlasmaDisease(PlasmaDisease): void
++ getEmployee(): Employee
++ setEmployee(Employee): void
++ Trasnfer(int, Cage, BiteDisease, Employee, String)
++ Transfer(int, Cage, PlasmaDisease, Employee, String)
++ Transfer()
++ Transfer(int)
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>245</x>
+      <y>560</y>
+      <w>398</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>21;119;21;21;385;21</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>553</x>
+      <y>560</y>
+      <w>90</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+0..1
+ </panel_attributes>
+    <additional_attributes>28;119;28;35;77;35</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>903</x>
+      <y>567</y>
+      <w>96</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+0..1
+ </panel_attributes>
+    <additional_attributes>70;112;70;35;21;35</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>903</x>
+      <y>567</y>
+      <w>398</w>
+      <h>125</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>385;112;385;21;21;21</additional_attributes>
+  </element>
+</diagram>
