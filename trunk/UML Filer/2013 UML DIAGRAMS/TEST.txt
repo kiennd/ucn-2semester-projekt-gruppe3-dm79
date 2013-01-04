@@ -1,0 +1,11 @@
+Test
+Dette afsnit beskriver, hvordan og hvad vi har testet systemet. Vi har udført 3 typer af tests -Unit test og Usability test.
+
+Usability Test:
+Målet for usability test var at finde ud af, hvor let det er for en bruger at udføre nogle opgaver, første gang de støder systemet. Unit tests blev udført ved bruge af JUNIT imens de enkelte dele af systemet blev udviklet.
+
+
+JUNIT Tests:
+For at teste på de forskellige klasser, har vi oprettet JUNIT test cases i Eclipse. Vi har brugt Junit testing at verificere funktionaliteter af nogle klasser.
+Herunder vises skærmbilleder af resultater af JUnit test case for DBEmployee class. Komplet test koder med deres resultater kan findes i bilag???.
+ADD JUNIT TEST CASE screenshots. 
