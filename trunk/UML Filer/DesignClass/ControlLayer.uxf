@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>120</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>CTRPlasmaDisease
+--
+-
+--
++ PlasmaDisease findDiseaseById(int):PlasmaDisease
++ PlasmaDisease findDiseaseByName(String):PlasmaDisease
++ updatePlasmaDisease(int,String,String,String):int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>450</x>
+      <y>120</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>CTRBiteDisease
+--
+-
+--
++ BiteDisease findDiseaseById(int):BiteDisease
++ BiteDisease findDiseaseByName(String):BiteDisease
++ updateDiseaseBite(int,String):int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>900</x>
+      <y>120</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>CTREmployee
+--
+-
+--
++ findAllEmployees():ArrayList&lt;Employee&gt;
++ findByFname(String):Employee
++ findByLname(String):Employee
++ findEmployeeByID(int):Employee
++ updateEmployee(int,String,String,String,int,String,int,String):int
++ insertEmployee(int,String,String,String,int,String,int,String):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1350</x>
+      <y>120</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>CTRCage
+--
+-
+--
++ getAllCages():ArrayList&lt;Cage&gt;
++ findCage(int):Cage
++ insertCage(int,String):void
++ updateCage(int,String):int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1800</x>
+      <y>120</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>CTRTransfer
+--
+-
+--
++ getAllTransfer():ArrayList&lt;Transfer&gt;
++ searchTransferByCageId(int):Transfer
++ findTransfersByEmployeeId(int):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseid(int):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String):ArrayList&lt;Transfer&gt;
++ instertTransfer(int,int,int):int
++ deleteTransfer(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
