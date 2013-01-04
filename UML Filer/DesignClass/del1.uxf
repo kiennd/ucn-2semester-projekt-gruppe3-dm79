@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>370</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>PlasmaDisease
+--
+- diseaseid: int
+- clinicName: String
+- clinicCVR: String
+- diseaseName: String
+--
++ getDiseaseId(): int
++ setDisease(int): void
++ getClinicName() String
++ setClinicName(String) void
++ getClinicCVR(): String
++ setClinicName(String) void
++ getDiseaseName() String
++ setDiseaseName(String) void
++ PlasmaDisease(int, String, String, String)
++ PlasmaDisease(int)
++ PlasmaDisease()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>310</y>
+      <w>370</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>Trasfer
+--
+- transferId: int
+- transferDate: void
+--
++ getTrasferId(): int
++ setTrasferId(int): void
++ getTransferDate(): String
++ setTransferDate(String): void
++ getCage(): Cage
++ setCage(Cage): void
++ getBiteDisease(): BiteDisease
++ setBiteDisease(BiteDisease): void
++ getPlasmaDisease(): PlasmaDisease
++ setPlasmaDisease(PlasmaDisease): void
++ getEmployee(): Employee
++ setEmployee(Employee): void
++ Trasnfer(int, Cage, BiteDisease, Employee, String)
++ Transfer(int, Cage, PlasmaDisease, Employee, String)
++ Transfer()
++ Transfer(int)
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>360</y>
+      <w>370</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>BiteDisease
+--
+- diseaseId: int
+- diseaseName: String
+--
++ getDiseaseId(): int
++ setDiseaseId(int) void
++ getDiseaseName(): String
++ setDiseaseName(String): void
++ BiteDisease(int, String)
++ BiteDisease(int)
++ BiteDisease()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>860</x>
+      <y>710</y>
+      <w>370</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>IFDBEmployee
+--
+
++ getAllEmployees(boolean): ArrayList&lt;Employee&gt;
++ findEmployeeByFname(String, boolean): Employee
++ findEmployeeByLname(String, boolean): Employee
++ findEmployeeById(int, boolean):Employee
++ insertEmployee(Employee): int
++ updateEmployee(Employee):int
++ deleteEmployee(int): int
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>460</x>
+      <y>60</y>
+      <w>370</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Cage
+--
+- cageNo: int
+- colNr: int
+- cageType: String
+- myMink: ArrayList&lt;Mink&gt;
+--
++ Cage(int, int, String)
++ Cage(int)
++ Cage()
++ getCage(): int
++ setCage(int): void
++ getColNr(): int
++ setColNr(int): void
++ getMyMink():ArrayList&lt;Mink&gt;
++ setMyMink(ArrayList&lt;Mink&gt;): void
++ getCageType(): String
++ setCageType(String): void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>860</x>
+      <y>390</y>
+      <w>370</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>DBEmployee
+--
+- con: Connection
+--
++ DBEmployee()
++ getAllEmployees(boolean): ArrayList&lt;Employee&gt;
++ findEmployeeByFname(String, boolean): Employee
++ findEmployeeByLname(String, boolean): Employee
++ findEmployeeById(int, boolean):Employee
++ insertEmployee(Employee): int
++ updateEmployee(Employee):int
++ deleteEmployee(int): int
+- buildEmployee(ResultSet): Employee
+- buildQuery(String): String
+- miscWhere(String, boolean): ArrayList&lt;Employee&gt;
+- singleWhere(String, boolean): Employee
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
