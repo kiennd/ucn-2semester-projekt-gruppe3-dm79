@@ -1,0 +1,17 @@
+De mønstre, vi har taget i betragtning.
+
+GRASP PATTERNS
+Creator
+Det omfatter at vælge en creator, som har ansvar til oprettelse af objekter, der kan anvendes i andre dele af programmet. 
+
+Controller
+Dette er de første klasser uden for brugergrænseflade som håndtere events fra UI og redeleger dem til andre lavere niveau klasser. 
+
+Information Expert
+Information Expert anbefaler til at overdrage ansvar til den klasser som har de nødvendige oplysninger til at opfylde opgaven.
+
+Low Coupling
+Indebærer at vi skal designe klasser med lav kobling, så at de ikke er i høj grad afhænge af hinanden. Overdreven betyder, at hvis en klasse ændres, kan det let påvirke andre klasser, der er afhængige af denne klasse.
+
+High Cohesion
+Dette betyder, at elementerne i en klasse er stærkt relateret til hinanden. Hver klasse i systemet er designet til at være fokuseret på specifikke ansvar.
