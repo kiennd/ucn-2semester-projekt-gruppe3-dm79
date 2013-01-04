@@ -1,0 +1,151 @@
+
+Implementering 
+Dette afsnit omhandler implementeringen af vores design. Vi starter med... og til sidste har vi ..
+ 
+Implementering 
+ 
+I deisgn fasen valgte vi en åben arkitektur. Her beskriver kort de forskellige værktøjer, som vi har brugt til at implementere systemet.
+ 
+SVN-
+Vi har brugt svn gennem hele implementation af systemet. Det har givet os mulighed for at gemme alle projekt relaterede filer i et centralt sted, hvor alle gruppe medlemmer kan få adgang til, arbejde på og opdatere eksisterende filer.
+
+Eclipse
+hele programmering blev lavet ved at anvende Eclipse. Eclipse blev anvendt med svn, og dette har gjort det muligt for gruppens medlemmer til at være i stand til samtidigt at arbejde på koderne.
+
+Java
+Java blev anvendt som programmeringssprog, fordi den er baseret på OOP(object oriented programming) og det er operativsystem uafhængigt. Java er også det sprog for programmerings  kursus for dette semester.
+
+
+Microsoft SQL Server/SQL
+Microsoft SQL Server er en relationel database management system, det giver os mulighed for at oprette, gemme og hente data fra vores database, ved hjælp af SQL som både er en DDL(data definition language) og en DML (Data Manipulation Language).
+
+
+Programmet
+
+Systemet består af fire pakker:
+package GUILayer
+package ControlLayer
+package DBLayer
+package ModelLayer
+
+GUIlayer pakke interagerer med kontrol og model lag pakker. Kontrol lag pakke interagerer med dblayer og model lag pakker. Disse pakker er implementeringen af de fire lag i vores design klassediagram. \ ref til arkitektur diagram i design & klassediagram.
+Herunder er en kort beskrivelse af Transfer klass i de forskellige pakker.
+
+Model Layer:
+Alle variabler i klasserne fra dette lag er defineret som privat og kan kun tilgås ved hjælp af set og get metoder. klasserne også indeholder forskellige former for constructor, der anvendes til instantiere objekter af hver klasse. koden nedenfor viser vores Transfer klasse definition i model laget.
+
+public class Transfer
+{
+	private int transferId;
+	private String transferDate; 
+	private Cage cage;
+	private BiteDisease bitedisease;
+	private PlasmaDisease plasmadisease;
+	private Employee employee;
+	...
+	
+// This constructor is called when there is Plasmacytosis.	
+public Transfer(int transferId, Cage cage, BiteDisease bitedisease, Employee employee, String transferDate) 
+{
+...
+
+// This constructor is called when there is Bite sore.
+public Transfer(int transferId, Cage cage, PlasmaDisease plasmadisease, Employee employee, String transferDate) 
+{
+...
+
+
+GUI layer:
+Klasser i dette lag er ansvarlig for oprettelse de views, der er synlig for brugerene af systemet, såsom screen layout og knapper. ADD Screenshot fra Transfer UI.
+
+
+Control Layer:
+Alle metoder i db lag, afspejles i control lag. Gennem control lag klasser, får guilag adgang til dblag klasser og modellag klasser.  Nedenstående kode viser kode fra kontrol lag, bruges til at oprette en Transfer objekt i control laget.
+    
+	public int insertTransfer(int cageNo, int diseaseId, int employeeId)
+    {
+        int rc = -1;
+    	IFDBTransfer dbtrans = new DBTransfer();
+    	Transfer transObj = new Transfer();
+    	
+    	transObj.setCage(new Cage(cageNo));
+    	if (diseaseId == 1600)
+    	{
+    		transObj.setBitedisease(new BiteDisease(diseaseId));
+    	}
+    	else 
+    	{
+    		transObj.setPlasmadisease(new PlasmaDisease(diseaseId));
+    	}
+    	transObj.setEmployee(new Employee(employeeId));
+
+	    try
+	    {
+	        DbConnection.startTransaction();
+	        rc = dbtrans.insertTransfer(transObj);
+	        DbConnection.commitTransaction();
+	    }
+        catch(Exception e)
+        {
+            DbConnection.rollbackTransaction();
+            System.out.println(e.getMessage());
+        }
+	    
+	    return rc;
+    }...
+
+
+
+DBlayer Layer:
+Klasser i den lag sikre for håndtering af persistence af objekter i vores database. Nedenstående kode fra dblag, bruges til at indsætte en Transfer objekt i databasen.
+
+	@Override
+	public int insertTransfer(Transfer transferObj)
+	{
+		//call to get next transferId.
+		int nextTransferId = GetMax.getMaxId("Select max(transferId) from mfTRansfer");
+        nextTransferId = nextTransferId + 1;
+		System.out.println("next transferId = " +  nextTransferId);
+		
+        int rc = -1;
+	  	int diseaseValue = getDiseaseValue(transferObj);
+		String query="INSERT INTO mfTransfer(transferId, cageNo, diseaseId, employeeId, transferDate)  VALUES('"+
+				nextTransferId  + "','"  +		
+				transferObj.getCage().getCageNo() + "','" +
+				diseaseValue + "','" +
+				transferObj.getEmployee().getEmployeeID() + "','" +
+				getTodaysDate() + "') ";
+		System.out.println("insert : " + query);
+		
+		try 
+		{
+			//insert new transfer with cagenum, diseaseid, employeeId.
+			Statement stmt = con.createStatement();
+	        stmt.setQueryTimeout(5);
+	     	rc = stmt.executeUpdate(query);
+	        stmt.close();
+	        
+	        // Check if Cage number is in DiseaseReport DB, if so delete it in DiseaseReport DB. 
+		  	int cagenumber = transferObj.getCage().getCageNo();
+	        IFDBDiseaseReport diseasereport = new DBDiseaseReport();
+	        try
+	        {
+				if(diseasereport.searchDiseaseReportByCageNumber(cagenumber, false) != null)
+				{
+					rc = diseasereport.deleteDiseaseReportWithCageNo(cagenumber);
+				}
+			}
+	        catch (Exception e)
+	        {
+				System.out.println(e.getMessage());
+			}
+	        
+		}//end try.
+	    catch(SQLException ex)
+	    {
+            System.out.println("Transfer not created"+ex.getMessage());
+	    }
+		
+        return rc;		
+	}...
+	
