@@ -1,0 +1,5 @@
+Abstract
+Denne rapport dokumenterer processen med at analysere, designe og implementere et it-system for en mink farmer. Vi anvender viden fra ITIO(IT i organisation), samt metoder og principper for OOA / D(Object Oriented Analysis og Design) til at implementere et it-system der kan hjælpe en mink farmer til at administrere oplysninger omkring syge minke i hans farm.
+Systemet er implementeret i java sprog og bruger MSSQL server som database. 
+ 
+
