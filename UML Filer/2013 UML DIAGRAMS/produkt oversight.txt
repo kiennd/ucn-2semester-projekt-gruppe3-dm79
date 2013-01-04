@@ -1,0 +1,2 @@
+
+produktet skal kunne håndtere requests fra brugerene, sende svar til brugerne. Produktet bør også være i stand til at sende og modtage information til og fra eksterne IT-system.
