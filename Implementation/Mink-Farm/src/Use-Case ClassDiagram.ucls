@@ -90,7 +90,7 @@
   </class>  
   <class id="12" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBTransfer" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/DBTransfer.java" binary="false">    
-    <position height="-1" width="-1" x="1782" y="1292"/>    
+    <position height="367" width="319" x="1919" y="657"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -98,7 +98,7 @@
   </class>  
   <interface id="13" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBPlasmaDisease" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/IFDBPlasmaDisease.java" binary="false">    
-    <position height="-1" width="-1" x="2424" y="1589"/>    
+    <position height="146" width="324" x="2558" y="1064"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -106,7 +106,7 @@
   </interface>  
   <class id="14" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBCage" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/DBCage.java" binary="false">    
-    <position height="-1" width="-1" x="2102" y="1233"/>    
+    <position height="248" width="240" x="2278" y="657"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -114,7 +114,7 @@
   </class>  
   <class id="15" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBPlasmaDisease" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/DBPlasmaDisease.java" binary="false">    
-    <position height="-1" width="-1" x="2424" y="1224"/>    
+    <position height="231" width="324" x="2558" y="657"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -122,7 +122,7 @@
   </class>  
   <interface id="16" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBBiteDisease" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/IFDBBiteDisease.java" binary="false">    
-    <position height="-1" width="-1" x="2772" y="1589"/>    
+    <position height="146" width="292" x="2922" y="1064"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -130,7 +130,7 @@
   </interface>  
   <class id="17" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBBiteDisease" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/DBBiteDisease.java" binary="false">    
-    <position height="-1" width="-1" x="2772" y="1224"/>    
+    <position height="231" width="292" x="2922" y="657"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -138,7 +138,7 @@
   </class>  
   <interface id="18" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBEmployee" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/IFDBEmployee.java" binary="false">    
-    <position height="-1" width="-1" x="3087" y="1606"/>    
+    <position height="180" width="259" x="3254" y="1064"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -146,7 +146,7 @@
   </interface>  
   <interface id="19" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBTransfer" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/IFDBTransfer.java" binary="false">    
-    <position height="-1" width="-1" x="1782" y="1623"/>    
+    <position height="214" width="319" x="1919" y="1064"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -154,7 +154,7 @@
   </interface>  
   <class id="20" corner="BOTTOM_RIGHT" language="java" name="DBLayer.DBEmployee" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/DBEmployee.java" binary="false">    
-    <position height="-1" width="-1" x="3088" y="1250"/>    
+    <position height="282" width="261" x="3254" y="657"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -162,104 +162,132 @@
   </class>  
   <interface id="21" corner="BOTTOM_RIGHT" language="java" name="DBLayer.IFDBCage" project="Mink-Farm" 
     file="/Mink-Farm/src/DBLayer/IFDBCage.java" binary="false">    
-    <position height="-1" width="-1" x="2088" y="1589"/>    
+    <position height="146" width="213" x="2278" y="1064"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
     </display>  
   </interface>  
-  <association id="22">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="23" name="bitedisease"/>      
-      <multiplicity id="24" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="25">    
+  <realization id="22">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="19"/>  
   </realization>  
-  <dependency id="26">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="9"/>  
   </dependency>  
+  <dependency id="24">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="26">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
   <dependency id="27">    
-    <end type="SOURCE" refId="1"/>    
+    <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
   <dependency id="28">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
+    <end type="TARGET" refId="7"/>  
   </dependency>  
-  <realization id="29">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="18"/>  
-  </realization>  
-  <dependency id="30">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="31">    
-    <end type="SOURCE" refId="1"/>    
+  <dependency id="29">    
+    <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="10"/>  
   </dependency>  
-  <realization id="32">    
+  <dependency id="30">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <realization id="31">    
     <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="21"/>  
   </realization>  
-  <realization id="33">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <dependency id="34">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <association id="35">    
+  <association id="32">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="36" name="employee"/>      
-      <multiplicity id="37" minimum="0" maximum="1"/>    
+      <attribute id="33" name="employee"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="38">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="6"/>  
+  <realization id="35">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <dependency id="36">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
   </dependency>  
-  <association id="39">    
+  <dependency id="37">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="21"/>  
+  </dependency>  
+  <association id="38">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="40" name="plasmadisease"/>      
-      <multiplicity id="41" minimum="0" maximum="1"/>    
+      <attribute id="39" name="bitedisease"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="44">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="45">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="46">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <association id="47">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="48" name="plasmadisease"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="42">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <association id="43">    
+  <dependency id="50">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="51">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="52">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="44" name="cage"/>      
-      <multiplicity id="45" minimum="0" maximum="1"/>    
+      <attribute id="53" name="cage"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="46">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <dependency id="47">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="48">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
+  <realization id="55">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     visibility="true">    
     <attributes public="true" package="true" protected="true" private="true"/>    
