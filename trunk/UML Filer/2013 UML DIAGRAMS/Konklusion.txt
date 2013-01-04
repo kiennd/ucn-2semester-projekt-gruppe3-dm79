@@ -1,0 +1,11 @@
+Konklusion
+De overordnede mål med dette projekt var at lære at bruge viden fra ITIO  og OOA/D  til at analysere, design og implementere et it-system til en mink farmer.
+Den første fase af projektet var at analysere og definere de vigtigste krav. Baseret på kravet, har vi udviklet et design, og vi har en delvis implementation af systemet.
+Baseret på vores implementation har vi et it-system med følgende funktioner:
+- muligt at registrere oplysninger om syg mink som er blevet flyttet
+- muligt at registrere en ny farm med bure, haller, koloner samt mink.
+- Det er muligt at styre medarbejder og forskellige sygdom information i farmen
+- ...
+
+I forbindelse med udviklingen af en delvis system, har gruppen fået kendskab til anvendelsen af UP procesmodel i projektudvikling.
+Desuden har vi fået en praktisk kendskab til de udfordringer, der er forbundet med håndtering af tids krav under projektudvikling.
