@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>0</y>
+      <w>370</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>GUITransfer
+--
++ GUITransfer()
+- createTransferPane():void
+- insertTransfer():void
+- deleteTransfer():void
+- createTransferList():void
+- createDiseaseReport():void
+- createReportList():void
+- refreshScreen():void
+- checkCage(int):Cage
+- checkEmployee(int):Employee
+- checkBite(int):BiteDisease
+- checkPlasma(int):PlasmaDisease
+- checkCageNoTransfer(int):Transfer
+- findTransfer():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>280</y>
+      <w>370</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>DBTransfer
+--
+-con: Connection
+--
++ DBTransfer()
++ getAllTransfer(boolean):ArrayList&lt;Transfer&gt;
++ searchTransferBysearchTransferId(int,boolean):Transfer
++ searchTransfersByCageNo(int,boolean):Transfer
++ findTransfersByEmployeeId(int,boolean):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseId(int,boolean):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String,boolean):ArrayList&lt;Transfer&gt;
++ updateTransfer(Transfer):int
++ deleteTransfer(int):int
++ insertTransfer(Transfer):int
++ deleteTransfer(transfer):int
+- singleWhere(String,boolean):Transfer
+- buildQuery(String):String
+- buildTransfer(ResultSet):Transfer
+- miscWhere(String,boolean):ArrayList&lt;Transfer&gt;
+- getDiseaseValue(transfer):int
+- getTodaysDate():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>660</y>
+      <w>370</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>IFDBTransfer
+--
+
+--
++ getAllTransfer(boolean):ArrayList&lt;Transfer&gt;
++ searchTransfersByTransferId(int,boolean):Transfer
++ searchTransfersByCageNo(int,boolean):Transfer
++ findTransfersByEmployeeId(int,boolean):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseId(int,boolean):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String,boolean):ArrayList&lt;Transfer&gt;
++ updateTransfer(Transfer):int
++ insertTransfer(Transfer):int
++ deleteTransfer(Transfer):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>880</y>
+      <w>370</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>DBCage
+--
+-con: Connection
+--
++ DBCage()
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(int,boolean):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int
+- buildCage(ResuntSet):Cage
+- buildquery(String):String
+- singleWhere(String,boolean):Cage
+- miscWhere(String,boolean):ArrayList&lt;Cage&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>1130</y>
+      <w>370</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>IFDBCage
+--
+-con: Connection
+--
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(Cage):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>1280</y>
+      <w>370</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>DBBiteDisease
+--
+-con: Connection
+--
++ DBBiteDisease()
++ searchBiteDiseaseById(int,boolean):BiteDisease
++ searchBiteDiseaseByName(String,boolean):BiteDisease
++ updateBiteDisease(BiteDisease):int
++ insertBiteDisease(BiteDisease):int
++ deleteBiteDiseaseWithId(int):int
+- singleWhere(String,boolean):BiteDisease
+- buildQuery(String,boolean):String
+- BuildBiteDisease(ResultSet):BiteDisease</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
