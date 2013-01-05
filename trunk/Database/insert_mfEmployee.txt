@@ -1,0 +1,5 @@
+INSERT INTO mfEmployee VALUES('15587', 'Aaron', 'Lestat', 'Danmarksgade 53', '9000', '53501204', 'aaronlestat@sumps.org', '123456789', 'Aalborg');
+
+INSERT INTO mfEmployee VALUES('15599', 'Simon', 'Thomsen', 'Østergade 42', '9220', '99156685', 'simonthomsen@sirop.com', '123456789', 'Aalborg Øst');
+
+INSERT INTO mfEmployee VALUES('15444', 'Kristian', 'Olesen', 'Larsgade 69', '9000', '95549669', 'krisole@gmail.com', '123456789', 'Aalborg');
