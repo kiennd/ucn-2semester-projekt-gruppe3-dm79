@@ -1,0 +1,577 @@
+{\rtf1\ansi\uc0 \deff1{\fonttbl{\f1\fmodern\fprq1\fcharset0 Courier New;}}{\colortbl;\red255\green255\blue255;\red00\green00\blue00;\red163\green21\blue21;\red00\green00\blue00;\red00\green128\blue00;\red00\green128\blue00;\red163\green21\blue21;\red00\green00\blue255;\red00\green00\blue255;\red43\green145\blue175;\red00\green00\blue00;\red163\green21\blue21;\red00\green00\blue255;\red00\green00\blue255;\red43\green145\blue175;\red00\green00\blue00;}
+{\stylesheet{
+{\*\cs2\additive\cf2\f1\fs20\sbasedon222\snext0 HL Default;}
+{\*\cs3\additive\cf3\f1\fs20\sbasedon222\snext0 HL String;}
+{\*\cs4\additive\cf4\f1\fs20\sbasedon222\snext0 HL Number;}
+{\*\cs5\additive\cf5\f1\fs20\sbasedon222\snext0 HL SL Comment;}
+{\*\cs6\additive\cf6\f1\fs20\sbasedon222\snext0 HL ML Comment;}
+{\*\cs7\additive\cf7\f1\fs20\sbasedon222\snext0 HL Escape Character;}
+{\*\cs8\additive\cf8\f1\fs20\sbasedon222\snext0 HL Directive;}
+{\*\cs9\additive\cf9\f1\fs20\sbasedon222\snext0 HL Directive String;}
+{\*\cs10\additive\cf10\f1\fs20\sbasedon222\snext0 HL Line;}
+{\*\cs11\additive\cf11\f1\fs20\sbasedon222\snext0 HL Operator;}
+{\*\cs12\additive\cf12\f1\fs20\sbasedon222\snext0 HL Interpolation;}
+{\*\cs13\additive\cf13\f1\fs20\sbasedon222\snext0 HL Keyword A;}
+{\*\cs14\additive\cf14\f1\fs20\sbasedon222\snext0 HL Keyword B;}
+{\*\cs15\additive\cf15\f1\fs20\sbasedon222\snext0 HL Keyword C;}
+{\*\cs16\additive\cf16\f1\fs20\sbasedon222\snext0 HL Keyword D;}
+}}
+\paperw11905\paperh16837\margl1134\margr1134\margt1134\margb1134\sectd\plain\f1\fs20
+\pard \cbpat1{{\*\cs2\cf2{}}{\*\cs10\cf10{{0}{1} }}{\*\cs13\cf13{package}} {\*\cs2\cf2{DBLayer}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{2} }}{\*\cs2\cf2{}}{\*\cs13\cf13{import}} {\*\cs2\cf2{ModelLayer}}{\*\cs11\cf11{.*;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{3} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{4} }}{\*\cs13\cf13{import}} {\*\cs2\cf2{java}}{\*\cs11\cf11{.}}{\*\cs2\cf2{sql}}{\*\cs11\cf11{.*;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{5} }}{\*\cs2\cf2{}}{\*\cs13\cf13{import}} {\*\cs2\cf2{java}}{\*\cs11\cf11{.}}{\*\cs2\cf2{text}}{\*\cs11\cf11{.}}{\*\cs2\cf2{SimpleDateFormat}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{6} }}{\*\cs2\cf2{}}{\*\cs13\cf13{import}} {\*\cs2\cf2{java}}{\*\cs11\cf11{.}}{\*\cs2\cf2{util}}{\*\cs11\cf11{.}}{\*\cs2\cf2{ArrayList}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{7} }}{\*\cs2\cf2{}}{\*\cs13\cf13{import}} {\*\cs2\cf2{java}}{\*\cs11\cf11{.}}{\*\cs2\cf2{util}}{\*\cs11\cf11{.}}{\*\cs2\cf2{Calendar}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{8} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{0}{9} }}{\*\cs13\cf13{public class}} {\*\cs2\cf2{DBTransfer}} {\*\cs13\cf13{implements}} {\*\cs2\cf2{IFDBTransfer}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0} }}{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{private}} {\*\cs2\cf2{Connection con}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3} }}	{\*\cs5\cf5{// Creates a new instance of DBPlasmDisease }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{}}{\*\cs16\cf16{DBTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{()}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6} }}{\*\cs2\cf2{		con}} {\*\cs11\cf11{=}} {\*\cs2\cf2{DbConnection}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getInstance}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDBcon}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{ArrayList}}{\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>}} {\*\cs2\cf2{}}{\*\cs16\cf16{getAllTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs14\cf14{boolean}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2} }}{\*\cs2\cf2{	retriveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{try}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{return}} {\*\cs2\cf2{}}{\*\cs16\cf16{miscWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{""}}{\*\cs2\cf2{}}{\*\cs11\cf11{,}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{catch}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception e}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0} }}{\*\cs2\cf2{			e}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{printStackTrace}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{return}} {\*\cs2\cf2{null}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{Transfer}} {\*\cs16\cf16{searchTransfersByTransferId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{transferId}}{\*\cs11\cf11{,}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8} }}{\*\cs2\cf2{}}	{\*\cs14\cf14{boolean}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0} }}{\*\cs2\cf2{    	String wClause}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"  transferId = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transferId}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1} }}{\*\cs2\cf2{}} 		{\*\cs13\cf13{return}} {\*\cs2\cf2{}}{\*\cs16\cf16{singleWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{,}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{Transfer}} {\*\cs16\cf16{searchTransfersByCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{cageNo}}{\*\cs11\cf11{,}} {\*\cs2\cf2{}}{\*\cs14\cf14{boolean}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6} }}{\*\cs2\cf2{	retriveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8} }}{\*\cs2\cf2{    	String wClause}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"  cageNo = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{cageNo}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9} }}{\*\cs2\cf2{}} 		{\*\cs13\cf13{return}} {\*\cs2\cf2{}}{\*\cs16\cf16{singleWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{,}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{ArrayList}}{\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>}} {\*\cs2\cf2{}}{\*\cs16\cf16{findTransfersByEmployeeId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs14\cf14{int}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5} }}{\*\cs2\cf2{	employeeId}}{\*\cs11\cf11{,}} {\*\cs2\cf2{}}{\*\cs14\cf14{boolean}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{6} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{7} }}{\*\cs2\cf2{    	String wClause}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"  employeeId = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{employeeId}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{8} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{return}} {\*\cs2\cf2{}}{\*\cs16\cf16{miscWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{,}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{9} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{0} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{1} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{2} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{3} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{ArrayList}}{\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>}} {\*\cs2\cf2{}}{\*\cs16\cf16{findTransfersBydiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs14\cf14{int}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{4} }}{\*\cs2\cf2{	diseaseId}}{\*\cs11\cf11{,}} {\*\cs2\cf2{}}{\*\cs14\cf14{boolean}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{5} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{6} }}{\*\cs2\cf2{    	String wClause}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"  diseaseId = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{diseaseId}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{7} }}{\*\cs2\cf2{}} 		{\*\cs13\cf13{return}} {\*\cs2\cf2{}}{\*\cs16\cf16{miscWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{,}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{8} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{6}{9} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{0} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{1} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{2} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{ArrayList}}{\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>}} {\*\cs2\cf2{}}{\*\cs16\cf16{findtransferByDate}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{String }\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{3} }}	transdate}}{\*\cs11\cf11{,}} {\*\cs2\cf2{}}{\*\cs14\cf14{boolean}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{4} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{5} }}{\*\cs2\cf2{    	String wClause}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"  transferDate = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transdate}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{6} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{return}} {\*\cs2\cf2{}}{\*\cs16\cf16{miscWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{,}} {\*\cs2\cf2{retriveAssociation}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{7} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{8} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{7}{9} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{0} }}	{\*\cs5\cf5{//update transfer. }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{1} }}{\*\cs2\cf2{}}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{2} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{}}{\*\cs16\cf16{updateTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Transfer transferObj}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{3} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{4} }}{\*\cs2\cf2{}}		{\*\cs14\cf14{int}} {\*\cs2\cf2{rc}} {\*\cs11\cf11{= -}}{\*\cs2\cf2{}}{\*\cs4\cf4{{1}}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{5} }}{\*\cs2\cf2{		Transfer transfer}} {\*\cs11\cf11{=}} {\*\cs2\cf2{transferObj}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{6} }}{\*\cs2\cf2{}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{7} }}		String query}}{\*\cs11\cf11{=}}{\*\cs2\cf2{}}{\*\cs3\cf3{"UPDATE mfTransfer SET "}}{\*\cs2\cf2{}}{\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{8} }}{\*\cs2\cf2{}}				{\*\cs3\cf3{"cageNo ='"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transfer}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"', "}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{8}{9} }}{\*\cs2\cf2{}}				{\*\cs3\cf3{"diseaseId ='"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseValue}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transfer}}{\*\cs11\cf11{) +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"', "}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{0} }}{\*\cs2\cf2{}}				{\*\cs3\cf3{"employeeId ='"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transfer}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployeeID}}{\*\cs2\cf2{}}{\*\cs11\cf11{()}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{1} }}{\*\cs2\cf2{}}				{\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"', "}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{2} }}{\*\cs2\cf2{}}				{\*\cs3\cf3{"transferDate ='"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transfer}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getTransferDate}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"' "}}{\*\cs2\cf2{}}  {\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{3} }}{\*\cs2\cf2{}}				{\*\cs3\cf3{"WHERE transferId = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transfer}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getTransferId}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"' "}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{4} }}{\*\cs2\cf2{	   }\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{5} }}	    System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"Update query:"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{6} }}{\*\cs2\cf2{}}	  	{\*\cs13\cf13{try}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{7} }}{\*\cs2\cf2{}}	  	{\*\cs11\cf11{\{}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{8} }}{\*\cs2\cf2{		 	Statement stmt}} {\*\cs11\cf11{=}} {\*\cs2\cf2{con}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{createStatement}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{9}{9} }}{\*\cs2\cf2{		 	stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setQueryTimeout}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs4\cf4{{5}}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{0} }}{\*\cs2\cf2{		 	rc}} {\*\cs11\cf11{=}} {\*\cs2\cf2{stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{executeUpdate}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{1} }}{\*\cs2\cf2{		 	stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{close}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{2} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{3} }}{\*\cs2\cf2{}}	  	{\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception e}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{4} }}{\*\cs2\cf2{}}	  	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{5} }}{\*\cs2\cf2{			System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{e}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{6} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{7} }}{\*\cs2\cf2{}}	  	}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{8} }}	  	{\*\cs13\cf13{return}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{rc}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{0}{9} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{0} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{1} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{2} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{3} }}	{\*\cs5\cf5{//delete from transfer using id.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{4} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{}}{\*\cs16\cf16{deleteTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{transferId}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{5} }}{\*\cs2\cf2{}}    {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{6} }}{\*\cs2\cf2{}}        {\*\cs14\cf14{int}} {\*\cs2\cf2{rc}} {\*\cs11\cf11{= -}}{\*\cs2\cf2{}}{\*\cs4\cf4{{1}}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{7} }}{\*\cs2\cf2{        String delete}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"DELETE FROM mfTransfer where }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{8} }}{\*\cs3\cf3{        transferId ='"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{transferId}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{1}{9} }}{\*\cs2\cf2{        System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{delete}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{0} }}{\*\cs2\cf2{}}        {\*\cs13\cf13{try}} {\*\cs2\cf2{}}{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{1} }}{\*\cs2\cf2{        	Statement stmt}} {\*\cs11\cf11{=}} {\*\cs2\cf2{con}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{createStatement}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{2} }}{\*\cs2\cf2{}}            {\*\cs5\cf5{//stmt.setQueryTimeout({5});}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{3} }}{\*\cs2\cf2{            rc}} {\*\cs11\cf11{=}} {\*\cs2\cf2{stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{executeUpdate}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{delete}}{\*\cs11\cf11{);}}     }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{4} }}{\*\cs2\cf2{            stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{close}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{5} }}{\*\cs2\cf2{}}        {\*\cs11\cf11{\}}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{6} }}{\*\cs2\cf2{}}        {\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{SQLException sqlE}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{7} }}{\*\cs2\cf2{}}        {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{8} }}{\*\cs2\cf2{            System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{sqlE}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}   }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{2}{9} }}{\*\cs2\cf2{}}        {\*\cs11\cf11{\}}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{0} }}{\*\cs2\cf2{}}        {\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception e}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{1} }}{\*\cs2\cf2{}}        {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{2} }}{\*\cs2\cf2{        	System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{e}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{3} }}{\*\cs2\cf2{}}        {\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{4} }}{\*\cs2\cf2{}}        }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{5} }}        {\*\cs13\cf13{return}} {\*\cs2\cf2{rc}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{6} }}{\*\cs2\cf2{}}     {\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{7} }}{\*\cs2\cf2{}}     }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{8} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{3}{9} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{0} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{1} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{}}{\*\cs16\cf16{insertTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Transfer transferObj}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{2} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{3} }}{\*\cs2\cf2{}}		{\*\cs5\cf5{//call to get next transferId.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{4} }}{\*\cs2\cf2{}}		{\*\cs14\cf14{int}} {\*\cs2\cf2{nextTransferId}} {\*\cs11\cf11{=}} {\*\cs2\cf2{GetMax}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMaxId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"Select max(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{5} }}{\*\cs3\cf3{		transferId) from mfTRansfer"}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{6} }}{\*\cs2\cf2{        nextTransferId}} {\*\cs11\cf11{=}} {\*\cs2\cf2{nextTransferId}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs4\cf4{{1}}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{7} }}{\*\cs2\cf2{		System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"next transferId = "}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}  {\*\cs2\cf2{nextTransferId}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{8} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{4}{9} }}        {\*\cs14\cf14{int}} {\*\cs2\cf2{rc}} {\*\cs11\cf11{= -}}{\*\cs2\cf2{}}{\*\cs4\cf4{{1}}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{0} }}{\*\cs2\cf2{}}	  	{\*\cs14\cf14{int}} {\*\cs2\cf2{diseaseValue}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseValue}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{1} }}{\*\cs2\cf2{		String query}}{\*\cs11\cf11{=}}{\*\cs2\cf2{}}{\*\cs3\cf3{"INSERT INTO mfTransfer(transferId, cageNo, }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{2} }}{\*\cs3\cf3{		diseaseId, employeeId, transferDate)  VALUES('"}}{\*\cs2\cf2{}}{\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{3} }}{\*\cs2\cf2{				nextTransferId}}  {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"','"}}{\*\cs2\cf2{}}  {\*\cs11\cf11{+}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{4} }}{\*\cs2\cf2{				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"','"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{5} }}{\*\cs2\cf2{				diseaseValue}} {\*\cs11\cf11{+}} {\*\cs2\cf2{}}{\*\cs3\cf3{"','"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{6} }}{\*\cs2\cf2{				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployeeID}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"','"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{7} }}{\*\cs2\cf2{}}				{\*\cs16\cf16{getTodaysDate}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"') "}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{8} }}{\*\cs2\cf2{		System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"insert : "}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{5}{9} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{0} }}		{\*\cs13\cf13{try}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{1} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{2} }}{\*\cs2\cf2{}}			{\*\cs5\cf5{//insert new transfer with cagenum, diseaseid, employeeId.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{3} }}{\*\cs2\cf2{			Statement stmt}} {\*\cs11\cf11{=}} {\*\cs2\cf2{con}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{createStatement}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{4} }}{\*\cs2\cf2{	        stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setQueryTimeout}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs4\cf4{{5}}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{5} }}{\*\cs2\cf2{	     	rc}} {\*\cs11\cf11{=}} {\*\cs2\cf2{stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{executeUpdate}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{6} }}{\*\cs2\cf2{	        stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{close}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{7} }}{\*\cs2\cf2{}}	        }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{8} }}	        {\*\cs5\cf5{// Check if Cage number is in DiseaseReport DB, if }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{6}{9} }}{\*\cs5\cf5{	        so delete it in DiseaseReport DB. }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{0} }}{\*\cs2\cf2{}}		  	{\*\cs14\cf14{int}} {\*\cs2\cf2{cagenumber}} {\*\cs11\cf11{=}} {\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{1} }}{\*\cs2\cf2{	        IFDBDiseaseReport diseasereport}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{2} }}{\*\cs2\cf2{}}	        {\*\cs16\cf16{DBDiseaseReport}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{3} }}{\*\cs2\cf2{}}	        {\*\cs13\cf13{try}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{4} }}{\*\cs2\cf2{}}	        {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{5} }}{\*\cs2\cf2{}}				{\*\cs13\cf13{if}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{diseasereport}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{searchDiseaseReportByCageNumber}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{6} }}{\*\cs2\cf2{				cagenumber}}{\*\cs11\cf11{,}} {\*\cs2\cf2{false}}{\*\cs11\cf11{) !=}} {\*\cs2\cf2{null}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{7} }}{\*\cs2\cf2{}}				{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{8} }}{\*\cs2\cf2{					rc}} {\*\cs11\cf11{=}} {\*\cs2\cf2{diseasereport}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{deleteDiseaseReportWithCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{7}{9} }}{\*\cs2\cf2{					cagenumber}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{0} }}{\*\cs2\cf2{}}				{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{1} }}{\*\cs2\cf2{}}			{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{2} }}{\*\cs2\cf2{}}	        {\*\cs13\cf13{catch}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception e}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{3} }}{\*\cs2\cf2{}}	        {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{4} }}{\*\cs2\cf2{				System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{e}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{5} }}{\*\cs2\cf2{}}			{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{6} }}{\*\cs2\cf2{}}	        }\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{7} }}		{\*\cs11\cf11{\}}}{\*\cs2\cf2{}}{\*\cs5\cf5{//end try.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{8} }}{\*\cs2\cf2{}}	    {\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{SQLException ex}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{8}{9} }}{\*\cs2\cf2{}}	    {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{0} }}{\*\cs2\cf2{            System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"Transfer not created"}}{\*\cs2\cf2{}}{\*\cs11\cf11{+}}{\*\cs2\cf2{ex}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{1} }}{\*\cs2\cf2{}}            {\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{2} }}{\*\cs2\cf2{}}	    {\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{3} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{4} }}        {\*\cs13\cf13{return}} {\*\cs2\cf2{rc}}{\*\cs11\cf11{;}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{5} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{6} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{7} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{8} }}	{\*\cs15\cf15{@Override}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{1}{9}{9} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{public}} {\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{}}{\*\cs16\cf16{deleteTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Transfer transferObj}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{0} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}   }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{1} }}{\*\cs2\cf2{}}		{\*\cs14\cf14{int}} {\*\cs2\cf2{rc}}{\*\cs11\cf11{=-}}{\*\cs2\cf2{}}{\*\cs4\cf4{{1}}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{2} }}{\*\cs2\cf2{	  	String query}}{\*\cs11\cf11{=}}{\*\cs2\cf2{}}{\*\cs3\cf3{"DELETE FROM mfTransfer WHERE cageNo = '"}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{3} }}{\*\cs2\cf2{	  	transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{() +}} {\*\cs2\cf2{}}{\*\cs3\cf3{"'"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{4} }}{\*\cs2\cf2{	  	System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{5} }}{\*\cs2\cf2{}}	  	{\*\cs13\cf13{try}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{6} }}{\*\cs2\cf2{}}	  	{\*\cs11\cf11{\{}} {\*\cs2\cf2{}}{\*\cs5\cf5{// delete from Transfer}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{7} }}{\*\cs2\cf2{	  		Statement stmt}} {\*\cs11\cf11{=}} {\*\cs2\cf2{con}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{createStatement}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{8} }}{\*\cs2\cf2{	  		stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setQueryTimeout}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs4\cf4{{5}}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{0}{9} }}{\*\cs2\cf2{	  		rc}} {\*\cs11\cf11{=}} {\*\cs2\cf2{stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{executeUpdate}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{0} }}{\*\cs2\cf2{	  		stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{close}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{1} }}{\*\cs2\cf2{}}	  	{\*\cs11\cf11{\}}}{\*\cs2\cf2{}}{\*\cs5\cf5{//slut try	}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{2} }}{\*\cs2\cf2{}}	  	{\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception ex}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{3} }}{\*\cs2\cf2{}}	  	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{4} }}{\*\cs2\cf2{	  		System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"Delete exception in mfTransfer db: }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{5} }}{\*\cs3\cf3{	  		"}}{\*\cs2\cf2{}}{\*\cs11\cf11{+}}{\*\cs2\cf2{ex}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{6} }}{\*\cs2\cf2{}}	  	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{7} }}{\*\cs2\cf2{}}	  	}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{8} }}	  	{\*\cs13\cf13{return}} {\*\cs2\cf2{rc}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{1}{9} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{0} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{1} }}	{\*\cs5\cf5{//alternative}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{2} }}{\*\cs2\cf2{}}{\*\cs6\cf6{/*	public int insertTransfer(Transfer transferObj) }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{3} }}{\*\cs6\cf6{	\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{4} }}{\*\cs6\cf6{        int rc = -{1}; }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{5} }}{\*\cs6\cf6{        PreparedStatement pstmt = null;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{6} }}{\*\cs6\cf6{        String insert = "INSERT INTO mfTransfer(transferId, }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{7} }}{\*\cs6\cf6{        cageNo, diseaseId, employeeId, transferDate)"+}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{8} }}{\*\cs6\cf6{        "values(?,?,?,?,?)";}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{2}{9} }}{\*\cs6\cf6{        System.out.println(insert);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{0} }}{\*\cs6\cf6{        try}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{1} }}{\*\cs6\cf6{        \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{2} }}{\*\cs6\cf6{        	pstmt = con.prepareStatement(insert);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{3} }}{\*\cs6\cf6{        	pstmt.setInt({1}, transferObj.getTransferId());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{4} }}{\*\cs6\cf6{        	pstmt.setInt({2}, transferObj.getCageNo());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{5} }}{\*\cs6\cf6{        	pstmt.setInt({3}, transferObj.getDiseaseId());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{6} }}{\*\cs6\cf6{        	pstmt.setInt({4}, transferObj.getEmployeeId());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{7} }}{\*\cs6\cf6{        	pstmt.setString({5}, transferObj.getTransferDate());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{8} }}{\*\cs6\cf6{        	rc = pstmt.executeUpdate();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{3}{9} }}{\*\cs6\cf6{        \} catch(SQLException sqlE) \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{0} }}{\*\cs6\cf6{            System.out.println("SQL Error");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{1} }}{\*\cs6\cf6{            System.out.println(sqlE.getMessage());   }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{2} }}{\*\cs6\cf6{        \} catch(Exception e) \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{3} }}{\*\cs6\cf6{            e.getMessage();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{4} }}{\*\cs6\cf6{        \}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{5} }}{\*\cs6\cf6{        return rc;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{6} }}{\*\cs6\cf6{	\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{7} }}{\*\cs6\cf6{        	*/}}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{8} }}        }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{4}{9} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{0} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{1} }}	{\*\cs5\cf5{//used when we select only one Transfer.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{2} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{private}} {\*\cs2\cf2{Transfer}} {\*\cs16\cf16{singleWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{String wClause}}{\*\cs11\cf11{,}} {\*\cs2\cf2{}}{\*\cs14\cf14{boolean}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{3} }}{\*\cs2\cf2{	retrieveAssociation}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{4} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{5} }}{\*\cs2\cf2{		ResultSet results}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{6} }}{\*\cs2\cf2{		Transfer transferObj}} {\*\cs11\cf11{=}} {\*\cs2\cf2{null}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{7} }}{\*\cs2\cf2{		String query}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs16\cf16{buildQuery}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{8} }}{\*\cs2\cf2{		System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{5}{9} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{0} }}		{\*\cs13\cf13{try}}	{\*\cs2\cf2{}}{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{1} }}{\*\cs2\cf2{}}			{\*\cs5\cf5{//read the transfer from the database.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{2} }}{\*\cs2\cf2{	 		Statement stmt}} {\*\cs11\cf11{=}} {\*\cs2\cf2{con}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{createStatement}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{3} }}{\*\cs2\cf2{	 		stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setQueryTimeout}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs4\cf4{{5}}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{4} }}{\*\cs2\cf2{	 		results}} {\*\cs11\cf11{=}} {\*\cs2\cf2{stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{executeQuery}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{5} }}{\*\cs2\cf2{}}	 		}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{6} }}	 		{\*\cs13\cf13{if}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}} {\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{next}}{\*\cs2\cf2{}}{\*\cs11\cf11{() )}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{7} }}{\*\cs2\cf2{}}	 		{\*\cs11\cf11{\{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{8} }}{\*\cs2\cf2{	 			transferObj}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs16\cf16{buildTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{6}{9} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{0} }}	 			{\*\cs13\cf13{if}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{retrieveAssociation}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{1} }}{\*\cs2\cf2{}}	 			{\*\cs11\cf11{\{}}	       		}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{2} }}{\*\cs2\cf2{}}	 				{\*\cs5\cf5{// Based upon Cage number retreive a complete Cage }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{3} }}{\*\cs5\cf5{	 				object from DBCage}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{4} }}{\*\cs2\cf2{	 				IFDBCage dbcage}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{DBCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{5} }}{\*\cs2\cf2{	 				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{dbcage}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{findCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{6} }}{\*\cs2\cf2{}}	 				{\*\cs16\cf16{getCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{7} }}{\*\cs2\cf2{}}	 				}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{8} }}	 				{\*\cs5\cf5{// Based upon Disease Id retreive a complete Disease }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{7}{9} }}{\*\cs5\cf5{	 				object from DBDisease}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{0} }}{\*\cs2\cf2{}}            		{\*\cs13\cf13{if}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{() !=}} {\*\cs2\cf2{null}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{1} }}{\*\cs2\cf2{}}            		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{2} }}{\*\cs2\cf2{            			IFDBBiteDisease bitedisease}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{3} }}{\*\cs2\cf2{}}            			{\*\cs16\cf16{DBBiteDisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{4} }}{\*\cs2\cf2{            			transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{bitedisease}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{5} }}{\*\cs2\cf2{}}            			{\*\cs16\cf16{searchBiteDiseaseById}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{6} }}{\*\cs2\cf2{}}            			{\*\cs16\cf16{getBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{7} }}{\*\cs2\cf2{}}            		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{8} }}{\*\cs2\cf2{}}            		{\*\cs13\cf13{else}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{8}{9} }}{\*\cs2\cf2{}}            		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{0} }}{\*\cs2\cf2{            			IFDBPlasmaDisease plasmadisease}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{1} }}{\*\cs2\cf2{}}            			{\*\cs16\cf16{DBPlasmaDisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{2} }}{\*\cs2\cf2{            			transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setPlasmadisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{plasmadisease}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{3} }}{\*\cs2\cf2{}}            			{\*\cs16\cf16{searchDiseaseById}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{4} }}{\*\cs2\cf2{}}            			{\*\cs16\cf16{getPlasmadisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{5} }}{\*\cs2\cf2{}}            		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{6} }}{\*\cs2\cf2{}}	 				}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{7} }}	 				{\*\cs5\cf5{// Based upon Employee Id retreive a complete Employee }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{8} }}{\*\cs5\cf5{	 				object from DBEmployee}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{2}{9}{9} }}{\*\cs2\cf2{            		IFDBEmployee employee}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{DBEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{0} }}{\*\cs2\cf2{	 				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{employee}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{findEmployeeByID}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{1} }}{\*\cs2\cf2{	 				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployeeID}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{2} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{3} }}	 				{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{4} }}{\*\cs2\cf2{}}	 		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{5} }}{\*\cs2\cf2{	 		}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{6} }} 			stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{close}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{7} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{8} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception ex}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{0}{9} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{0} }}{\*\cs2\cf2{			System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"Query Exception "}}{\*\cs2\cf2{}} {\*\cs11\cf11{+}} {\*\cs2\cf2{ex}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{1} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{2} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{3} }}	 	{\*\cs13\cf13{return}} {\*\cs2\cf2{transferObj}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{4} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{5} }}{\*\cs2\cf2{}}	 			}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{6} }}	 }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{7} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{8} }}	{\*\cs5\cf5{//method to build the query}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{1}{9} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{0} }}	{\*\cs13\cf13{private}} {\*\cs2\cf2{String}} {\*\cs16\cf16{buildQuery}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{String wClause}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{1} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{2} }}{\*\cs2\cf2{		String query}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs3\cf3{"SELECT transferId, cageNo, diseaseId, }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{3} }}{\*\cs3\cf3{		employeeId, transferDate FROM mfTransfer"}}{\*\cs2\cf2{}}{\*\cs11\cf11{;}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{4} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{if}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{length}}{\*\cs2\cf2{}}{\*\cs11\cf11{()>}}{\*\cs2\cf2{}}{\*\cs4\cf4{{0}}}{\*\cs2\cf2{}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{5} }}{\*\cs2\cf2{			query}}{\*\cs11\cf11{=}}{\*\cs2\cf2{query}}{\*\cs11\cf11{+}}{\*\cs2\cf2{}}{\*\cs3\cf3{" WHERE "}}{\*\cs2\cf2{}}{\*\cs11\cf11{+}} {\*\cs2\cf2{wClause}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{6} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{return}} {\*\cs2\cf2{query}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{7} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{8} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{2}{9} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{0} }}	{\*\cs13\cf13{private}} {\*\cs2\cf2{Transfer}} {\*\cs16\cf16{buildTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{ResultSet results}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{1} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{2} }}{\*\cs2\cf2{		Transfer transObj}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{Transfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{3} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{4} }}		{\*\cs5\cf5{//columns from mfTransfer table are used.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{5} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{try}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{6} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{7} }}{\*\cs2\cf2{			transObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setTransferId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getInt}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"transferId"}}{\*\cs2\cf2{}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{8} }}{\*\cs2\cf2{			transObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{Cage}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getInt}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"cageNo"}}{\*\cs2\cf2{}}{\*\cs11\cf11{)));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{3}{9} }}{\*\cs2\cf2{}}			}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{0} }}			{\*\cs14\cf14{int}} {\*\cs2\cf2{valueOfDisease}} {\*\cs11\cf11{=}} {\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getInt}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"diseaseId"}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{1} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{if}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{valueOfDisease}} {\*\cs11\cf11{==}} {\*\cs2\cf2{}}{\*\cs4\cf4{{1}{6}{0}{0}}}{\*\cs2\cf2{}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{2} }}{\*\cs2\cf2{			    transObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{BiteDisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{3} }}{\*\cs2\cf2{			    valueOfDisease}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{4} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{else}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{5} }}{\*\cs2\cf2{				transObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setPlasmadisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{PlasmaDisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{6} }}{\*\cs2\cf2{				valueOfDisease}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{7} }}{\*\cs2\cf2{			}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{8} }}			transObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{Employee}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getInt}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{4}{9} }}{\*\cs2\cf2{}}			{\*\cs3\cf3{"employeeID"}}{\*\cs2\cf2{}}{\*\cs11\cf11{)));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{0} }}{\*\cs2\cf2{			transObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setTransferDate}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getString}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"transferDate"}}{\*\cs2\cf2{}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{1} }}{\*\cs2\cf2{}}			{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{2} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{3} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{catch}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception ex}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{4} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{5} }}{\*\cs2\cf2{			System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{ex}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{6} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{return}} {\*\cs2\cf2{null}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{7} }}{\*\cs2\cf2{}}		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{8} }}{\*\cs2\cf2{}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{5}{9} }}		{\*\cs13\cf13{return}} {\*\cs2\cf2{transObj}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{0} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{1} }}{\*\cs2\cf2{}}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{2} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{3} }}{\*\cs6\cf6{/*	//method to build transfer object.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{4} }}{\*\cs6\cf6{	private Transfer buildTransfer(ResultSet results)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{5} }}{\*\cs6\cf6{    \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{6} }}{\*\cs6\cf6{		try \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{7} }}{\*\cs6\cf6{			Transfer transferObj = new Transfer(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{8} }}{\*\cs6\cf6{				results.getInt("transferId"),}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{6}{9} }}{\*\cs6\cf6{				results.getInt("cageNo"),}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{0} }}{\*\cs6\cf6{				results.getInt("diseaseId"),}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{1} }}{\*\cs6\cf6{				results.getInt("employeeId"),}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{2} }}{\*\cs6\cf6{				results.getString("transferDate"));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{3} }}{\*\cs6\cf6{			}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{4} }}{\*\cs6\cf6{			return transferObj;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{5} }}{\*\cs6\cf6{			}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{6} }}{\*\cs6\cf6{		\} catch (SQLException ex) \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{7} }}{\*\cs6\cf6{		// TODO Auto-generated catch block}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{8} }}{\*\cs6\cf6{			ex.printStackTrace();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{7}{9} }}{\*\cs6\cf6{		\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{0} }}{\*\cs6\cf6{		return null;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{1} }}{\*\cs6\cf6{	\}	}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{2} }}{\*\cs6\cf6{	*/}}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{3} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{4} }}	{\*\cs13\cf13{private}} {\*\cs2\cf2{ArrayList}}{\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>}} {\*\cs2\cf2{}}{\*\cs16\cf16{miscWhere}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{String wClause}}{\*\cs11\cf11{,}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{5} }}{\*\cs2\cf2{}}	{\*\cs14\cf14{boolean}} {\*\cs2\cf2{retrieveAssociation}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{6} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{7} }}{\*\cs2\cf2{    	ResultSet results}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{8} }}{\*\cs2\cf2{	    ArrayList}}{\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>}} {\*\cs2\cf2{listT}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{ArrayList}} {\*\cs11\cf11{<}}{\*\cs2\cf2{Transfer}}{\*\cs11\cf11{>();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{8}{9} }}{\*\cs2\cf2{	    String query}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs16\cf16{buildQuery}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{wClause}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{0} }}{\*\cs2\cf2{	    System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{1} }}{\*\cs2\cf2{}}	    {\*\cs13\cf13{try}} {\*\cs2\cf2{}}{\*\cs11\cf11{\{}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{2} }}{\*\cs2\cf2{}}				{\*\cs5\cf5{// read transfer from the database}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{3} }}{\*\cs2\cf2{	            Statement stmt}} {\*\cs11\cf11{=}} {\*\cs2\cf2{con}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{createStatement}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{4} }}{\*\cs2\cf2{	            stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setQueryTimeout}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs4\cf4{{5}}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{5} }}{\*\cs2\cf2{	            results}} {\*\cs11\cf11{=}} {\*\cs2\cf2{stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{executeQuery}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{query}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{6} }}{\*\cs2\cf2{}}	            }\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{7} }}	            {\*\cs13\cf13{while}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{next}}{\*\cs2\cf2{}}{\*\cs11\cf11{())}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{8} }}{\*\cs2\cf2{}}				{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{3}{9}{9} }}{\*\cs2\cf2{	            	Transfer transferObj}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs16\cf16{buildTransfer}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{results}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{0} }}{\*\cs2\cf2{	            	           	}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{1} }}	 				listT}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{add}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{2} }}{\*\cs2\cf2{}}	 				}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{3} }}	            {\*\cs11\cf11{\}}}{\*\cs2\cf2{}}{\*\cs5\cf5{//end while}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{4} }}{\*\cs2\cf2{	            }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{5} }}	            stmt}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{close}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{6} }}{\*\cs2\cf2{}}	            {\*\cs13\cf13{if}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{retrieveAssociation}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{7} }}{\*\cs2\cf2{}}	            {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{8} }}{\*\cs2\cf2{}}	            	{\*\cs13\cf13{for}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Transfer transferObj}} {\*\cs11\cf11{:}} {\*\cs2\cf2{listT}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{0}{9} }}{\*\cs2\cf2{}}	            	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{0} }}{\*\cs2\cf2{}}		 				{\*\cs5\cf5{// Based upon Cage number retreive a complete Cage }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{1} }}{\*\cs5\cf5{		 				object from DBCage}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{2} }}{\*\cs2\cf2{	            		IFDBCage dbcage}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{DBCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{3} }}{\*\cs2\cf2{		 				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{dbcage}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{findCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{4} }}{\*\cs2\cf2{}}		 				{\*\cs16\cf16{getCage}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getCageNo}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{5} }}{\*\cs2\cf2{}}		 				}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{6} }}		 				{\*\cs5\cf5{// Based upon Disease Id retreive a complete Disease }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{7} }}{\*\cs5\cf5{		 				object from DBDisease}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{8} }}{\*\cs2\cf2{}}	            		{\*\cs13\cf13{if}} {\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{() !=}} {\*\cs2\cf2{null}}{\*\cs11\cf11{)}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{1}{9} }}{\*\cs2\cf2{}}	            		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{0} }}{\*\cs2\cf2{	            			IFDBBiteDisease bitedisease}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{1} }}{\*\cs2\cf2{}}	            			{\*\cs16\cf16{DBBiteDisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{2} }}{\*\cs2\cf2{	            			transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{bitedisease}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{3} }}{\*\cs2\cf2{}}	            			{\*\cs16\cf16{searchBiteDiseaseById}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{4} }}{\*\cs2\cf2{}}	            			{\*\cs16\cf16{getBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{5} }}{\*\cs2\cf2{}}	            		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{6} }}{\*\cs2\cf2{}}	            		{\*\cs13\cf13{else}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{7} }}{\*\cs2\cf2{}}	            		{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{8} }}{\*\cs2\cf2{	            			IFDBPlasmaDisease plasmadisease}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{2}{9} }}{\*\cs2\cf2{}}	            			{\*\cs16\cf16{DBPlasmaDisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{0} }}{\*\cs2\cf2{	            			transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setPlasmadisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{plasmadisease}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{1} }}{\*\cs2\cf2{}}	            			{\*\cs16\cf16{searchDiseaseById}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{2} }}{\*\cs2\cf2{}}	            			{\*\cs16\cf16{getPlasmadisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{3} }}{\*\cs2\cf2{}}	            		{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{4} }}{\*\cs2\cf2{}}		 				}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{5} }}		 				{\*\cs5\cf5{// Based upon Employee Id retreive a complete }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{6} }}{\*\cs5\cf5{		 				Employee object from DBEmployee}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{7} }}{\*\cs2\cf2{	            		IFDBEmployee employee}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{DBEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{8} }}{\*\cs2\cf2{		 				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{setEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{employee}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{findEmployeeByID}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{3}{9} }}{\*\cs2\cf2{		 				transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployee}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getEmployeeID}}{\*\cs2\cf2{}}{\*\cs11\cf11{(),}} {\*\cs2\cf2{false}}{\*\cs11\cf11{));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{0} }}{\*\cs2\cf2{}}		 				}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{1} }}		 			{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{2} }}{\*\cs2\cf2{}}	            {\*\cs11\cf11{\}}}{\*\cs2\cf2{}}{\*\cs5\cf5{//end if}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{3} }}{\*\cs2\cf2{}}	    {\*\cs11\cf11{\}}}{\*\cs2\cf2{}}{\*\cs5\cf5{//end try}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{4} }}{\*\cs2\cf2{}}	    {\*\cs13\cf13{catch}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Exception ex}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{5} }}{\*\cs2\cf2{}}	    {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{6} }}{\*\cs2\cf2{	 		System}}{\*\cs11\cf11{.}}{\*\cs2\cf2{out}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{println}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{}}{\*\cs3\cf3{"Query exception - select: "}}{\*\cs2\cf2{}}{\*\cs11\cf11{+}} {\*\cs2\cf2{ex}}{\*\cs11\cf11{.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{7} }}{\*\cs2\cf2{}}	 		{\*\cs16\cf16{getMessage}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{8} }}{\*\cs2\cf2{	 		ex}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{printStackTrace}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{4}{9} }}{\*\cs2\cf2{}}	 	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{0} }}{\*\cs2\cf2{}}	    }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{1} }}		{\*\cs13\cf13{return}} {\*\cs2\cf2{listT}}{\*\cs11\cf11{;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{2} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{3} }}{\*\cs2\cf2{}}	            }\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{4} }}	}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{5} }}{\*\cs6\cf6{/*	//michWere is used whenever we want to select more than }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{6} }}{\*\cs6\cf6{one row in transfer table. }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{7} }}{\*\cs6\cf6{    private ArrayList<Transfer> miscWhere(String wClause, }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{8} }}{\*\cs6\cf6{    boolean retrieveAssociation) throws Exception}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{5}{9} }}{\*\cs6\cf6{	\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{0} }}{\*\cs6\cf6{    	ResultSet results;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{1} }}{\*\cs6\cf6{	    ArrayList<Transfer> listT = new ArrayList <Transfer>();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{2} }}{\*\cs6\cf6{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{3} }}{\*\cs6\cf6{	    String query = buildQuery(wClause);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{4} }}{\*\cs6\cf6{	    System.out.println(query);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{5} }}{\*\cs6\cf6{	    try \{ }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{6} }}{\*\cs6\cf6{				// read transfer from the database}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{7} }}{\*\cs6\cf6{	            Statement stmt = con.createStatement();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{8} }}{\*\cs6\cf6{	            stmt.setQueryTimeout({5});}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{6}{9} }}{\*\cs6\cf6{	            results = stmt.executeQuery(query);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{0} }}{\*\cs6\cf6{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{1} }}{\*\cs6\cf6{	            while(results.next())}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{2} }}{\*\cs6\cf6{				\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{3} }}{\*\cs6\cf6{	                listT.add(buildTransfer(results));}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{4} }}{\*\cs6\cf6{	            \}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{5} }}{\*\cs6\cf6{	            stmt.close();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{6} }}{\*\cs6\cf6{	            }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{7} }}{\*\cs6\cf6{	            if(retrieveAssociation)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{8} }}{\*\cs6\cf6{	            \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{7}{9} }}{\*\cs6\cf6{	            	for(Transfer trans : listT)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{0} }}{\*\cs6\cf6{	            	\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{1} }}{\*\cs6\cf6{	            		}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{2} }}{\*\cs6\cf6{            		    DBCage dbcage = new DBCage();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{3} }}{\*\cs6\cf6{	            		int cageNo = trans.getCageNo();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{4} }}{\*\cs6\cf6{	            		if (cageNo != dbcage.findCage(cageNo, false).}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{5} }}{\*\cs6\cf6{	            		getCageNo())}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{6} }}{\*\cs6\cf6{	            		\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{7} }}{\*\cs6\cf6{	            			throw new Exception("Case number:[" + cageNo }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{8} }}{\*\cs6\cf6{	            			+ "] not found.");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{8}{9} }}{\*\cs6\cf6{	            		\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{0} }}{\*\cs6\cf6{	            		System.out.println("Cage Id is selected");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{1} }}{\*\cs6\cf6{	            		}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{2} }}{\*\cs6\cf6{	            		DBEmployee dbemp = new DBEmployee();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{3} }}{\*\cs6\cf6{	            		int empId = trans.getEmployeeId(); }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{4} }}{\*\cs6\cf6{	            		if (empId != dbemp.findEmployeeByID(empId, }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{5} }}{\*\cs6\cf6{	            		false).getEmployeeID())}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{6} }}{\*\cs6\cf6{	            		\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{7} }}{\*\cs6\cf6{	            			throw new Exception("Employee Id:[" + empId +}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{8} }}{\*\cs6\cf6{	            			"] not found.");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{4}{9}{9} }}{\*\cs6\cf6{	            		\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{0} }}{\*\cs6\cf6{	            		System.out.println("Employee Id is selected");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{1} }}{\*\cs6\cf6{	            		}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{2} }}{\*\cs6\cf6{	         		    int diseaseId = trans.getDiseaseId();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{3} }}{\*\cs6\cf6{	            		if (diseaseId == {1}{6}{0}{0})}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{4} }}{\*\cs6\cf6{	            		\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{5} }}{\*\cs6\cf6{	            		    DBBiteDisease dbbite = new DBBiteDisease()}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{6} }}{\*\cs6\cf6{	            		    ;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{7} }}{\*\cs6\cf6{	            		    BiteDisease bitedisease = dbbite.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{8} }}{\*\cs6\cf6{	            		    searchBiteDiseaseById(diseaseId, false);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{0}{9} }}{\*\cs6\cf6{	            		    System.out.println("BiteDisease Id is }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{0} }}{\*\cs6\cf6{	            		    selected");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{1} }}{\*\cs6\cf6{	            		\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{2} }}{\*\cs6\cf6{	            		else if (diseaseId == {1}{5}{0}{0})}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{3} }}{\*\cs6\cf6{	            		\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{4} }}{\*\cs6\cf6{	            			DBPlasmaDisease dbplasma = new }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{5} }}{\*\cs6\cf6{	            			DBPlasmaDisease();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{6} }}{\*\cs6\cf6{	            			PlasmaDisease plasmadisease = dbplasma.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{7} }}{\*\cs6\cf6{	            			searchDiseaseById(diseaseId, false);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{8} }}{\*\cs6\cf6{	            		    System.out.println("PlasmaDisease Id is }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{1}{9} }}{\*\cs6\cf6{	            		    selected");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{0} }}{\*\cs6\cf6{	            		\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{1} }}{\*\cs6\cf6{	            		else}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{2} }}{\*\cs6\cf6{	            		\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{3} }}{\*\cs6\cf6{	            			throw new Exception("DiseaseId:["+ diseaseId }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{4} }}{\*\cs6\cf6{	            			+ "] not unknown.");}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{5} }}{\*\cs6\cf6{	            		\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{6} }}{\*\cs6\cf6{	            	\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{7} }}{\*\cs6\cf6{	            \}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{8} }}{\*\cs6\cf6{	            return listT;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{2}{9} }}{\*\cs6\cf6{	         \}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{0} }}{\*\cs6\cf6{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{1} }}{\*\cs6\cf6{	         catch(Exception e)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{2} }}{\*\cs6\cf6{	         \{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{3} }}{\*\cs6\cf6{	            System.out.println (e.getMessage());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{4} }}{\*\cs6\cf6{	            return null;}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{5} }}{\*\cs6\cf6{	         \}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{6} }}{\*\cs6\cf6{	    \}*/}}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{7} }}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{8} }} }\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{3}{9} }}	{\*\cs5\cf5{//method for selecting disease type.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{0} }}{\*\cs2\cf2{}}	{\*\cs13\cf13{private}} {\*\cs2\cf2{}}{\*\cs14\cf14{int}} {\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseValue}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{Transfer transferObj}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{1} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{2} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{if}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{() !=}} {\*\cs2\cf2{null}}{\*\cs11\cf11{)}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{3} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{return}} {\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getBitedisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{4} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{else}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{5} }}{\*\cs2\cf2{}}			{\*\cs13\cf13{return}} {\*\cs2\cf2{transferObj}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getPlasmadisease}}{\*\cs2\cf2{}}{\*\cs11\cf11{().}}{\*\cs2\cf2{}}{\*\cs16\cf16{getDiseaseId}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}		}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{6} }}{\*\cs2\cf2{}}	{\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{7} }}{\*\cs2\cf2{}}    }\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{8} }}    {\*\cs5\cf5{//method for getting today's date.}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{4}{9} }}{\*\cs2\cf2{}}    {\*\cs13\cf13{private}} {\*\cs2\cf2{String}} {\*\cs16\cf16{getTodaysDate}}{\*\cs2\cf2{}}{\*\cs11\cf11{()}} }\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{0} }}{\*\cs2\cf2{}}    {\*\cs11\cf11{\{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{1} }}{\*\cs2\cf2{    	Calendar calendar}} {\*\cs11\cf11{=}} {\*\cs2\cf2{Calendar}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getInstance}}{\*\cs2\cf2{}}{\*\cs11\cf11{();}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{2} }}{\*\cs2\cf2{    	SimpleDateFormat dateFormat}} {\*\cs11\cf11{=}} {\*\cs2\cf2{}}{\*\cs13\cf13{new}} {\*\cs2\cf2{}}{\*\cs16\cf16{SimpleDateFormat}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{3} }}{\*\cs2\cf2{}}    	{\*\cs3\cf3{"dd/MM/yyyy"}}{\*\cs2\cf2{}}{\*\cs11\cf11{);}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{4} }}{\*\cs2\cf2{}}		{\*\cs13\cf13{return}} {\*\cs2\cf2{dateFormat}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{format}}{\*\cs2\cf2{}}{\*\cs11\cf11{(}}{\*\cs2\cf2{calendar}}{\*\cs11\cf11{.}}{\*\cs2\cf2{}}{\*\cs16\cf16{getTime}}{\*\cs2\cf2{}}{\*\cs11\cf11{());}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{5} }}{\*\cs2\cf2{}}    {\*\cs11\cf11{\}}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{6} }}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{{\*\cs10\cf10{{5}{5}{7} }}{\*\cs11\cf11{\}}}{\*\cs2\cf2{}}{\*\cs5\cf5{// end of class DBTransfer.}}{\*\cs2\cf2{}}}\par\pard
+\cbpat1{}}
