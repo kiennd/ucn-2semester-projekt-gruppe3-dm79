@@ -61,82 +61,82 @@ public class GUIEmployee {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JPanel Opret = new JPanel();
-		Opret.setBorder(new TitledBorder(null, "Opret medarbejder", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		Opret.setBounds(10, 11, 414, 295);
-		frame.getContentPane().add(Opret);
-		Opret.setLayout(null);
+		JPanel create = new JPanel();
+		create.setBorder(new TitledBorder(null, "Opret medarbejder", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		create.setBounds(10, 11, 414, 295);
+		frame.getContentPane().add(create);
+		create.setLayout(null);
 		
 		JLabel lblID = new JLabel("ID:");
 		lblID.setBounds(10, 22, 103, 14);
-		Opret.add(lblID);
+		create.add(lblID);
 		
 		JLabel lblFname = new JLabel("Fornavn:");
 		lblFname.setBounds(10, 47, 103, 14);
-		Opret.add(lblFname);
+		create.add(lblFname);
 		
 		JLabel lblLname = new JLabel("Efternavn:");
 		lblLname.setBounds(10, 72, 103, 14);
-		Opret.add(lblLname);
+		create.add(lblLname);
 		
 		JLabel lblAddress = new JLabel("Adresse:");
 		lblAddress.setBounds(10, 97, 103, 14);
-		Opret.add(lblAddress);
+		create.add(lblAddress);
 		
 		JLabel lblZipCode = new JLabel("Post Nr.:");
 		lblZipCode.setBounds(10, 122, 103, 14);
-		Opret.add(lblZipCode);
+		create.add(lblZipCode);
 		
 		JLabel lblCity = new JLabel("By:");
 		lblCity.setBounds(10, 147, 103, 14);
-		Opret.add(lblCity);
+		create.add(lblCity);
 		
 		JLabel lblPhoneNo = new JLabel("Telefon Nr.:");
 		lblPhoneNo.setBounds(10, 172, 103, 14);
-		Opret.add(lblPhoneNo);
+		create.add(lblPhoneNo);
 		
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setBounds(10, 197, 103, 14);
-		Opret.add(lblEmail);
+		create.add(lblEmail);
 		
 		textField = new JTextField();
 		textField.setBounds(123, 19, 86, 20);
-		Opret.add(textField);
+		create.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setBounds(123, 44, 214, 20);
-		Opret.add(textField_1);
+		create.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
 		textField_2.setBounds(123, 69, 214, 20);
-		Opret.add(textField_2);
+		create.add(textField_2);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
 		textField_3.setBounds(123, 94, 281, 20);
-		Opret.add(textField_3);
+		create.add(textField_3);
 		textField_3.setColumns(10);
 		
 		textField_4 = new JTextField();
 		textField_4.setBounds(123, 119, 86, 20);
-		Opret.add(textField_4);
+		create.add(textField_4);
 		textField_4.setColumns(10);
 		
 		textField_5 = new JTextField();
 		textField_5.setBounds(123, 144, 140, 20);
-		Opret.add(textField_5);
+		create.add(textField_5);
 		textField_5.setColumns(10);
 		
 		textField_6 = new JTextField();
 		textField_6.setBounds(123, 169, 140, 20);
-		Opret.add(textField_6);
+		create.add(textField_6);
 		textField_6.setColumns(10);
 		
 		textField_7 = new JTextField();
 		textField_7.setBounds(123, 194, 281, 20);
-		Opret.add(textField_7);
+		create.add(textField_7);
 		textField_7.setColumns(10);
 		
 		JButton btnOpret = new JButton("Opret");
@@ -164,7 +164,7 @@ public class GUIEmployee {
 		});
 		
 		btnOpret.setBounds(315, 261, 89, 23);
-		Opret.add(btnOpret);
+		create.add(btnOpret);
 		
 		JButton btnOpdater = new JButton("Opdater");
 		btnOpdater.addActionListener(new ActionListener() {
@@ -191,7 +191,7 @@ public class GUIEmployee {
 			}
 		});
 		btnOpdater.setBounds(216, 261, 89, 23);
-		Opret.add(btnOpdater);
+		create.add(btnOpdater);
 		
 		JPanel search = new JPanel();
 		search.setBorder(new TitledBorder(null, "S\u00F8g medarbejder", TitledBorder.LEADING, TitledBorder.TOP, null, null));
