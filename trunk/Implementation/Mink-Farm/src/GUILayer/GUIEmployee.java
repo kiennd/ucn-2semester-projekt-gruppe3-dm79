@@ -7,15 +7,10 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JDesktopPane;
 import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-import javax.swing.table.DefaultTableModel;
 
 
 public class GUIEmployee {
@@ -150,15 +145,15 @@ public class GUIEmployee {
 			{
 				try
 				{
-					CTREmployee ctrEmp = CTREmployee();
+					CTREmployee ctrEmp = new CTREmployee();
 					int employeeID = Integer.parseInt(textField.getText());
 					String fname = textField_1.getText();
 					String lname = textField_2.getText();
 					String address = textField_3.getText();
-					int zipCode = Integer.parseInt(textField.getText());
-					String city = textField_4.getText();
-					int phoneNo = Integer.parseInt(textField.getText());
-					String email = textField_5.getText();
+					int zipCode = Integer.parseInt(textField_4.getText());
+					String city = textField_5.getText();
+					int phoneNo = Integer.parseInt(textField_6.getText());
+					String email = textField_7.getText();
 					ctrEmp.insertEmployee(employeeID, fname, lname, address, zipCode, city, phoneNo, email);
 				}
 				catch(Exception e)
@@ -172,6 +167,29 @@ public class GUIEmployee {
 		Opret.add(btnOpret);
 		
 		JButton btnOpdater = new JButton("Opdater");
+		btnOpdater.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				CTREmployee ctrEmp = new CTREmployee();
+				int employeeID = Integer.parseInt(textField.getText());
+				System.out.println("+" + employeeID + "+");
+				String fname = textField_1.getText();
+				System.out.println("+" + fname + "+");
+				String lname = textField_2.getText();
+				System.out.println("+" + lname + "+");
+				String address = textField_3.getText();
+				System.out.println("+" + address + "+");
+				int zipCode = Integer.parseInt(textField_4.getText());
+				System.out.println("+" + zipCode + "+");
+				String city = textField_5.getText();
+				System.out.println("+" + city + "+");
+				int phoneNo = Integer.parseInt(textField_6.getText());
+				System.out.println("+" + phoneNo + "+");
+				String email = textField_7.getText();
+				System.out.println("+" + email + "+");
+				int result = ctrEmp.updateEmployee(employeeID, fname, lname, address, zipCode, city, phoneNo, email);
+			}
+		});
 		btnOpdater.setBounds(216, 261, 89, 23);
 		Opret.add(btnOpdater);
 		
