@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1200</x>
+      <y>488</y>
+      <w>336</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>CTRPlasmaDisease
+--
+DBPlasmaDisease
+--
++ CTRPlasmaDisease()
++ PlasmaDisease findDiseaseById(int):PlasmaDisease
++ PlasmaDisease findDiseaseByName(String):PlasmaDisease
++ updatePlasmaDisease(int,String,String,String):int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1552</x>
+      <y>488</y>
+      <w>336</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>CTRBiteDisease
+--
+DBBiteDisease
+--
++ CTRBiteDisease()
++ BiteDisease findDiseaseById(int):BiteDisease
++ BiteDisease findDiseaseByName(String):BiteDisease
++ updateDiseaseBite(int,String):int
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2608</x>
+      <y>488</y>
+      <w>336</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>CTREmployee
+--
+-
+--
++ CTREmployee()
++ findAllEmployees():ArrayList&lt;Employee&gt;
++ findByFname(String):Employee
++ findByLname(String):Employee
++ findEmployeeByID(int):Employee
++ updateEmployee(int,String,String,String,int,String,int,String):int
++ insertEmployee(int,String,String,String,int,String,int,String):void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1208</x>
+      <y>688</y>
+      <w>336</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>DBPlasmaDisease
+--
+- con:Connection
+--
++ DBPlasmaDisease()
++ searchDiseaseById(int,boolean):PlasmaDisease
++ searchPlasmaDiseaseByName(String,boolean):PlasmaDisease
++ updatePlasmaDisease(PlasmaDisease):int
++ insertPlasmaDisease(PlasmaDisease):int
++ deletePlasmaDisease(int):int
+- singleWhere(String,boolean):PlasmaDisease
+- buildQuery(String):String
+- buildPlasmaDisease(ResultSet):PlasmaDisease
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2256</x>
+      <y>488</y>
+      <w>336</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>CTRCage
+--
+DBCage
+--
++ CTRCage()
++ getAllCages():ArrayList&lt;Cage&gt;
++ findCage(int):Cage
++ insertCage(int,String):void
++ updateCage(int,String):int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1208</x>
+      <y>1024</y>
+      <w>336</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IFDBPlasmaDisease
+--
+-
+--
++ searchDiseaseById(int,boolean):PlasmaDisease
++ searchPlasmaDiseaseByName(String,boolean):PlasmaDisease
++ updatePlasmaDisease(PlasmaDisease):int
++ insertPlasmaDisease(PlasmaDisease):int
++ deletePlasmaDisease(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1560</x>
+      <y>1032</y>
+      <w>336</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IFDBBiteDisease
+--
+-
+--
++ searchBiteDiseaseById(int,boolean):BiteDisease
++ searchBiteDiseaseByName(String,boolean):BiteDisease
++ updateBiteDisease(BiteDisease):int
++ insertBiteDisease(BiteDisease):int
++ deleteBiteDiseaseWithId(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2296</x>
+      <y>1240</y>
+      <w>216</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Cage
+--
+- cageNo: int
+- colNr: int
+- cageType: String
+- myMink: ArrayList&lt;Mink&gt;
+--
++ Cage(int, int, String)
++ Cage(int)
++ Cage()
++ getCage(): int
++ setCage(int): void
++ getColNr(): int
++ setColNr(int): void
++ getMyMink():ArrayList&lt;Mink&gt;
++ setMyMink(ArrayList&lt;Mink&gt;): void
++ getCageType(): String
++ setCageType(String): void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2616</x>
+      <y>992</y>
+      <w>336</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IFDBEmployee
+--
+
++ getAllEmployees(boolean): ArrayList&lt;Employee&gt;
++ findEmployeeByFname(String, boolean): Employee
++ findEmployeeByLname(String, boolean): Employee
++ findEmployeeById(int, boolean):Employee
++ insertEmployee(Employee): int
++ updateEmployee(Employee):int
++ deleteEmployee(int): int
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2616</x>
+      <y>680</y>
+      <w>336</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>DBEmployee
+--
+- con: Connection
+--
++ DBEmployee()
++ getAllEmployees(boolean): ArrayList&lt;Employee&gt;
++ findEmployeeByFname(String, boolean): Employee
++ findEmployeeByLname(String, boolean): Employee
++ findEmployeeById(int, boolean):Employee
++ insertEmployee(Employee): int
++ updateEmployee(Employee):int
++ deleteEmployee(int): int
+- buildEmployee(ResultSet): Employee
+- buildQuery(String): String
+- miscWhere(String, boolean): ArrayList&lt;Employee&gt;
+- singleWhere(String, boolean): Employee
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1928</x>
+      <y>672</y>
+      <w>320</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>DBTransfer
+--
+-con: Connection
+--
++ DBTransfer()
++ getAllTransfer(boolean):ArrayList&lt;Transfer&gt;
++ searchTransferBysearchTransferId(int,boolean):Transfer
++ searchTransfersByCageNo(int,boolean):Transfer
++ findTransfersByEmployeeId(int,boolean):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseId(int,boolean):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String,boolean):ArrayList&lt;Transfer&gt;
++ updateTransfer(Transfer):int
++ deleteTransfer(int):int
++ insertTransfer(Transfer):int
++ deleteTransfer(transfer):int
+- singleWhere(String,boolean):Transfer
+- buildQuery(String):String
+- buildTransfer(ResultSet):Transfer
+- miscWhere(String,boolean):ArrayList&lt;Transfer&gt;
+- getDiseaseValue(transfer):int
+- getTodaysDate():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1952</x>
+      <y>1016</y>
+      <w>312</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IFDBTransfer
+--
+-
+--
++ getAllTransfer(boolean):ArrayList&lt;Transfer&gt;
++ searchTransfersByTransferId(int,boolean):Transfer
++ searchTransfersByCageNo(int,boolean):Transfer
++ findTransfersByEmployeeId(int,boolean):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseId(int,boolean):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String,boolean):ArrayList&lt;Transfer&gt;
++ updateTransfer(Transfer):int
++ insertTransfer(Transfer):int
++ deleteTransfer(Transfer):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2288</x>
+      <y>688</y>
+      <w>296</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>DBCage
+--
+-con: Connection
+--
++ DBCage()
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(int,boolean):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int
+- buildCage(ResuntSet):Cage
+- buildquery(String):String
+- singleWhere(String,boolean):Cage
+- miscWhere(String,boolean):ArrayList&lt;Cage&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2280</x>
+      <y>1000</y>
+      <w>296</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IFDBCage
+--
+ppp
+--
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(Cage):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1560</x>
+      <y>688</y>
+      <w>328</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>DBBiteDisease
+--
+-con: Connection
+--
++ DBBiteDisease()
++ searchBiteDiseaseById(int,boolean):BiteDisease
++ searchBiteDiseaseByName(String,boolean):BiteDisease
++ updateBiteDisease(BiteDisease):int
++ insertBiteDisease(BiteDisease):int
++ deleteBiteDiseaseWithId(int):int
+- singleWhere(String,boolean):BiteDisease
+- buildQuery(String,boolean):String
+- BuildBiteDisease(ResultSet):BiteDisease</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2224</x>
+      <y>360</y>
+      <w>192</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>176;128;176;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1240</x>
+      <y>1256</y>
+      <w>224</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>PlasmaDisease
+--
+- diseaseid: int
+- clinicName: String
+- clinicCVR: String
+- diseaseName: String
+--
++ getDiseaseId(): int
++ setDisease(int): void
++ getClinicName() String
++ setClinicName(String) void
++ getClinicCVR(): String
++ setClinicName(String) void
++ getDiseaseName() String
++ setDiseaseName(String) void
++ PlasmaDisease(int, String, String, String)
++ PlasmaDisease(int)
++ PlasmaDisease()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1568</x>
+      <y>1248</y>
+      <w>216</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>BiteDisease
+--
+- diseaseId: int
+- diseaseName: String
+--
++ getDiseaseId(): int
++ setDiseaseId(int) void
++ getDiseaseName(): String
++ setDiseaseName(String): void
++ BiteDisease(int, String)
++ BiteDisease(int)
++ BiteDisease()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>2608</x>
+      <y>1240</y>
+      <w>264</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+- employeeID:int
+- fname:String
+- lname:String
+- address:String
+- zipCode:int
+- city:String
+- phoneNo:int
+- email:String
+--
++ Employee(int,String,String,String,int,String, int,String)
++ Employee()
++ Employee(int)
++ setEmployeeID(int):void
++ getEmployeeID():int
++ setFname(string):void
++ getFname():String
++ setLname(String):void
++ getLname():String
++ setAddress(String):void
++ getAddress():String
++ setZipCode(int):void
++ getZipCode():int
++ setCity(String):void
++ getCity():int
++ setPhoneNo(int):void
++ getPhoneNo():int
++ setEmail(String):void
++ getEmail():String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1912</x>
+      <y>336</y>
+      <w>336</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>CTRTransfer
+--
+CTRCage
+CTRPlasmaDisease
+CTREmployee
+CTRBiteDisease
+--
++ CTRTransfer()
++ getAllTransfer():ArrayList&lt;Transfer&gt;
++ searchTransferByCageId(int):Transfer
++ findTransfersByEmployeeId(int):ArrayList&lt;Transfer&gt;
++ findTransfersBydiseaseid(int):ArrayList&lt;Transfer&gt;
++ findtransferByDate(String):ArrayList&lt;Transfer&gt;
++ instertTransfer(int,int,int):int
++ deleteTransfer(int):int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1920</x>
+      <y>1240</y>
+      <w>272</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>Trasfer
+--
+- transferId: int
+- transferDate: void
+--
++ getTrasferId(): int
++ setTrasferId(int): void
++ getTransferDate(): String
++ setTransferDate(String): void
++ getCage(): Cage
++ setCage(Cage): void
++ getBiteDisease(): BiteDisease
++ setBiteDisease(BiteDisease): void
++ getPlasmaDisease(): PlasmaDisease
++ setPlasmaDisease(PlasmaDisease): void
++ getEmployee(): Employee
++ setEmployee(Employee): void
++ Trasnfer(int, Cage, BiteDisease, Employee, String)
++ Transfer(int, Cage, PlasmaDisease, Employee, String)
++ Transfer()
++ Transfer(int)
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1912</x>
+      <y>0</y>
+      <w>336</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>GUITransfer
+--
+CTRTransfer
+--
++ GUITransfer()
+- createTransferPane():void
+- insertTransfer():void
+- deleteTransfer():void
+- createTransferList():void
+- createDiseaseReport():void
+- createReportList():void
+- refreshScreen():void
+- checkCage(int):Cage
+- checkEmployee(int):Employee
+- checkBite(int):BiteDisease
+- checkPlasma(int):PlasmaDisease
+- checkCageNoTransfer(int):Transfer
+- findTransfer():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2056</x>
+      <y>208</y>
+      <w>40</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;128;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2224</x>
+      <y>344</y>
+      <w>480</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>464;144;464;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1632</x>
+      <y>368</y>
+      <w>296</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;120;24;24;280;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1416</x>
+      <y>344</y>
+      <w>512</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;144;24;24;496;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1376</x>
+      <y>928</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;96;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1688</x>
+      <y>928</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;104;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2096</x>
+      <y>912</y>
+      <w>40</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;104;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2400</x>
+      <y>928</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2744</x>
+      <y>920</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1160</x>
+      <y>920</y>
+      <w>128</w>
+      <h>352</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>112;336;112;296;24;296;24;24;48;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1744</x>
+      <y>592</y>
+      <w>192</w>
+      <h>672</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;656;24;632;176;632;176;24;144;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2168</x>
+      <y>32</y>
+      <w>1160</w>
+      <h>1696</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;1472;88;1472;88;1680;1144;1680;1144;24;80;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2296</x>
+      <y>880</y>
+      <w>312</w>
+      <h>376</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;360;24;296;296;296;296;24;280;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2824</x>
+      <y>856</y>
+      <w>184</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;384;24;320;168;320;168;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1096</x>
+      <y>184</y>
+      <w>824</w>
+      <h>1136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>144;1120;24;1120;24;24;808;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1048</x>
+      <y>32</y>
+      <w>880</w>
+      <h>1232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>544;1216;544;1160;24;1160;24;24;864;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2224</x>
+      <y>72</y>
+      <w>1008</w>
+      <h>1472</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>648;1456;992;1456;992;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2224</x>
+      <y>120</y>
+      <w>872</w>
+      <h>1136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>144;1120;144;1096;856;1096;856;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>848</x>
+      <y>288</y>
+      <w>1256</w>
+      <h>1424</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>1240;1224;1240;1408;24;1408;24;24;1072;24;1072;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>896</x>
+      <y>328</y>
+      <w>1024</w>
+      <h>1280</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>472;1168;472;1264;24;1264;24;24;1008;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2200</x>
+      <y>288</y>
+      <w>1248</w>
+      <h>1544</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>536;1352;536;1528;1232;1528;1232;24;24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2224</x>
+      <y>320</y>
+      <w>1352</w>
+      <h>1576</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>192;1200;192;1560;1336;1560;1336;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2120</x>
+      <y>240</y>
+      <w>1592</w>
+      <h>1752</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;1272;24;1736;1576;1736;1568;24;48;24;48;96</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1760</x>
+      <y>832</y>
+      <w>160</w>
+      <h>648</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;632;144;632;144;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2112</x>
+      <y>848</y>
+      <w>176</w>
+      <h>408</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;392;24;376;160;376;160;24;136;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1128</x>
+      <y>592</y>
+      <w>128</w>
+      <h>712</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>112;696;24;696;24;24;72;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>728</x>
+      <y>256</y>
+      <w>1256</w>
+      <h>1520</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>912;1240;912;1504;24;1504;24;24;1240;24;1240;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1336</x>
+      <y>640</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;48;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1688</x>
+      <y>640</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;48;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2384</x>
+      <y>640</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;48;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2784</x>
+      <y>640</y>
+      <w>40</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;40;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2048</x>
+      <y>496</y>
+      <w>40</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;176;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2456</x>
+      <y>432</y>
+      <w>160</w>
+      <h>936</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>56;920;144;920;144;408;144;296;144;24;24;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>2848</x>
+      <y>432</y>
+      <w>200</w>
+      <h>880</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;864;184;864;184;408;184;296;184;24;64;24;64;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>664</y>
+      <w>296</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>DBConnection
+--
+-driver:String
+-databaseName:String
+-userName:String
+-password:Stringdma:DatabaseMetaData
+-con:Connection
+--
+- DBConnection()
++closeConnection():void
++getDBcon():Connection
++getInstance():DbConnection
++startTransaction():void
++commitTransaction():void
++rollbackTransaction():void
+
+
+
+
++ getAllCages(boolean):ArrayList&lt;Cage&gt;
++ findCage(int,boolean):Cage
++ insertCage(Cage):int
++ deleteCage(int):int
++ updateCage(Cage):int
+- buildCage(ResuntSet):Cage
+- buildquery(String):String
+- singleWhere(String,boolean):Cage
+- miscWhere(String,boolean):ArrayList&lt;Cage&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>832</y>
+      <w>2624</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;728;144;2608;144;2608;112</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>888</y>
+      <w>2128</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;192;104;2112;104;2112;64</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>424</y>
+      <w>1776</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;296;304;24;1576;24;1760;200;1760;248</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>608</y>
+      <w>1400</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;160;440;24;1384;64;1384;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>272</x>
+      <y>800</y>
+      <w>952</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>24;24;936;24</additional_attributes>
+  </element>
+</diagram>
