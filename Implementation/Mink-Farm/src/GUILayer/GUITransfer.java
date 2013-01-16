@@ -361,28 +361,36 @@ public class GUITransfer extends JFrame {
 		int disease = Integer.parseInt(disease_field.getText());
 		int employee = Integer.parseInt(employee_field.getText());
 		
-        if((checkCage(cagenumber) != null) &&
-           (checkEmployee(employee) != null) && 
-           ((checkBite(disease) != null) || (checkPlasma(disease) != null))
-          )
-        {
-        	if(ctrtrans.insertTransfer(cagenumber, disease, employee) == 1)
-        	{
-        		status_field.setForeground(Color.BLACK);
-    			status_field.setText("NY TRANSFER OPRETTET.");
-        	}
-        	else
-        	{
-        		status_field.setForeground(Color.RED);
-    			status_field.setText("EN FEJL OPSTOD UNDER OPRETTELSE AF TRANSFER. SE KONSOL VINDUE.");
-        	}
-        		
-        }
-        else
-        {
+		if(checkCageNoTransfer(cagenumber) == null)
+		{
+	        if((checkCage(cagenumber) != null) &&
+	           (checkEmployee(employee) != null) && 
+	           ((checkBite(disease) != null) || (checkPlasma(disease) != null))
+	          )
+	        {
+	        	if(ctrtrans.insertTransfer(cagenumber, disease, employee) == 1)
+	        	{
+	        		status_field.setForeground(Color.BLACK);
+	    			status_field.setText("NY TRANSFER OPRETTET.");
+	        	}
+	        	else
+	        	{
+	        		status_field.setForeground(Color.RED);
+	    			status_field.setText("EN FEJL OPSTOD UNDER OPRETTELSE AF TRANSFER. SE KONSOL VINDUE.");
+	        	}
+	        		
+	        }
+	        else
+	        {
+	    		status_field.setForeground(Color.RED);
+				status_field.setText("FEJL I EN ELLER FLERE NØGLER. TRANSFER IKKE OPRETTET. SE KONSOL VINDUE.");
+	        }
+		}
+		else
+		{
     		status_field.setForeground(Color.RED);
-			status_field.setText("FEJL I EN ELLER FLERE NØGLER. TRANSFER IKKE OPRETTET. SE KONSOL VINDUE.");
-        }
+			status_field.setText("FEJL BUR EKSISTERE I FORVEJEN.");			
+		}
      }
         	
     private void deleteTransfer()
