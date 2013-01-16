@@ -71,7 +71,7 @@ public class Transfer
 		this.employee = employee;
 	}
 
-	//this constructor is called when there is plasmacytosis.
+	//constructor is called when there is bite Sår.
 	public Transfer(int transferId, Cage cage, BiteDisease bitedisease, Employee employee, String transferDate) 
 	{	
 		this.transferId = transferId;
@@ -81,7 +81,7 @@ public class Transfer
 		this.transferDate = transferDate;
 	}
 	
-	//constructor is called when there is bite Sår.
+	//this constructor is called when there is plasmacytosis.
 	public Transfer(int transferId, Cage cage, PlasmaDisease plasmadisease, Employee employee, String transferDate) 
 	{	
 		this.transferId = transferId;
